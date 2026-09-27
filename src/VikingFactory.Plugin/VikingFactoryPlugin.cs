@@ -15,7 +15,7 @@ namespace VikingFactory
     {
         public const string PluginGuid = "com.vikingfactory";
         public const string PluginName = "VikingFactory";
-        public const string PluginVersion = "0.1.0";
+        public const string PluginVersion = "0.2.0";
 
         private void Awake()
         {
@@ -29,7 +29,7 @@ namespace VikingFactory
             localization.AddTranslation("$piece_vf_clutch", "Clutch");
             localization.AddTranslation("$piece_vf_clutch_desc", "Interact to disconnect the branch beyond the forward end.");
             localization.AddTranslation("$piece_vf_wheel", "Water wheel");
-            localization.AddTranslation("$piece_vf_wheel_desc", "Turns while placed in water. Dry ground is rejected by the game.");
+            localization.AddTranslation("$piece_vf_wheel_desc", "Stands on the ground. It is meant for a stream.");
             localization.AddTranslation("$piece_vf_belt", "Timber belt");
             localization.AddTranslation("$piece_vf_belt_desc", "Draws a little power along the line. A feeder moves the items.");
             localization.AddTranslation("$piece_vf_feeder", "Bronze feeder");
@@ -65,33 +65,33 @@ namespace VikingFactory
                 return;
             }
 
-            Add("vf_marker", "$piece_vf_marker", "$piece_vf_marker_desc", null, new Vector3(0.6f, 0.6f, 0.6f), new Color(0.55f, 0.38f, 0.2f), false, new[] { Req("Wood", 2) }, null, null);
-            Add("vf_crank", "$piece_vf_crank", "$piece_vf_crank_desc", MachineRole.Crank, new Vector3(0.4f, 0.9f, 0.4f), new Color(0.62f, 0.42f, 0.22f), false, new[] { Req("Wood", 6), Req("LeatherScraps", 2) }, "vf_hand_crank.glb", new[]
+            Add("vf_marker", "$piece_vf_marker", "$piece_vf_marker_desc", null, new Vector3(0.6f, 0.6f, 0.6f), new Color(0.55f, 0.38f, 0.2f), new[] { Req("Wood", 2) }, null, null);
+            Add("vf_crank", "$piece_vf_crank", "$piece_vf_crank_desc", MachineRole.Crank, new Vector3(0.4f, 0.9f, 0.4f), new Color(0.62f, 0.42f, 0.22f), new[] { Req("Wood", 6), Req("LeatherScraps", 2) }, "vf_hand_crank.glb", new[]
             {
                 Box(new Vector3(0f, 0.55f, 0f), new Vector3(0.7f, 1.1f, 0.65f))
             });
-            Add("vf_shaft", "$piece_vf_shaft", "$piece_vf_shaft_desc", MachineRole.Shaft, new Vector3(0.2f, 0.2f, 2f), new Color(0.45f, 0.3f, 0.16f), false, new[] { Req("Wood", 2) }, "vf_shaft_2m.glb", new[]
+            Add("vf_shaft", "$piece_vf_shaft", "$piece_vf_shaft_desc", MachineRole.Shaft, new Vector3(0.2f, 0.2f, 2f), new Color(0.45f, 0.3f, 0.16f), new[] { Req("Wood", 2) }, "vf_shaft_2m.glb", new[]
             {
                 Box(new Vector3(0f, 0.3f, 0f), new Vector3(0.42f, 0.6f, 2f))
             });
-            Add("vf_clutch", "$piece_vf_clutch", "$piece_vf_clutch_desc", MachineRole.Clutch, new Vector3(0.45f, 0.45f, 0.7f), new Color(0.55f, 0.4f, 0.18f), false, new[] { Req("Wood", 4), Req("Bronze", 1) }, "vf_clutch.glb", new[]
+            Add("vf_clutch", "$piece_vf_clutch", "$piece_vf_clutch_desc", MachineRole.Clutch, new Vector3(0.45f, 0.45f, 0.7f), new Color(0.55f, 0.4f, 0.18f), new[] { Req("Wood", 4), Req("Bronze", 1) }, "vf_clutch.glb", new[]
             {
                 Box(new Vector3(0f, 0.35f, 0f), new Vector3(0.5f, 0.7f, 0.8f))
             });
-            Add("vf_water_wheel", "$piece_vf_wheel", "$piece_vf_wheel_desc", MachineRole.WaterWheel, new Vector3(2f, 2f, 0.35f), new Color(0.35f, 0.28f, 0.16f), true, new[] { Req("Wood", 30), Req("RoundLog", 10), Req("Bronze", 4), Req("DeerHide", 4) }, "vf_water_wheel.glb", new[]
+            Add("vf_water_wheel", "$piece_vf_wheel", "$piece_vf_wheel_desc", MachineRole.WaterWheel, new Vector3(2f, 2f, 0.35f), new Color(0.35f, 0.28f, 0.16f), new[] { Req("Wood", 30), Req("RoundLog", 10), Req("Bronze", 4), Req("DeerHide", 4) }, "vf_water_wheel.glb", new[]
             {
                 Box(new Vector3(-0.95f, 1.075f, 0f), new Vector3(0.3f, 2.15f, 1.95f)),
                 Box(new Vector3(0.95f, 1.075f, 0f), new Vector3(0.3f, 2.15f, 1.95f))
             });
-            Add("vf_belt", "$piece_vf_belt", "$piece_vf_belt_desc", MachineRole.Belt, new Vector3(0.7f, 0.15f, 2f), new Color(0.42f, 0.28f, 0.14f), false, new[] { Req("Wood", 4), Req("LeatherScraps", 2), Req("BronzeNails", 2) }, "vf_conveyor_2m.glb", new[]
+            Add("vf_belt", "$piece_vf_belt", "$piece_vf_belt_desc", MachineRole.Belt, new Vector3(0.7f, 0.15f, 2f), new Color(0.42f, 0.28f, 0.14f), new[] { Req("Wood", 4), Req("LeatherScraps", 2), Req("BronzeNails", 2) }, "vf_conveyor_2m.glb", new[]
             {
                 Box(new Vector3(0f, 0.73f, 0f), new Vector3(1.1f, 0.25f, 2f))
             });
-            Add("vf_feeder", "$piece_vf_feeder", "$piece_vf_feeder_desc", MachineRole.Feeder, new Vector3(0.55f, 0.8f, 0.7f), new Color(0.72f, 0.48f, 0.22f), false, new[] { Req("Wood", 6), Req("Bronze", 2), Req("LeatherScraps", 2) }, "vf_feeder.glb", new[]
+            Add("vf_feeder", "$piece_vf_feeder", "$piece_vf_feeder_desc", MachineRole.Feeder, new Vector3(0.55f, 0.8f, 0.7f), new Color(0.72f, 0.48f, 0.22f), new[] { Req("Wood", 6), Req("Bronze", 2), Req("LeatherScraps", 2) }, "vf_feeder.glb", new[]
             {
                 Box(new Vector3(0f, 0.4f, 0f), new Vector3(0.8f, 0.8f, 0.8f))
             });
-            Add("vf_basket", "$piece_vf_basket", "$piece_vf_basket_desc", MachineRole.Basket, new Vector3(0.8f, 0.45f, 0.8f), new Color(0.5f, 0.34f, 0.18f), false, new[] { Req("Wood", 6), Req("LeatherScraps", 2) }, "vf_catch_basket.glb", new[]
+            Add("vf_basket", "$piece_vf_basket", "$piece_vf_basket_desc", MachineRole.Basket, new Vector3(0.8f, 0.45f, 0.8f), new Color(0.5f, 0.34f, 0.18f), new[] { Req("Wood", 6), Req("LeatherScraps", 2) }, "vf_catch_basket.glb", new[]
             {
                 Box(new Vector3(-0.48f, 0.4f, 0f), new Vector3(0.1f, 0.75f, 0.95f)),
                 Box(new Vector3(0.48f, 0.4f, 0f), new Vector3(0.1f, 0.75f, 0.95f)),
@@ -101,7 +101,7 @@ namespace VikingFactory
             });
         }
 
-        private void Add(string name, string title, string description, MachineRole? role, Vector3 scale, Color color, bool water, Requirement[] requirements, string modelFile, GlbPieceVisual.BoxSpec[] boxes)
+        private void Add(string name, string title, string description, MachineRole? role, Vector3 scale, Color color, Requirement[] requirements, string modelFile, GlbPieceVisual.BoxSpec[] boxes)
         {
             for (var i = 0; i < requirements.Length; i++)
             {
@@ -111,14 +111,17 @@ namespace VikingFactory
                 return;
             }
 
+            // Valheim's water-piece flag rejects dry ground unless Shift is held, and it
+            // forces the pivot 3 metres above the surface. The wheel's pivot is its feet.
             var config = new PieceConfig
             {
                 Name = title,
                 Description = description,
                 PieceTable = PieceTables.Hammer,
                 CraftingStation = CraftingStations.Workbench,
-                Category = "Workshop",
-                Icon = SolidIcon(color)
+                Category = "Crafting",
+                Usage = new[] { "Crafting" },
+                Icon = LoadIcon(Path.Combine(Path.GetDirectoryName(Info.Location) ?? "", "Assets", "icons", name + ".png"), color)
             };
             for (var i = 0; i < requirements.Length; i++)
                 config.AddRequirement(requirements[i].Item, requirements[i].Amount, true);
@@ -129,13 +132,6 @@ namespace VikingFactory
             var renderer = prefab.GetComponent<Renderer>();
             if (renderer != null)
                 renderer.material.color = color;
-            var vanilla = prefab.GetComponent<Piece>();
-            if (vanilla != null && water)
-            {
-                vanilla.m_waterPiece = true;
-                vanilla.m_noInWater = false;
-            }
-
             WorkshopMachine machine = null;
             if (role.HasValue)
             {
@@ -170,6 +166,14 @@ namespace VikingFactory
         private static Requirement Req(string item, int amount)
         {
             return new Requirement { Item = item, Amount = amount };
+        }
+
+        private static Sprite LoadIcon(string path, Color fallback)
+        {
+            Texture2D texture;
+            if (!PngIcon.TryLoad(path, out texture))
+                return SolidIcon(fallback);
+            return Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100f);
         }
 
         private static Sprite SolidIcon(Color color)

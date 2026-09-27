@@ -15,6 +15,8 @@
   <br>
   <a href="ROADMAP.md">Roadmap</a>
   ·
+  <a href="CHANGELOG.md">Versions</a>
+  ·
   <a href="docs/Development.md">Development setup</a>
   ·
   <a href="docs/ImplementationStatus.md">What is actually built</a>
@@ -24,7 +26,7 @@
   <a href="https://github.com/loafdaddy/VikingFactory/issues">Issues</a>
 </p>
 
-**Early development.** The public repository is [loafdaddy/VikingFactory](https://github.com/loafdaddy/VikingFactory). It is here so people can follow the work, share ideas, and help build it. It is not a release for players. There is no Thunderstore package, and nothing here has been played in a Valheim world.
+**Early development.** The public repository is [loafdaddy/VikingFactory](https://github.com/loafdaddy/VikingFactory). It is here so people can follow the work, share ideas, and help build it. It is not a release for players. There is no Thunderstore package. What changed in each number is [CHANGELOG.md](CHANGELOG.md).
 
 VikingFactory is an automation mod for Valheim. The long-term aim is machinery for power, transport, processing, farming, forestry, mining, and cooking, where automation fits the world. Those are design goals. A model or a class name is not a working machine.
 
@@ -44,14 +46,17 @@ The full target is written up as a design proposal in [`docs/VikingFactory-Maste
 
 ## What works today
 
-Checked in code and by a headless game launch. No world was entered, and no piece was placed with the hammer.
+Checked in code, by a headless load, and by one windowed session on 27 September 2026. That session entered an isolated world and placed one water wheel. The wheel floated. The placement fix after that has not been repeated in a world.
 
-- The plugin loads. Version `0.1.0`, BepInEx, Jötunn.
-- Eight hammer pieces register: a workshop marker, hand crank, wooden shaft, clutch, water wheel, timber belt, bronze feeder, and catch basket.
+- The plugin loads under BepInEx and Jötunn. This update is `0.2.0`. The first public snapshot was `0.1.0`.
+- Eight hammer pieces register: a workshop marker, hand crank, wooden shaft, clutch, water wheel, timber belt, bronze feeder, and catch basket. They are on the hammer’s Crafting tag.
 - Those seven machines, other than the marker, load original GLB models. Material names are swapped at runtime for cloned Valheim shaders. The game’s own textures are not in this repository.
+- Each hammer button has a rendered picture of that machine. Those pictures have not been seen in the menu yet.
 - A core simulation, covered by tests that do not start Valheim, runs one feeder from a crank and stalls when a second feeder is added. Shafts add no load. A closed clutch drops the branch beyond it.
 
-Present in code, and not yet seen in a world: placing those pieces, spinning parts, a scrolling belt surface, a feeder moving a real item, and basket or clutch state saved on the piece.
+The hammer only lists pieces the character has discovered. A new character sees Repair, so the grid looks empty until `debugmode` is on or the materials have been learned. `debugmode` resets every launch.
+
+Present in code, and not yet watched in a world: spinning parts, a scrolling belt surface, a feeder moving a real item, and basket or clutch state saved on the piece.
 
 Not gameplay yet: item-carrying belts, smelters, kilns, recipe crafting, farming, forestry, mining, cooking, steam, sail, and livestock. Some of those have models only. See the [roadmap](ROADMAP.md).
 
@@ -72,7 +77,7 @@ cp Environment.props.example Environment.props
 
 - No in-game screenshots, save/load test, second client, or dedicated server.
 - The belt draws a little power and can scroll its hide surface. It does not carry items.
-- The water wheel can be placed only on the game’s water piece. Spacing and immersion are not checked.
+- The water wheel places on the ground. Valheim’s water-piece flag lifted it about 3 m and demanded Shift on dry ground, so that flag is off. Spacing and immersion are not checked. The corrected place has not been repeated in a world.
 - Multiplayer is not implemented as a tested feature. The intention is that the piece owner simulates, and that a factory stops when nobody is nearby. That has not been tried with two clients.
 - Unity `6000.0.75f1` matches the current game player. No AssetBundle has been built.
 - There is no license file yet. Do not treat the source as free to relicense or ship until one is added.
@@ -88,6 +93,7 @@ cp Environment.props.example Environment.props
 
 | Doc | What it is |
 |---|---|
+| [CHANGELOG.md](CHANGELOG.md) | Patch notes for each version |
 | [ROADMAP.md](ROADMAP.md) | Current focus, next, later, and what “ready” would mean |
 | [docs/Development.md](docs/Development.md) | Prerequisites, build, assets, multiplayer notes |
 | [docs/ImplementationStatus.md](docs/ImplementationStatus.md) | Checked boxes for work that exists |

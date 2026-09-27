@@ -5,6 +5,5 @@
     <Nullable>enable</Nullable>
     <RootNamespace>VikingFactory.Core</RootNamespace>
     <AssemblyName>VikingFactory.Core</AssemblyName>
-    <Version>0.1.0</Version>
   </PropertyGroup>
 </Project>

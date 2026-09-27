@@ -4,7 +4,7 @@ Updated 27 September 2026 after Valheim was installed. Observations were checked
 
 ## Progress
 
-The cross-off list is `docs/ImplementationStatus.md`. A headless load registered the pieces. No world was entered. Setup steps are `docs/Development.md`.
+The cross-off list is `docs/ImplementationStatus.md`. A headless load registered the pieces. A later windowed session entered an isolated world and placed one water wheel. Setup steps are `docs/Development.md`. Patch notes are `CHANGELOG.md`.
 
 ## Observations
 
@@ -20,8 +20,8 @@ The cross-off list is `docs/ImplementationStatus.md`. A headless load registered
 | Jötunn | ValheimModding-Jotunn 2.30.2, in `BepInEx/plugins/Jotunn`. Its manifest asks for BepInEx pack 5.4.2333. 5.4.2351 is the newer pack that was current on Thunderstore. |
 | Plugin target | `net472`, compiled against those local DLLs, plus `assembly_utils` for `Vector2i`. `VikingFactory.dll` and `VikingFactory.Core.dll` are in `BepInEx/plugins/VikingFactory`. |
 | Pieces in code | `vf_marker`, `vf_crank`, `vf_shaft`, `vf_clutch`, `vf_water_wheel`, `vf_belt`, `vf_feeder`, `vf_basket`. The marker is still a block. The other seven load polished GLBs. |
-| Core tests | 12 passed. They do not load the game. |
-| In-game load | Headless, 27 September 2026, via `start_game_bepinex.sh -batchmode -nographics` and the isolated save directory from `scripts/launch-dev.sh`. Pieces registered `Valid=True`. No world was entered and no piece was placed. |
+| Core tests | 13 passed on 27 September 2026. They do not load the game. |
+| In-game load | Headless, 27 September 2026, via `start_game_bepinex.sh -batchmode -nographics` and the isolated save directory from `scripts/launch-dev.sh`. Pieces registered `Valid=True`. No world was entered on that run. A later windowed `0.2.0` client entered a world and placed one water wheel. That wheel floated. |
 
 ## What the plugin references
 

@@ -107,7 +107,7 @@ Wind ownership. On a server the windmill uses the environment of the client that
 
 Smoke. Active smelters, kilns, and blast furnaces stop after about 4 seconds without being able to spawn smoke. Smoke wants about a meter of clearance. Feeders sit beside ports and leave the chimney alone.
 
-Snap. 1 meter modules. Shaft ends are snap points. Jötunn `CustomPiece` from a vanilla piece or an empty primitive until real meshes exist. Hammer category `Workshop`.
+Snap. 1 meter modules. Shaft ends are snap points. Jötunn `CustomPiece` from a vanilla piece or an empty primitive until real meshes exist. The hammer tag in the current build is Crafting. A custom Workshop category left Valheim’s build menu on an empty page. The menu only lists pieces the character has discovered.
 
 Portals. Wood portals block ore, bars, and a short list (dragon egg, dvergr extractor, mechanical spring, Hildir's chests, charred cogwheel). Stone portals allow them, only when you enter the stone portal. Belts do not cross portals. Long hauls stay carts (18 slots) and ships until Ashlands.
 

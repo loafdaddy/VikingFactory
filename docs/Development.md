@@ -29,6 +29,12 @@ Set `VALHEIM_INSTALL` to your game directory. `Environment.props` is gitignored.
 
 A dedicated server, when you have `valheim_server.x86_64`, reads its world password from `VF_DEV_SERVER_PASSWORD`. The script will not start without it. This install has no server binary, so that script has not created a world.
 
+## Versions
+
+`Version.props` is the number for the update on the current branch. The core assembly, `PluginVersion` in `VikingFactoryPlugin.cs`, and `packaging/manifest.json` must all use that number. `VersionTests` fails if they drift. What changed in each number is [CHANGELOG.md](../CHANGELOG.md).
+
+`main` keeps the last snapshot that was pushed. This branch is `0.2.0`. Start a new update from `main` by branching to the next number and setting `Version.props` to it. If you are already on a version branch and the work is a further update, branch again to the next number instead of continuing on the old one.
+
 ## Build and test
 
 ```bash
@@ -37,9 +43,9 @@ A dedicated server, when you have `valheim_server.x86_64`, reads its world passw
 VF_DEPLOY_PLUGINS=/path/to/BepInEx/plugins/VikingFactory ./scripts/deploy-dev.sh
 ```
 
-`scripts/test.sh` runs the core tests. They do not load Valheim. Twelve tests were passing on 27 September 2026: crank stall, clutch, water-wheel probe, and item escrow.
+`scripts/test.sh` runs the core tests. They do not load Valheim. Thirteen tests were passing on 27 September 2026: crank stall, clutch, water-wheel probe, item escrow, and the version match.
 
-`scripts/build.sh` builds the solution in Release. The plugin output is `src/VikingFactory.Plugin/bin/Release/VikingFactory.dll` plus `VikingFactory.Core.dll`. Deploy copies those and the polished GLBs for the registered machines.
+`scripts/build.sh` builds the solution in Release. The plugin output is `src/VikingFactory.Plugin/bin/Release/VikingFactory.dll` plus `VikingFactory.Core.dll`. Deploy copies those, the polished GLBs for the registered machines, and the hammer pictures in `polished/icons/`.
 
 To look at the game, set Steam's launch options to:
 
@@ -47,7 +53,9 @@ To look at the game, set Steam's launch options to:
 ./start_game_bepinex.sh %command%
 ```
 
-Then `scripts/launch-dev.sh` starts the client with an isolated save directory. `scripts/launch-dev.sh client2` uses a second directory. Neither directory had a world in it when this note was written.
+Then `scripts/launch-dev.sh` starts the client with an isolated save directory. `scripts/launch-dev.sh client2` uses a second directory. The primary directory has a character and a world from 27 September 2026. `client2` was still empty.
+
+The hammer lists only pieces that character has discovered. A new character sees Repair, and the grid looks empty. `debugmode` shows every piece and resets every launch. In the world, press F5 and run `devcommands`, then `debugmode`. The workshop pieces are on the Crafting tag. Patch notes are [CHANGELOG.md](../CHANGELOG.md).
 
 `scripts/validate-package.sh` checks `packaging/` for a manifest, README, and a 256×256 icon, and rejects game DLLs. It does not upload.
 
@@ -63,7 +71,7 @@ Then `scripts/launch-dev.sh` starts the client with an isolated save directory. 
 | `packaging` | Thunderstore template. Not a release. |
 | `branding` | README lockup. |
 
-Plugin id: `com.vikingfactory`. Version: `0.1.0`. There are no Harmony patches. Jötunn's `CustomPiece` creates the hammer pieces. The catalogue and material probe write JSON under the game's BepInEx config folder when vanilla prefabs become available. Those files are local output, not source.
+Plugin id: `com.vikingfactory`. The version is `Version.props`, currently `0.2.0`. There are no Harmony patches. Jötunn's `CustomPiece` creates the hammer pieces. The catalogue and material probe write JSON under the game's BepInEx config folder when vanilla prefabs become available. Those files are local output, not source.
 
 ## Assets
 

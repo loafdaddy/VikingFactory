@@ -113,7 +113,7 @@ Matplotlib is only needed for the contact sheet. The generator overwrites genera
 
 ## Scope
 
-This is the first workshop kit, not all art for the full master design. Still needed later: steam/sail/eitr generators, clutches, extra shaft/rope layouts, farm and livestock machinery, station tenders, biome-tier variants, finished textures, sounds and UI icons. Reuse this modular language while implementing the core.
+This is the first workshop kit, not all art for the full master design. Hammer pictures for the eight registered pieces are in `polished/icons/`. Still needed later: steam/sail/eitr generators, clutches, extra shaft/rope layouts, farm and livestock machinery, station tenders, biome-tier variants, finished textures, and sounds. Reuse this modular language while implementing the core.
 
 ## Provenance
 

@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using VikingFactory.Core;
 
 namespace VikingFactory.Diagnostics
 {
@@ -11,7 +12,8 @@ namespace VikingFactory.Diagnostics
         private static int Main()
         {
             Console.WriteLine("VikingFactory diagnostic");
-            Console.WriteLine("Core assembly: VikingFactory.Core 0.1.0");
+            var version = typeof(BalanceDefaults).Assembly.GetName().Version?.ToString(3) ?? "unknown";
+            Console.WriteLine("Core assembly: VikingFactory.Core " + version);
             var install = ReadProp("VALHEIM_INSTALL");
             if (string.IsNullOrWhiteSpace(install))
             {

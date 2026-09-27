@@ -16,8 +16,8 @@ The plugin already registers a marker, hand crank, shaft, clutch, water wheel, t
 |---|---|
 | Player outcome | Place a crank, shaft, and feeder, see the line turn or stall, and still have the pieces after a save. |
 | Developer outcome | Confirm materials, pivots, and colliders beside vanilla wood and a workbench. |
-| Status | Code and models exist. No world has been entered. |
-| Blockers | Unity license before any AssetBundle. Steam must launch through BepInEx. No second client and no dedicated server have been run. |
+| Status | Code and models exist. One isolated world was entered and one water wheel was placed. It floated. The placement fix and hammer pictures are in `0.2.0` and have not been looked at in a world. |
+| Blockers | Unity `6000.0.75f1` batchmode still has no license, so there is no AssetBundle. The current pieces load GLBs without one. Steam must launch through BepInEx. No second client and no dedicated server have been run. |
 | Done when | One placed line stalls when load exceeds drive, items survive a save, and the turning direction is visible. Rain, torchlight, and indoor light have been looked at. The result is written into the status doc without calling it a player release. |
 
 ## Next
@@ -51,8 +51,8 @@ There is no public package. `packaging/` is a template. `scripts/validate-packag
 
 | Milestone | Outcome | Status | Blockers | Done when |
 |---|---|---|---|---|
-| Dev build | A contributor can compile and load the plugin | Plugin `0.1.0` has loaded headless | Local game path stays in gitignored `Environment.props` | Documented setup still matches the scripts |
-| World proof | The current pieces survive play | Not started | Needs a played world | Save, reload, and a visible stall |
+| Dev build | A contributor can compile and load the plugin | Plugin `0.2.0` has loaded in a window. `0.1.0` loaded headless | Local game path stays in gitignored `Environment.props` | Documented setup still matches the scripts |
+| World proof | The current pieces survive play | One wheel placed, then it floated | The corrected place, hammer pictures, save, and a stall have not been checked | Save, reload, and a visible stall |
 | Multiplayer proof | Server and clients agree | Not implemented as a tested feature | No dedicated server has been run. No second client. | Same build on server and clients. One item transfer, no duplicate, owner handoff checked |
 | Package | Someone can install a zip | Not a release | Empty manifest website and dependencies. No license. Icon is a flat mark, not the logo | Version, icon, README, and dependencies match a build that passed the world and multiplayer checks |
 | Thunderstore | A public alpha | Not started | Everything above | A separate, explicit publish. Game files are not in the zip |

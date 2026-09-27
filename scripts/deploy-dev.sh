@@ -64,4 +64,11 @@ copy_model vf_clutch
 copy_model vf_conveyor_2m
 copy_model vf_feeder
 copy_model vf_catch_basket
-echo "Copied the plugin DLLs and workshop GLBs to $dest"
+mkdir -p "$dest/Assets/icons"
+icon_dir="$pack/polished/icons"
+if [[ ! -d "$icon_dir" ]]; then
+  echo "Piece icons are missing under polished/icons." >&2
+  exit 2
+fi
+cp "$icon_dir"/*.png "$dest/Assets/icons/"
+echo "Copied the plugin DLLs, workshop GLBs, and piece icons to $dest"
