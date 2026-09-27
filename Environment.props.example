@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <!-- Copy to Environment.props. That file is gitignored. Do not commit game paths. -->
+    <VALHEIM_INSTALL></VALHEIM_INSTALL>
+    <BEPINEX_PATH></BEPINEX_PATH>
+    <VF_DEPLOY_PLUGINS></VF_DEPLOY_PLUGINS>
+  </PropertyGroup>
+</Project>

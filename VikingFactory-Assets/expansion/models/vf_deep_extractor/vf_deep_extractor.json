@@ -1,0 +1,150 @@
+{
+  "id": "vf_deep_extractor",
+  "title": "Deep extraction derrick",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -1.05,
+      0.0,
+      -1.135
+    ],
+    [
+      1.05,
+      3.4,
+      1.55
+    ]
+  ],
+  "triangles": 640,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Drill",
+      "pivot": [
+        0,
+        1.65,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        1.05,
+        0.5,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.4,
+        1.55
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Ground_Probe",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.9,
+        1.65,
+        -1.0
+      ],
+      "size": [
+        0.19,
+        3.3,
+        0.19
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.9,
+        1.65,
+        1.0
+      ],
+      "size": [
+        0.19,
+        3.3,
+        0.19
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.9,
+        1.65,
+        -1.0
+      ],
+      "size": [
+        0.19,
+        3.3,
+        0.19
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.9,
+        1.65,
+        1.0
+      ],
+      "size": [
+        0.19,
+        3.3,
+        0.19
+      ]
+    }
+  ],
+  "notes": [
+    "Drill is vertical; perimeter-only colliders keep bore and output clear.",
+    "Iron is the named metal slot; black-metal variant must be selected by runtime using vf_deep_extractor."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

@@ -1,0 +1,120 @@
+{
+  "id": "vf_cooking_tender",
+  "title": "Hearth-side tender",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.325,
+      0.0,
+      -0.325
+    ],
+    [
+      0.325,
+      0.9072511148213589,
+      1.1800000000000002
+    ]
+  ],
+  "triangles": 132,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Arm_Yaw",
+      "pivot": [
+        0,
+        0.74,
+        0
+      ],
+      "rotation_axis": "y",
+      "motion": "swing"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Pickup",
+      "position": [
+        0,
+        0.8,
+        1.12
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Dropoff",
+      "position": [
+        0,
+        0.8,
+        -0.65
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -0.36,
+        0.5,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        0.65,
+        0.12,
+        0.65
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.35,
+        0
+      ],
+      "size": [
+        0.16,
+        0.7,
+        0.16
+      ]
+    }
+  ],
+  "notes": [
+    "Standalone reaching arm only; no vanilla hearth or cooking-rack mesh included."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

@@ -1,0 +1,183 @@
+{
+  "id": "vf_iron_belt_2m",
+  "title": "Iron chain-deck conveyor",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.5700000000000001,
+      0.0,
+      -1.0
+    ],
+    [
+      0.5700000000000001,
+      0.915,
+      1.0
+    ]
+  ],
+  "triangles": 1116,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Belt_Surface",
+      "pivot": [
+        0,
+        0.77,
+        0
+      ],
+      "rotation_axis": "x",
+      "scroll": "u"
+    },
+    {
+      "name": "Roller_Rear",
+      "pivot": [
+        0,
+        0.7,
+        -0.85
+      ],
+      "rotation_axis": "x"
+    },
+    {
+      "name": "Roller_Front",
+      "pivot": [
+        0,
+        0.7,
+        0.85
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        0.85,
+        -1
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.85,
+        1
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic_In",
+      "position": [
+        0.57,
+        0.5,
+        -0.75
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.46,
+        0.31,
+        -0.74
+      ],
+      "size": [
+        0.14,
+        0.62,
+        0.14
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.46,
+        0.31,
+        0.74
+      ],
+      "size": [
+        0.14,
+        0.62,
+        0.14
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.46,
+        0.31,
+        -0.74
+      ],
+      "size": [
+        0.14,
+        0.62,
+        0.14
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.46,
+        0.31,
+        0.74
+      ],
+      "size": [
+        0.14,
+        0.62,
+        0.14
+      ]
+    },
+    {
+      "name": "Deck",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.69,
+        0
+      ],
+      "size": [
+        0.86,
+        0.15,
+        2
+      ]
+    }
+  ],
+  "notes": [
+    "Iron ladder chassis, overlapping timber treads, forged wear caps and braced feet distinguish it from the timber tier. Decorative treads stay static; scroll only the loop or add runtime cyclic treads."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

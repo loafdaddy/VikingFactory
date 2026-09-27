@@ -1,0 +1,131 @@
+{
+  "id": "vf_quarry",
+  "label": "Bedrock quarry",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 588,
+  "bounds": [
+    [
+      -1.1,
+      0.0,
+      -1.0
+    ],
+    [
+      1.1,
+      2.6750000000000003,
+      1.35
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Drill",
+      "pivot": [
+        0,
+        1.25,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.49,
+        1.35
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic",
+      "position": [
+        1.05,
+        2.35,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Ground_Probe",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Side-0.8",
+      "type": "box",
+      "size": [
+        0.26,
+        2.65,
+        1.55
+      ],
+      "center": [
+        -0.8,
+        1.325,
+        0
+      ],
+      "parent": "Static"
+    },
+    {
+      "name": "Side0.8",
+      "type": "box",
+      "size": [
+        0.26,
+        2.65,
+        1.55
+      ],
+      "center": [
+        0.8,
+        1.325,
+        0
+      ],
+      "parent": "Static"
+    },
+    {
+      "name": "Base",
+      "type": "box",
+      "size": [
+        2.2,
+        0.22,
+        2
+      ],
+      "center": [
+        0,
+        0.11,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

@@ -1,0 +1,121 @@
+{
+  "id": "vf_harvester",
+  "title": "Rail harvester",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -1.33,
+      0.0,
+      -1.5
+    ],
+    [
+      1.33,
+      1.33,
+      1.5
+    ]
+  ],
+  "triangles": 360,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tool_Head",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": "z",
+      "motion": "slide",
+      "travel": 2.2
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -1.4,
+        0.5,
+        -1.5
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.7,
+        -1.5
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Ground_Probe",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.25,
+        0.08,
+        0
+      ],
+      "size": [
+        0.16,
+        0.16,
+        3.0
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.25,
+        0.08,
+        0
+      ],
+      "size": [
+        0.16,
+        0.16,
+        3.0
+      ]
+    }
+  ],
+  "notes": [
+    "Tool_Head is a complete travelling carriage along Z. Root marker is the parked service dock; moving operation points must be derived from the carriage."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

@@ -1,0 +1,96 @@
+{
+  "checks": "GLB chunks, offsets, finite geometry, triangle area, normal direction/length, node names, markers, metadata counts",
+  "not_tested": [
+    "Blender execution",
+    "FBX conversion",
+    "Unity import",
+    "Valheim integration",
+    "runtime performance"
+  ],
+  "assets": [
+    {
+      "asset": "vf_catch_basket",
+      "triangles": 300,
+      "nodes": 4,
+      "sha256": "1821e52240ce0ea70ef064d6d96de743a73b71a852997e57795a57ffd5f593b9",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_cog",
+      "triangles": 564,
+      "nodes": 5,
+      "sha256": "1e615024f6ce66be4e579816bcc4023707ca2de3b4f7cb41af35aaf0bf221bd3",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_conveyor_2m",
+      "triangles": 432,
+      "nodes": 8,
+      "sha256": "3a1ba6fc3babd3568721dbc09dc1cded430341b6daa47b566faa6b411daa4e0c",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_conveyor_corner",
+      "triangles": 396,
+      "nodes": 5,
+      "sha256": "9a719b60d88cb78fe4c2cc7c31d08468ef3bb7f08b7ffe71e70f9aab02b1c80a",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_feeder",
+      "triangles": 180,
+      "nodes": 6,
+      "sha256": "6c652479ab9f41881550b3a88d43d6e9311f0826fe8b1e3300d72b7f932a6ce3",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_gravity_trough",
+      "triangles": 84,
+      "nodes": 4,
+      "sha256": "d34e6844b3799c8c00a849abea265629e377ad7485bee1a9052c0e308c21fc37",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_hand_crank",
+      "triangles": 228,
+      "nodes": 5,
+      "sha256": "984493841fe340f0d499c809606a789949fc860ecf2eee19705d010f702058b4",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_quarry",
+      "triangles": 588,
+      "nodes": 6,
+      "sha256": "555bffb32683214e602550710deaa772d94d048d4c1011b030527852e1a05357",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_recipe_mill",
+      "triangles": 424,
+      "nodes": 9,
+      "sha256": "98ecd001e3deee897362a91ccaedf5402af9874a82f27521912ad46e086d6914",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_shaft_2m",
+      "triangles": 368,
+      "nodes": 5,
+      "sha256": "62e8ba1448b8fe9edc66e00b118573435ca9ddcd52e9b3256ba77109f08ba728",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_splitter",
+      "triangles": 228,
+      "nodes": 8,
+      "sha256": "b04118f6a040773fd70368458ed844ce1ceac858b7b39cff4c016d1890be5e96",
+      "status": "pass"
+    },
+    {
+      "asset": "vf_water_wheel",
+      "triangles": 1608,
+      "nodes": 6,
+      "sha256": "41eef0e5eba0c43eab0afe6b31884eee84bce32a034337833137cced4a75b308",
+      "status": "pass"
+    }
+  ]
+}

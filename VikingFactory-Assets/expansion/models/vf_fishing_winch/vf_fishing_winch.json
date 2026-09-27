@@ -1,0 +1,158 @@
+{
+  "id": "vf_fishing_winch",
+  "title": "Waterside fishing winch",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.525,
+      0.0,
+      -0.65
+    ],
+    [
+      0.525,
+      1.2000000000000002,
+      1.701358645409111
+    ]
+  ],
+  "triangles": 1620,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0,
+        0.5,
+        0
+      ],
+      "rotation_axis": "x"
+    },
+    {
+      "name": "Line_Surface",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": "x",
+      "scroll": "u"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_Left",
+      "position": [
+        -0.45,
+        0.5,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Kinetic_Right",
+      "position": [
+        0.45,
+        0.5,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Water_Probe",
+      "position": [
+        0,
+        0.12,
+        1.65
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.4,
+        -0.7
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_out"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        1.05,
+        0.12,
+        1.3
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.36,
+        0.25,
+        0
+      ],
+      "size": [
+        0.15,
+        0.5,
+        0.15
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.36,
+        0.25,
+        0
+      ],
+      "size": [
+        0.15,
+        0.5,
+        0.15
+      ]
+    }
+  ],
+  "notes": [
+    "Rotor is drum/spool; Line_Surface uses longitudinal UVs, no physical rope simulation."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

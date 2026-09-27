@@ -1,0 +1,120 @@
+{
+  "id": "vf_sail_wheel",
+  "title": "Linen sail wheel",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -1.9,
+      0.0,
+      -0.725
+    ],
+    [
+      1.9,
+      4.3,
+      1.74
+    ]
+  ],
+  "triangles": 408,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0,
+        2.4,
+        -0.28
+      ],
+      "rotation_axis": "z"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_Out",
+      "position": [
+        0,
+        2.4,
+        0.25
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Wind_Probe",
+      "position": [
+        0,
+        3.5,
+        -0.45
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "environment"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        1.25,
+        0.12,
+        1.45
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.4,
+        1.2,
+        0
+      ],
+      "size": [
+        0.17,
+        2.4,
+        0.17
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.4,
+        1.2,
+        0
+      ],
+      "size": [
+        0.17,
+        2.4,
+        0.17
+      ]
+    }
+  ],
+  "notes": [
+    "Axle height exception: 2.4 m, required by sail clearance. Hide is the mandated sail slot; runtime should select a linen-compatible native surface by this asset ID."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

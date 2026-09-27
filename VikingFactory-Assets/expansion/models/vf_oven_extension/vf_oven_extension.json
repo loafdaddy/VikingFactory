@@ -1,0 +1,111 @@
+{
+  "id": "vf_oven_extension",
+  "title": "Open hood extension",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.975,
+      0.0,
+      -0.475
+    ],
+    [
+      0.975,
+      2.4850000000000003,
+      0.475
+    ]
+  ],
+  "triangles": 140,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "Smoke_Out",
+      "position": [
+        0,
+        2.52,
+        0
+      ],
+      "forward": [
+        0,
+        1,
+        0
+      ],
+      "kind": "environment"
+    },
+    {
+      "name": "Interact",
+      "position": [
+        0,
+        1,
+        -0.48
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "service"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.85,
+        0.725,
+        0
+      ],
+      "size": [
+        0.24,
+        1.45,
+        0.75
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.85,
+        0.725,
+        0
+      ],
+      "size": [
+        0.24,
+        1.45,
+        0.75
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        1.55,
+        0
+      ],
+      "size": [
+        1.95,
+        0.2,
+        0.9
+      ]
+    }
+  ],
+  "notes": [
+    "Open under the canopy and on both Z faces; no existing oven mesh or inner solid collider. Footprint must be checked against the target station in game."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

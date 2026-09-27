@@ -1,0 +1,1313 @@
+{
+  "version": "0.1.0",
+  "assets": [
+    {
+      "id": "vf_shaft_2m",
+      "label": "Timber shaft \u00b7 2 m",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 368,
+      "bounds": [
+        [
+          -0.21,
+          0.020000000000000004,
+          -1.0
+        ],
+        [
+          0.21,
+          0.66,
+          1.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.5,
+            0
+          ],
+          "rotation_axis": "z"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0,
+            0.5,
+            -1
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            0,
+            0.5,
+            1
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Base",
+          "type": "box",
+          "size": [
+            0.42,
+            0.6,
+            2
+          ],
+          "center": [
+            0,
+            0.3,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_cog",
+      "label": "Bronze-braced cog",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 564,
+      "bounds": [
+        [
+          -0.45,
+          0.0,
+          -0.5741999999999999
+        ],
+        [
+          0.45,
+          1.2542,
+          0.5741999999999999
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.68,
+            0
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -0.35,
+            0.68,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            0.35,
+            0.68,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Stand",
+          "type": "box",
+          "size": [
+            0.9,
+            0.65,
+            0.55
+          ],
+          "center": [
+            0,
+            0.325,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_hand_crank",
+      "label": "Hand crank",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 228,
+      "bounds": [
+        [
+          -0.375,
+          0.0,
+          -0.325
+        ],
+        [
+          0.6900000000000001,
+          1.5050000000000001,
+          0.325
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Crank",
+          "pivot": [
+            0,
+            1.05,
+            0
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            -0.375,
+            1.05,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0.72,
+            1.43,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "service"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Stand",
+          "type": "box",
+          "size": [
+            0.7,
+            1.1,
+            0.65
+          ],
+          "center": [
+            0,
+            0.55,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_water_wheel",
+      "label": "Water wheel",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 1608,
+      "bounds": [
+        [
+          -1.25,
+          0.0,
+          -1.72
+        ],
+        [
+          1.25,
+          3.7199999999999998,
+          1.72
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            2.0,
+            0
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Left",
+          "position": [
+            -1.25,
+            2,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Right",
+          "position": [
+            1.25,
+            2,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Water_Probe",
+          "position": [
+            0,
+            0.35,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Support_-0.95",
+          "type": "box",
+          "size": [
+            0.3,
+            2.15,
+            1.95
+          ],
+          "center": [
+            -0.95,
+            1.075,
+            0
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "Support_0.95",
+          "type": "box",
+          "size": [
+            0.3,
+            2.15,
+            1.95
+          ],
+          "center": [
+            0.95,
+            1.075,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_conveyor_2m",
+      "label": "Timber conveyor \u00b7 2 m",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 432,
+      "bounds": [
+        [
+          -0.585,
+          0.0,
+          -1.0
+        ],
+        [
+          0.585,
+          0.95,
+          1.0
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Belt_Surface",
+          "pivot": [
+            0,
+            0.77,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Roller_-0.86",
+          "pivot": [
+            0,
+            0.7,
+            -0.86
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Roller_0.86",
+          "pivot": [
+            0,
+            0.7,
+            0.86
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.82,
+            -1
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.82,
+            1
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic",
+          "position": [
+            0.58,
+            0.7,
+            -0.86
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Deck",
+          "type": "box",
+          "size": [
+            1.1,
+            0.25,
+            2
+          ],
+          "center": [
+            0,
+            0.73,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_conveyor_corner",
+      "label": "Timber conveyor \u00b7 corner",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 396,
+      "bounds": [
+        [
+          -0.6000000000000001,
+          0.0,
+          -0.6000000000000001
+        ],
+        [
+          0.6598555418001658,
+          0.93,
+          0.6598555418001658
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0.21,
+            0.82,
+            -0.6
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            -0.6,
+            0.82,
+            0.21
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic",
+          "position": [
+            0.65,
+            0.65,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Deck",
+          "type": "box",
+          "size": [
+            1.3,
+            0.22,
+            1.3
+          ],
+          "center": [
+            0.05,
+            0.76,
+            0.05
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_splitter",
+      "label": "Three-way splitter",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 228,
+      "bounds": [
+        [
+          -0.65,
+          0.0,
+          -0.65
+        ],
+        [
+          0.65,
+          1.045,
+          0.65
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Selector",
+          "pivot": [
+            0,
+            0.87,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.85,
+            -0.7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out_Left",
+          "position": [
+            -0.7,
+            0.85,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Item_Out_Right",
+          "position": [
+            0.7,
+            0.85,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Item_Out_Forward",
+          "position": [
+            0,
+            0.85,
+            0.7
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic",
+          "position": [
+            0,
+            0.52,
+            0.7
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Body",
+          "type": "box",
+          "size": [
+            1.3,
+            0.25,
+            1.3
+          ],
+          "center": [
+            0,
+            0.75,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_feeder",
+      "label": "Bronze feeder",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 180,
+      "bounds": [
+        [
+          -0.4,
+          0.0,
+          -0.4
+        ],
+        [
+          0.4,
+          1.1993977506603168,
+          1.1400000000000001
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Arm_Yaw",
+          "pivot": [
+            0,
+            0.8,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pickup",
+          "position": [
+            0,
+            0.68,
+            1.08
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Dropoff",
+          "position": [
+            0,
+            0.68,
+            -1.08
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic",
+          "position": [
+            0.4,
+            0.4,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Base",
+          "type": "box",
+          "size": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "center": [
+            0,
+            0.4,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_catch_basket",
+      "label": "Catch basket",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 300,
+      "bounds": [
+        [
+          -0.525,
+          0.0,
+          -0.5
+        ],
+        [
+          0.525,
+          0.78,
+          0.5
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.82,
+            0
+          ],
+          "forward": [
+            0,
+            1,
+            0
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.35,
+            0.5
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Side-0.48",
+          "type": "box",
+          "size": [
+            0.1,
+            0.75,
+            0.95
+          ],
+          "center": [
+            -0.48,
+            0.4,
+            0
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "Side0.48",
+          "type": "box",
+          "size": [
+            0.1,
+            0.75,
+            0.95
+          ],
+          "center": [
+            0.48,
+            0.4,
+            0
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "End-0.43",
+          "type": "box",
+          "size": [
+            0.95,
+            0.75,
+            0.1
+          ],
+          "center": [
+            0,
+            0.4,
+            -0.43
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "End0.43",
+          "type": "box",
+          "size": [
+            0.95,
+            0.75,
+            0.1
+          ],
+          "center": [
+            0,
+            0.4,
+            0.43
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "Floor",
+          "type": "box",
+          "size": [
+            1,
+            0.1,
+            0.9
+          ],
+          "center": [
+            0,
+            0.05,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_gravity_trough",
+      "label": "Gravity trough",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 84,
+      "bounds": [
+        [
+          -0.48,
+          0.0,
+          -1.0314550023252762
+        ],
+        [
+          0.48,
+          1.109453369865561,
+          1.0314550023252762
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.94,
+            1
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.53,
+            -1
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_out"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Body",
+          "type": "box",
+          "size": [
+            0.96,
+            0.55,
+            2.06
+          ],
+          "center": [
+            0,
+            0.67,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_recipe_mill",
+      "label": "Recipe mill",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 424,
+      "bounds": [
+        [
+          -0.825,
+          0.0,
+          -0.855
+        ],
+        [
+          0.825,
+          2.1950000000000003,
+          1.18
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Millstone",
+          "pivot": [
+            0,
+            1.43,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In_0",
+          "position": [
+            -0.84,
+            1.13,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_In_1",
+          "position": [
+            0.84,
+            1.13,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_In_2",
+          "position": [
+            0,
+            1.13,
+            -0.74
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_In_3",
+          "position": [
+            0,
+            1.7,
+            -0.87
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            1.06,
+            1.18
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic",
+          "position": [
+            0.86,
+            0.65,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Table",
+          "type": "box",
+          "size": [
+            1.65,
+            1.15,
+            1.4
+          ],
+          "center": [
+            0,
+            0.575,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    },
+    {
+      "id": "vf_quarry",
+      "label": "Bedrock quarry",
+      "units": "metres",
+      "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+      "triangles": 588,
+      "bounds": [
+        [
+          -1.1,
+          0.0,
+          -1.0
+        ],
+        [
+          1.1,
+          2.6750000000000003,
+          1.35
+        ]
+      ],
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": null
+        },
+        {
+          "name": "Drill",
+          "pivot": [
+            0,
+            1.25,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.49,
+            1.35
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic",
+          "position": [
+            1.05,
+            2.35,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "suggested_colliders": [
+        {
+          "name": "Side-0.8",
+          "type": "box",
+          "size": [
+            0.26,
+            2.65,
+            1.55
+          ],
+          "center": [
+            -0.8,
+            1.325,
+            0
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "Side0.8",
+          "type": "box",
+          "size": [
+            0.26,
+            2.65,
+            1.55
+          ],
+          "center": [
+            0.8,
+            1.325,
+            0
+          ],
+          "parent": "Static"
+        },
+        {
+          "name": "Base",
+          "type": "box",
+          "size": [
+            2.2,
+            0.22,
+            2
+          ],
+          "center": [
+            0,
+            0.11,
+            0
+          ],
+          "parent": "Static"
+        }
+      ],
+      "status": "prototype; not a Unity prefab or game-tested asset"
+    }
+  ]
+}

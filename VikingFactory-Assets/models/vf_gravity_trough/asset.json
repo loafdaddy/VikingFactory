@@ -1,0 +1,78 @@
+{
+  "id": "vf_gravity_trough",
+  "label": "Gravity trough",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 84,
+  "bounds": [
+    [
+      -0.48,
+      0.0,
+      -1.0314550023252762
+    ],
+    [
+      0.48,
+      1.109453369865561,
+      1.0314550023252762
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        0.94,
+        1
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.53,
+        -1
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_out"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Body",
+      "type": "box",
+      "size": [
+        0.96,
+        0.55,
+        2.06
+      ],
+      "center": [
+        0,
+        0.67,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

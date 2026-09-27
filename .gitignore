@@ -1,0 +1,34 @@
+# Build outputs
+bin/
+obj/
+artifacts/
+TestResults/
+
+# Editor and IDE caches
+Library/
+Temp/
+Logs/
+UserSettings/
+.vs/
+.idea/
+*.user
+*.suo
+*~
+.DS_Store
+
+# Local game path. Copy Environment.props.example and keep the real file here.
+Environment.props
+publicized/
+
+# Compiled assemblies. Never commit game or plugin DLLs from a local build.
+*.dll
+*.pdb
+
+# Scratch from an unlicensed Unity editor attempt. Not a project to publish.
+VikingFactory-Unity/
+
+# One-off audit output. Regenerate with expansion/source/audit_blender.py.
+VikingFactory-Assets/expansion/blender-audit.json
+
+# Agent handoff for the prototype pack. The models and scripts stay tracked.
+VikingFactory-Assets/CURSOR-HANDOFF.md

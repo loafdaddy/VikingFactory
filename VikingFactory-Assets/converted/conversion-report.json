@@ -1,0 +1,74 @@
+[
+  {
+    "asset": "vf_catch_basket",
+    "meshes": 1,
+    "blend": "vf_catch_basket.blend",
+    "fbx": "vf_catch_basket.fbx"
+  },
+  {
+    "asset": "vf_cog",
+    "meshes": 2,
+    "blend": "vf_cog.blend",
+    "fbx": "vf_cog.fbx"
+  },
+  {
+    "asset": "vf_conveyor_2m",
+    "meshes": 4,
+    "blend": "vf_conveyor_2m.blend",
+    "fbx": "vf_conveyor_2m.fbx"
+  },
+  {
+    "asset": "vf_conveyor_corner",
+    "meshes": 1,
+    "blend": "vf_conveyor_corner.blend",
+    "fbx": "vf_conveyor_corner.fbx"
+  },
+  {
+    "asset": "vf_feeder",
+    "meshes": 2,
+    "blend": "vf_feeder.blend",
+    "fbx": "vf_feeder.fbx"
+  },
+  {
+    "asset": "vf_gravity_trough",
+    "meshes": 1,
+    "blend": "vf_gravity_trough.blend",
+    "fbx": "vf_gravity_trough.fbx"
+  },
+  {
+    "asset": "vf_hand_crank",
+    "meshes": 2,
+    "blend": "vf_hand_crank.blend",
+    "fbx": "vf_hand_crank.fbx"
+  },
+  {
+    "asset": "vf_quarry",
+    "meshes": 2,
+    "blend": "vf_quarry.blend",
+    "fbx": "vf_quarry.fbx"
+  },
+  {
+    "asset": "vf_recipe_mill",
+    "meshes": 2,
+    "blend": "vf_recipe_mill.blend",
+    "fbx": "vf_recipe_mill.fbx"
+  },
+  {
+    "asset": "vf_shaft_2m",
+    "meshes": 2,
+    "blend": "vf_shaft_2m.blend",
+    "fbx": "vf_shaft_2m.fbx"
+  },
+  {
+    "asset": "vf_splitter",
+    "meshes": 2,
+    "blend": "vf_splitter.blend",
+    "fbx": "vf_splitter.fbx"
+  },
+  {
+    "asset": "vf_water_wheel",
+    "meshes": 2,
+    "blend": "vf_water_wheel.blend",
+    "fbx": "vf_water_wheel.fbx"
+  }
+]

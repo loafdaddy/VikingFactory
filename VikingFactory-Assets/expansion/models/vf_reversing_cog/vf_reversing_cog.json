@@ -1,0 +1,159 @@
+{
+  "id": "vf_reversing_cog",
+  "title": "Reversing cog pair",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.4,
+      0.0,
+      -0.75
+    ],
+    [
+      0.4345,
+      0.86,
+      0.75
+    ]
+  ],
+  "triangles": 1236,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0,
+        0.5,
+        -0.36
+      ],
+      "rotation_axis": "x"
+    },
+    {
+      "name": "Rotor_Output",
+      "pivot": [
+        0,
+        0.5,
+        0.36
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -0.37,
+        0.5,
+        -0.36
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Kinetic_Out",
+      "position": [
+        0.37,
+        0.5,
+        0.36
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        0.8,
+        0.12,
+        1.5
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.25,
+        0.24,
+        -0.36
+      ],
+      "size": [
+        0.12,
+        0.48,
+        0.12
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.25,
+        0.24,
+        -0.36
+      ],
+      "size": [
+        0.12,
+        0.48,
+        0.12
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.25,
+        0.24,
+        0.36
+      ],
+      "size": [
+        0.12,
+        0.48,
+        0.12
+      ]
+    },
+    {
+      "name": "Box_4",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.25,
+        0.24,
+        0.36
+      ],
+      "size": [
+        0.12,
+        0.48,
+        0.12
+      ]
+    }
+  ],
+  "notes": [
+    "Two meshing external gears; Rotor_Output must run at the opposite angular velocity. Fixed timber chevrons indicate opposing rotation."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

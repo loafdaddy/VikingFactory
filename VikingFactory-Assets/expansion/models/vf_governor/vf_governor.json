@@ -1,0 +1,118 @@
+{
+  "id": "vf_governor",
+  "title": "Centrifugal governor",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.4,
+      0.0,
+      -0.35
+    ],
+    [
+      0.4,
+      0.965,
+      0.35
+    ]
+  ],
+  "triangles": 360,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0,
+        0.22,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        0,
+        0.15,
+        -0.36
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Interact",
+      "position": [
+        0.37,
+        0.5,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "service"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        0.7,
+        0.12,
+        0.7
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.28,
+        0.41,
+        0
+      ],
+      "size": [
+        0.08,
+        0.82,
+        0.08
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.28,
+        0.41,
+        0
+      ],
+      "size": [
+        0.08,
+        0.82,
+        0.08
+      ]
+    }
+  ],
+  "notes": [],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

@@ -1,0 +1,54 @@
+{
+  "status": "References were chosen from the headless MaterialProbe output at BepInEx/config/VikingFactory/materials.json. They are cloned at runtime. This file does not contain Valheim textures.",
+  "slots": {
+    "Oak": {
+      "sourceMaterial": "woodwall_worn",
+      "shader": "Custom/Piece",
+      "examplePath": "wood_wall_roof_45_upsidedown/GameObject/Broken/high/plank (4)",
+      "keywords": ["_ADDRAIN_ON", "_ADDSNOW_ON", "_NORMALMAP", "_PARALLAXMAP", "_VALUENOISEVERTEX_ON"],
+      "textures": {
+        "_MainTex": "Planks5c_worn",
+        "_BumpMap": "Planks5c_low_n",
+        "_NoiseTex": "Noise"
+      },
+      "cloneOverride": "All texture scales on the clone are set to (1, 1). The source _MainTex scale [-0.56, 0.12] belongs to that wall mesh and is not copied."
+    },
+    "OakLight": {
+      "sourceMaterial": "woodwall_worn",
+      "note": "Same timber clone as Oak. The GLB base colour is only the development fallback."
+    },
+    "Iron": {
+      "sourceMaterial": "Ironbeam_mat",
+      "shader": "Custom/Piece",
+      "examplePath": "woodiron_beam/New/med",
+      "keywords": ["_ADDRAIN_ON", "_ADDSNOW_ON", "_METALLICGLOSSMAP", "_NORMALMAP"],
+      "textures": {
+        "_MainTex": "Ironbeam_d",
+        "_BumpMap": "Ironbeam_n",
+        "_MetallicTex": "Ironbeam_m",
+        "_NoiseTex": "Noise"
+      }
+    },
+    "Bronze": {
+      "sourceMaterial": "PotsNpans_mat",
+      "shader": "Custom/Piece",
+      "examplePath": "cauldron_ext4_pots",
+      "note": "Workshop cookware metal. atgeir_bronze is a weapon atlas and is not used."
+    },
+    "Hide": {
+      "sourceMaterial": "Tanningrack_mat",
+      "shader": "Custom/Piece",
+      "examplePath": "prop_piece_workbench_ext2",
+      "note": "Not used by the water wheel. Recorded for later belt work."
+    },
+    "Stone": {
+      "sourceMaterial": "stonekit_floor_interior",
+      "shader": "Custom/StaticRock",
+      "examplePath": "portal/New/StoneKit_floor (1)",
+      "textures": {
+        "_MainTex": "stonefloor_d",
+        "_BumpMap": "stonefloor_n"
+      }
+    }
+  }
+}

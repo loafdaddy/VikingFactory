@@ -1,0 +1,157 @@
+{
+  "id": "vf_farm_gantry",
+  "title": "Twin-head field gantry",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -2.11,
+      0.0,
+      -2.0
+    ],
+    [
+      2.11,
+      2.19,
+      2.0
+    ]
+  ],
+  "triangles": 492,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Carriage",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": "z",
+      "motion": "slide",
+      "travel": 3.0
+    },
+    {
+      "name": "Tool_Head_0",
+      "pivot": [
+        -0.9,
+        1.08,
+        0
+      ],
+      "rotation_axis": "y",
+      "motion": "slide",
+      "follow_group": "Carriage"
+    },
+    {
+      "name": "Tool_Head_1",
+      "pivot": [
+        0.9,
+        1.08,
+        0
+      ],
+      "rotation_axis": "y",
+      "motion": "slide",
+      "follow_group": "Carriage"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -2.2,
+        0.5,
+        -2
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        0.6,
+        -2
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.6,
+        2
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Ground_Probe",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        0
+      ],
+      "size": [
+        0.22,
+        0.2,
+        4.0
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        0
+      ],
+      "size": [
+        0.22,
+        0.2,
+        4.0
+      ]
+    }
+  ],
+  "notes": [
+    "Carriage travels along Z. Root-level tool heads follow Carriage translation and retain independent strokes. No collision slab through growing area."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

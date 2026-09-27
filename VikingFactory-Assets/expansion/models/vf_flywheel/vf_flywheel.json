@@ -1,0 +1,118 @@
+{
+  "id": "vf_flywheel",
+  "title": "Heavy timber flywheel",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.425,
+      0.0,
+      -0.5
+    ],
+    [
+      0.425,
+      0.97,
+      0.5
+    ]
+  ],
+  "triangles": 816,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0,
+        0.5,
+        0
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_Left",
+      "position": [
+        -0.4,
+        0.5,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Kinetic_Right",
+      "position": [
+        0.4,
+        0.5,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        0.85,
+        0.12,
+        1.0
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.3,
+        0.24,
+        0
+      ],
+      "size": [
+        0.17,
+        0.48,
+        0.17
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.3,
+        0.24,
+        0
+      ],
+      "size": [
+        0.17,
+        0.48,
+        0.17
+      ]
+    }
+  ],
+  "notes": [],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

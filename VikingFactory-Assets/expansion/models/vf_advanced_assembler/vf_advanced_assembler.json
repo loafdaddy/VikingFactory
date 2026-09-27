@@ -1,0 +1,188 @@
+{
+  "id": "vf_advanced_assembler",
+  "title": "Roofed multi-tool assembler",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -1.3023850274571345,
+      0.0,
+      -0.975
+    ],
+    [
+      1.3023850274571345,
+      2.7657292153715023,
+      0.975
+    ]
+  ],
+  "triangles": 460,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tool_Head_0",
+      "pivot": [
+        -0.65,
+        1.6,
+        0
+      ],
+      "rotation_axis": "y",
+      "motion": "slide",
+      "travel": 0.22
+    },
+    {
+      "name": "Tool_Head_1",
+      "pivot": [
+        0,
+        1.6,
+        0
+      ],
+      "rotation_axis": "y",
+      "motion": "slide",
+      "travel": 0.22
+    },
+    {
+      "name": "Tool_Head_2",
+      "pivot": [
+        0.65,
+        1.6,
+        0
+      ],
+      "rotation_axis": "y",
+      "motion": "slide",
+      "travel": 0.22
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        1.05,
+        -0.88
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        1.05,
+        0.88
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -1.2,
+        0.5,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.05,
+        1.15,
+        -0.75
+      ],
+      "size": [
+        0.16,
+        2.3,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.05,
+        1.15,
+        0.75
+      ],
+      "size": [
+        0.16,
+        2.3,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.05,
+        1.15,
+        -0.75
+      ],
+      "size": [
+        0.16,
+        2.3,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.05,
+        1.15,
+        0.75
+      ],
+      "size": [
+        0.16,
+        2.3,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_4",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.88,
+        0
+      ],
+      "size": [
+        2.25,
+        0.16,
+        1.65
+      ]
+    }
+  ],
+  "notes": [
+    "Roofed table with three separate tool heads. Roof remains static."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

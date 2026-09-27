@@ -1,0 +1,646 @@
+{
+  "id": "vf_coppice_bed",
+  "title": "Coppice nursery bed",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -2.135,
+      0.0,
+      -2.18
+    ],
+    [
+      2.135,
+      1.0,
+      2.135
+    ]
+  ],
+  "triangles": 676,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Gate",
+      "pivot": [
+        -0.5,
+        0.55,
+        -2.08
+      ],
+      "rotation_axis": "y",
+      "motion": "swing"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Interact",
+      "position": [
+        0.48,
+        0.6,
+        -2.16
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "service"
+    },
+    {
+      "name": "Ground_Probe",
+      "position": [
+        0,
+        0.03,
+        0
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.85,
+        0.1,
+        -2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.85,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4388888888888889,
+        0.1,
+        -2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4388888888888889,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_4",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.0277777777777777,
+        0.1,
+        -2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_5",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.0277777777777777,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_7",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.6166666666666667,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_9",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.2055555555555555,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_11",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.2055555555555557,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_13",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.6166666666666667,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_14",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.0277777777777781,
+        0.1,
+        -2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_15",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.0277777777777781,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_16",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.438888888888889,
+        0.1,
+        -2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_17",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.438888888888889,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_18",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.85,
+        0.1,
+        -2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_19",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.85,
+        0.1,
+        2.0
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_20",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        -1.65
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_21",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        -1.65
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_22",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        -1.2374999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_23",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        -1.2374999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_24",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        -0.825
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_25",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        -0.825
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_26",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        -0.4125000000000001
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_27",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        -0.4125000000000001
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_28",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        0.0
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_29",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        0.0
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_30",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        0.4125000000000001
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_31",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        0.4125000000000001
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_32",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        0.8249999999999997
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_33",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        0.8249999999999997
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_34",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        1.2374999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_35",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        1.2374999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_36",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.1,
+        1.65
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_37",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.1,
+        1.65
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_38",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.36,
+        -2.0
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "name": "Box_39",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -2.0,
+        0.36,
+        2.0
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "name": "Box_40",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.36,
+        -2.0
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "name": "Box_41",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        2.0,
+        0.36,
+        2.0
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    }
+  ],
+  "notes": [
+    "Open bed interior: actual terrain remains visible. No floor slab or central collider; vegetation is supplied by gameplay."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

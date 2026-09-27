@@ -1,0 +1,119 @@
+{
+  "id": "vf_conveyor_2m",
+  "label": "Timber conveyor \u00b7 2 m",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 432,
+  "bounds": [
+    [
+      -0.585,
+      0.0,
+      -1.0
+    ],
+    [
+      0.585,
+      0.95,
+      1.0
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Belt_Surface",
+      "pivot": [
+        0,
+        0.77,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Roller_-0.86",
+      "pivot": [
+        0,
+        0.7,
+        -0.86
+      ],
+      "rotation_axis": "x"
+    },
+    {
+      "name": "Roller_0.86",
+      "pivot": [
+        0,
+        0.7,
+        0.86
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        0.82,
+        -1
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.82,
+        1
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic",
+      "position": [
+        0.58,
+        0.7,
+        -0.86
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Deck",
+      "type": "box",
+      "size": [
+        1.1,
+        0.25,
+        2
+      ],
+      "center": [
+        0,
+        0.73,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

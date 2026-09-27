@@ -1,0 +1,502 @@
+{
+  "id": "vf_forage_bed",
+  "title": "Wild forage bed",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -1.535,
+      0.0,
+      -1.535
+    ],
+    [
+      1.535,
+      0.845,
+      1.535
+    ]
+  ],
+  "triangles": 472,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "Ground_Probe",
+      "position": [
+        0,
+        0.03,
+        0
+      ],
+      "forward": [
+        0,
+        -1,
+        0
+      ],
+      "kind": "environment"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.25,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.25,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.8333333333333333,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.8333333333333333,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_4",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.41666666666666663,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_5",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.41666666666666663,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_6",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.0,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_7",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.0,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_8",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.41666666666666674,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_9",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.41666666666666674,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_10",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.8333333333333335,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_11",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.8333333333333335,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_12",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.25,
+        0.1,
+        -1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_13",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.25,
+        0.1,
+        1.4
+      ],
+      "size": [
+        0.36,
+        0.2,
+        0.27
+      ]
+    },
+    {
+      "name": "Box_14",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.1,
+        -1.0499999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_15",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.1,
+        -1.0499999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_16",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.1,
+        -0.6299999999999999
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_17",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.1,
+        -0.6299999999999999
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_18",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.1,
+        -0.20999999999999996
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_19",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.1,
+        -0.20999999999999996
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_20",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.1,
+        0.20999999999999996
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_21",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.1,
+        0.20999999999999996
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_22",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.1,
+        0.6299999999999999
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_23",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.1,
+        0.6299999999999999
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_24",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.1,
+        1.0499999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_25",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.1,
+        1.0499999999999998
+      ],
+      "size": [
+        0.27,
+        0.2,
+        0.36
+      ]
+    },
+    {
+      "name": "Box_26",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.36,
+        -1.4
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "name": "Box_27",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -1.4,
+        0.36,
+        1.4
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "name": "Box_28",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.36,
+        -1.4
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "name": "Box_29",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        1.4,
+        0.36,
+        1.4
+      ],
+      "size": [
+        0.09,
+        0.72,
+        0.09
+      ]
+    }
+  ],
+  "notes": [
+    "Open bed interior: actual terrain remains visible. No floor slab or central collider; vegetation is supplied by gameplay."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

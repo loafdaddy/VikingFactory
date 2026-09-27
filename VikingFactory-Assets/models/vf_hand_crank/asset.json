@@ -1,0 +1,87 @@
+{
+  "id": "vf_hand_crank",
+  "label": "Hand crank",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 228,
+  "bounds": [
+    [
+      -0.375,
+      0.0,
+      -0.325
+    ],
+    [
+      0.6900000000000001,
+      1.5050000000000001,
+      0.325
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Crank",
+      "pivot": [
+        0,
+        1.05,
+        0
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_Out",
+      "position": [
+        -0.375,
+        1.05,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Interact",
+      "position": [
+        0.72,
+        1.43,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "service"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Stand",
+      "type": "box",
+      "size": [
+        0.7,
+        1.1,
+        0.65
+      ],
+      "center": [
+        0,
+        0.55,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

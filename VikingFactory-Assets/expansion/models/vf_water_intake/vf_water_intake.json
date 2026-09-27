@@ -1,0 +1,81 @@
+{
+  "id": "vf_water_intake",
+  "title": "Short water intake",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.325,
+      0.0,
+      -0.685
+    ],
+    [
+      0.325,
+      0.47741376002574887,
+      0.65
+    ]
+  ],
+  "triangles": 288,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "Water_Probe",
+      "position": [
+        0,
+        0.33,
+        -0.73
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "environment"
+    },
+    {
+      "name": "Interact",
+      "position": [
+        0,
+        0.33,
+        0.73
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "water_connection"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        0.65,
+        0.12,
+        1.3
+      ]
+    }
+  ],
+  "notes": [
+    "Short open pipe with bronze collars; Interact marks boiler-side coupling."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

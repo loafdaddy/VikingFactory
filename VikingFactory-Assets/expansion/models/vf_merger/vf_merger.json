@@ -1,0 +1,252 @@
+{
+  "id": "vf_merger",
+  "title": "Three-mouth merger",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.825,
+      0.0,
+      -0.825
+    ],
+    [
+      0.825,
+      0.9824999999999999,
+      0.825
+    ]
+  ],
+  "triangles": 348,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Selector",
+      "pivot": [
+        0,
+        0.8,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        0.8,
+        -0.85
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_In_Left",
+      "position": [
+        -0.85,
+        0.8,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_In_Right",
+      "position": [
+        0.85,
+        0.8,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        0.8,
+        0.85
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic_In",
+      "position": [
+        0.85,
+        0.5,
+        0.65
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.68,
+        0.305,
+        -0.68
+      ],
+      "size": [
+        0.16,
+        0.61,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.68,
+        0.305,
+        0.68
+      ],
+      "size": [
+        0.16,
+        0.61,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.68,
+        0.305,
+        -0.68
+      ],
+      "size": [
+        0.16,
+        0.61,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.68,
+        0.305,
+        0.68
+      ],
+      "size": [
+        0.16,
+        0.61,
+        0.16
+      ]
+    },
+    {
+      "name": "Box_4",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.65,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        1.65
+      ]
+    },
+    {
+      "name": "Box_5",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.64,
+        0.83,
+        -0.64
+      ],
+      "size": [
+        0.23,
+        0.24,
+        0.23
+      ]
+    },
+    {
+      "name": "Box_6",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.64,
+        0.83,
+        -0.64
+      ],
+      "size": [
+        0.23,
+        0.24,
+        0.23
+      ]
+    },
+    {
+      "name": "Box_7",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.64,
+        0.83,
+        0.64
+      ],
+      "size": [
+        0.23,
+        0.24,
+        0.23
+      ]
+    },
+    {
+      "name": "Box_8",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.64,
+        0.83,
+        0.64
+      ],
+      "size": [
+        0.23,
+        0.24,
+        0.23
+      ]
+    }
+  ],
+  "notes": [
+    "All four mouths remain open; selector is a low central bronze guide."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

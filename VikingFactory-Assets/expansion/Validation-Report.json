@@ -1,0 +1,493 @@
+{
+  "models": 26,
+  "status": "pass",
+  "total_triangles": 17052,
+  "maximum_triangles": 2200,
+  "checks": [
+    "requested IDs and combined scene roots",
+    "GLB chunk layout and buffer bounds",
+    "no textures/images/compression extensions",
+    "material name allowlist",
+    "root and Static empty-node hierarchy",
+    "identity scales, root-level markers with position only",
+    "moving metadata, static box collider metadata",
+    "finite geometry, nondegenerate triangles and normalized matching normals",
+    "per-piece triangle cap and feet at y=0"
+  ],
+  "not_tested": [
+    "official Khronos validator",
+    "Blender/Unity import",
+    "native material lookup",
+    "game placement, simulation or multiplayer"
+  ],
+  "assets": [
+    {
+      "id": "vf_rope_4m",
+      "triangles": 2200,
+      "bounds": [
+        [
+          -0.51,
+          0.0,
+          -2.003505319190101
+        ],
+        [
+          0.11250000000000002,
+          0.72,
+          2.003505319190101
+        ]
+      ],
+      "status": "pass",
+      "sha256": "ab46c95d4647eb65aefdc62957bf7804711e6835535101a50519c2472b9233a8"
+    },
+    {
+      "id": "vf_reversing_cog",
+      "triangles": 1236,
+      "bounds": [
+        [
+          -0.4,
+          0.0,
+          -0.75
+        ],
+        [
+          0.4345,
+          0.86,
+          0.75
+        ]
+      ],
+      "status": "pass",
+      "sha256": "b26e8c5e3c67c60349f3bae1c1b205c8de4b30fc2e773b4a3181160cd1df32d6"
+    },
+    {
+      "id": "vf_merger",
+      "triangles": 348,
+      "bounds": [
+        [
+          -0.825,
+          0.0,
+          -0.825
+        ],
+        [
+          0.825,
+          0.9824999999999999,
+          0.825
+        ]
+      ],
+      "status": "pass",
+      "sha256": "3f2a40ebfc5b3cc13f44377fc36b9a1b4a9ad55706d171142b335011b20fb1cf"
+    },
+    {
+      "id": "vf_iron_belt_2m",
+      "triangles": 1116,
+      "bounds": [
+        [
+          -0.5700000000000001,
+          0.0,
+          -1.0
+        ],
+        [
+          0.5700000000000001,
+          0.915,
+          1.0
+        ]
+      ],
+      "status": "pass",
+      "sha256": "5331bb1f35746800131575c7f408292a236305ada56378b35158096ecbe690b8"
+    },
+    {
+      "id": "vf_iron_feeder",
+      "triangles": 228,
+      "bounds": [
+        [
+          -0.45,
+          0.0,
+          -0.525
+        ],
+        [
+          0.45,
+          1.38,
+          1.1700000000000002
+        ]
+      ],
+      "status": "pass",
+      "sha256": "8f5ff63e79d89e62f0c36baea0b1d1e7da0b745f5ca65b7738d50872adaf3b59"
+    },
+    {
+      "id": "vf_timber_saw",
+      "triangles": 396,
+      "bounds": [
+        [
+          -0.83,
+          0.0,
+          -0.85
+        ],
+        [
+          0.83,
+          2.23,
+          0.85
+        ]
+      ],
+      "status": "pass",
+      "sha256": "2b2bad313aabf8cf4eda7b752a0dd596c0d1c8b1587f2546c65b02901d455d11"
+    },
+    {
+      "id": "vf_coppice_bed",
+      "triangles": 676,
+      "bounds": [
+        [
+          -2.135,
+          0.0,
+          -2.18
+        ],
+        [
+          2.135,
+          1.0,
+          2.135
+        ]
+      ],
+      "status": "pass",
+      "sha256": "d097dd041d86fa720cf9529d3bdea0c04e9212e681b98a377a0dbf691b049b09"
+    },
+    {
+      "id": "vf_planter",
+      "triangles": 504,
+      "bounds": [
+        [
+          -1.33,
+          0.0,
+          -1.5
+        ],
+        [
+          1.33,
+          1.33,
+          1.5
+        ]
+      ],
+      "status": "pass",
+      "sha256": "fa8b23697ee26b404ff55359aabe6eddf9cecd7c139142f40be2c132b22869e3"
+    },
+    {
+      "id": "vf_harvester",
+      "triangles": 360,
+      "bounds": [
+        [
+          -1.33,
+          0.0,
+          -1.5
+        ],
+        [
+          1.33,
+          1.33,
+          1.5
+        ]
+      ],
+      "status": "pass",
+      "sha256": "bdf5860f19f226577cfe2eed8c0feddefbb0aa1ef773b7bcc3523ef4e73dff63"
+    },
+    {
+      "id": "vf_steam_engine",
+      "triangles": 1152,
+      "bounds": [
+        [
+          -1.0,
+          0.0,
+          -1.075
+        ],
+        [
+          1.08,
+          2.69,
+          1.16
+        ]
+      ],
+      "status": "pass",
+      "sha256": "f74fe462d29cc17cbc37e7a33512e00a97c4950c811e495376aa75c9def01064"
+    },
+    {
+      "id": "vf_water_intake",
+      "triangles": 288,
+      "bounds": [
+        [
+          -0.325,
+          0.0,
+          -0.685
+        ],
+        [
+          0.325,
+          0.47741376002574887,
+          0.65
+        ]
+      ],
+      "status": "pass",
+      "sha256": "f0275e8f69176efa13c75155ef9fdf1d2daa566377489034687169764f0563a8"
+    },
+    {
+      "id": "vf_sail_wheel",
+      "triangles": 408,
+      "bounds": [
+        [
+          -1.9,
+          0.0,
+          -0.725
+        ],
+        [
+          1.9,
+          4.3,
+          1.74
+        ]
+      ],
+      "status": "pass",
+      "sha256": "59bde6a529fbf13341c6a055b606c1d35c54716565a3eb5ad8fa9fef547e7c9a"
+    },
+    {
+      "id": "vf_flywheel",
+      "triangles": 816,
+      "bounds": [
+        [
+          -0.425,
+          0.0,
+          -0.5
+        ],
+        [
+          0.425,
+          0.97,
+          0.5
+        ]
+      ],
+      "status": "pass",
+      "sha256": "53c7a0959211de628cea6115eac60bac6d91109f1f3bd7b13cfe349764a6cf5a"
+    },
+    {
+      "id": "vf_governor",
+      "triangles": 360,
+      "bounds": [
+        [
+          -0.4,
+          0.0,
+          -0.35
+        ],
+        [
+          0.4,
+          0.965,
+          0.35
+        ]
+      ],
+      "status": "pass",
+      "sha256": "e7dd65cc6b891768e983dd295a96734e4a9cde5b83655cd57e2e5441b2164997"
+    },
+    {
+      "id": "vf_finite_mining_head",
+      "triangles": 568,
+      "bounds": [
+        [
+          -0.8,
+          0.0,
+          -0.865
+        ],
+        [
+          0.8,
+          2.2,
+          1.3
+        ]
+      ],
+      "status": "pass",
+      "sha256": "53a8d5e498282415d2b1b4ebb094d1b93a619555719a4bcc672c97ef1df8369e"
+    },
+    {
+      "id": "vf_deep_extractor",
+      "triangles": 640,
+      "bounds": [
+        [
+          -1.05,
+          0.0,
+          -1.135
+        ],
+        [
+          1.05,
+          3.4,
+          1.55
+        ]
+      ],
+      "status": "pass",
+      "sha256": "93b4861a44e9aa5c99543cff82e563f548084bf59faa726549cc2270bef80914"
+    },
+    {
+      "id": "vf_advanced_assembler",
+      "triangles": 460,
+      "bounds": [
+        [
+          -1.3023850274571345,
+          0.0,
+          -0.975
+        ],
+        [
+          1.3023850274571345,
+          2.7657292153715023,
+          0.975
+        ]
+      ],
+      "status": "pass",
+      "sha256": "66eb37f91600e71bc256574fd253578ae3a8803864b3fd25243677dfa072630d"
+    },
+    {
+      "id": "vf_farm_gantry",
+      "triangles": 492,
+      "bounds": [
+        [
+          -2.11,
+          0.0,
+          -2.0
+        ],
+        [
+          2.11,
+          2.19,
+          2.0
+        ]
+      ],
+      "status": "pass",
+      "sha256": "285b04e5e4d746dc9b5beeafc6a6ac47bd86a2de6f1687a00a5e369f852b3709"
+    },
+    {
+      "id": "vf_eitr_motor",
+      "triangles": 568,
+      "bounds": [
+        [
+          -0.75,
+          0.0,
+          -0.65
+        ],
+        [
+          0.75,
+          1.19,
+          0.65
+        ]
+      ],
+      "status": "pass",
+      "sha256": "014cdf13e26aa918341e879a9237e3f8cf6137e99d73a81257afaed01e42809c"
+    },
+    {
+      "id": "vf_cooking_tender",
+      "triangles": 132,
+      "bounds": [
+        [
+          -0.325,
+          0.0,
+          -0.325
+        ],
+        [
+          0.325,
+          0.9072511148213589,
+          1.1800000000000002
+        ]
+      ],
+      "status": "pass",
+      "sha256": "62db382c79479c780ba8d160c455e73e97be132a904633cc64caf71fb555265b"
+    },
+    {
+      "id": "vf_oven_extension",
+      "triangles": 140,
+      "bounds": [
+        [
+          -0.975,
+          0.0,
+          -0.475
+        ],
+        [
+          0.975,
+          2.4850000000000003,
+          0.475
+        ]
+      ],
+      "status": "pass",
+      "sha256": "0cb354da079d37725dea2cb23c5117c07b152e83a37a7ce3b62bfb2be2b8aa89"
+    },
+    {
+      "id": "vf_livestock_feed_gate",
+      "triangles": 264,
+      "bounds": [
+        [
+          -0.915,
+          0.0,
+          -0.915
+        ],
+        [
+          0.915,
+          1.27,
+          0.11499999999999999
+        ]
+      ],
+      "status": "pass",
+      "sha256": "cad943b89e064e8815d4d4f2bfffd1e02db254096d16eb85980ad7def4c85a23"
+    },
+    {
+      "id": "vf_livestock_culling_gate",
+      "triangles": 348,
+      "bounds": [
+        [
+          -1.5150000000000001,
+          0.0,
+          -0.11499999999999999
+        ],
+        [
+          1.5150000000000001,
+          1.27,
+          1.34
+        ]
+      ],
+      "status": "pass",
+      "sha256": "170e08e0189100353da610d6ff77dd02345763afabbea06797d9d243cc896994"
+    },
+    {
+      "id": "vf_fishing_winch",
+      "triangles": 1620,
+      "bounds": [
+        [
+          -0.525,
+          0.0,
+          -0.65
+        ],
+        [
+          0.525,
+          1.2000000000000002,
+          1.701358645409111
+        ]
+      ],
+      "status": "pass",
+      "sha256": "d5cf1f24f4c2d4999e7d04c6a350bdb2acd38ac7330f8882e8ac9a58f7cb1b3f"
+    },
+    {
+      "id": "vf_reinforced_steam_engine",
+      "triangles": 1260,
+      "bounds": [
+        [
+          -1.25,
+          0.0,
+          -1.3
+        ],
+        [
+          1.25,
+          2.69,
+          1.3
+        ]
+      ],
+      "status": "pass",
+      "sha256": "9eff6087ddb44a233ac2337b8fcdc2743385dff1e3a07eefb5e161870f079d60"
+    },
+    {
+      "id": "vf_forage_bed",
+      "triangles": 472,
+      "bounds": [
+        [
+          -1.535,
+          0.0,
+          -1.535
+        ],
+        [
+          1.535,
+          0.845,
+          1.535
+        ]
+      ],
+      "status": "pass",
+      "sha256": "dc5ac69d6144f91bafa99768731f1a9f757c6808becbb1a562115cb573f648ca"
+    }
+  ]
+}

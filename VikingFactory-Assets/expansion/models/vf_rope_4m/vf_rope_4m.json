@@ -1,0 +1,169 @@
+{
+  "id": "vf_rope_4m",
+  "title": "Rope transmission \u00b7 4 m",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.51,
+      0.0,
+      -2.003505319190101
+    ],
+    [
+      0.11250000000000002,
+      0.72,
+      2.003505319190101
+    ]
+  ],
+  "triangles": 2200,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0.04,
+        0.5,
+        -1.8
+      ],
+      "rotation_axis": "x"
+    },
+    {
+      "name": "Rotor_Output",
+      "pivot": [
+        0.04,
+        0.5,
+        1.8
+      ],
+      "rotation_axis": "x"
+    },
+    {
+      "name": "Belt_Surface",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": "x",
+      "scroll": "u"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -0.51,
+        0.5,
+        -1.8
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Kinetic_Out",
+      "position": [
+        -0.51,
+        0.5,
+        1.8
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Interact",
+      "position": [
+        -0.4,
+        0.7,
+        -1.8
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "service"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.2,
+        0.05,
+        -1.8
+      ],
+      "size": [
+        0.55,
+        0.1,
+        0.4
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.25,
+        0.36,
+        -1.8
+      ],
+      "size": [
+        0.15,
+        0.72,
+        0.15
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.2,
+        0.05,
+        1.8
+      ],
+      "size": [
+        0.55,
+        0.1,
+        0.4
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.25,
+        0.36,
+        1.8
+      ],
+      "size": [
+        0.15,
+        0.72,
+        0.15
+      ]
+    }
+  ],
+  "notes": [
+    "Nominal 4 m module; pulley centres 3.6 m apart. UV U follows the closed rope loop and advances by an integer at its seam.",
+    "Belt_Surface scrolls only; do not rotate its transform. Runtime scales/rebuilds sag for shorter spans."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

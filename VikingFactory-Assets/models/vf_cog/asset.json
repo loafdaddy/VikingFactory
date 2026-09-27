@@ -1,0 +1,87 @@
+{
+  "id": "vf_cog",
+  "label": "Bronze-braced cog",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 564,
+  "bounds": [
+    [
+      -0.45,
+      0.0,
+      -0.5741999999999999
+    ],
+    [
+      0.45,
+      1.2542,
+      0.5741999999999999
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0,
+        0.68,
+        0
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_In",
+      "position": [
+        -0.35,
+        0.68,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Kinetic_Out",
+      "position": [
+        0.35,
+        0.68,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Stand",
+      "type": "box",
+      "size": [
+        0.9,
+        0.65,
+        0.55
+      ],
+      "center": [
+        0,
+        0.325,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

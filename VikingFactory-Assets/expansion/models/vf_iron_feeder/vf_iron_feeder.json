@@ -1,0 +1,134 @@
+{
+  "id": "vf_iron_feeder",
+  "title": "Iron counterweighted feeder",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -0.45,
+      0.0,
+      -0.525
+    ],
+    [
+      0.45,
+      1.38,
+      1.1700000000000002
+    ]
+  ],
+  "triangles": 228,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Arm_Yaw",
+      "pivot": [
+        0,
+        0.94,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Pickup",
+      "position": [
+        0,
+        0.73,
+        1.08
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Dropoff",
+      "position": [
+        0,
+        0.73,
+        -1.08
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic_In",
+      "position": [
+        0.47,
+        0.5,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        0.9,
+        0.12,
+        0.9
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.25,
+        0.48,
+        0
+      ],
+      "size": [
+        0.12,
+        0.72,
+        0.32
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.25,
+        0.48,
+        0
+      ],
+      "size": [
+        0.12,
+        0.72,
+        0.32
+      ]
+    }
+  ],
+  "notes": [
+    "Twin forged arms, stone counterweight and iron clevis pedestal; not a recolour of the bronze feeder."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

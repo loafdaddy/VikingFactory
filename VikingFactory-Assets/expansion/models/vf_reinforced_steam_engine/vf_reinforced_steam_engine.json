@@ -1,0 +1,323 @@
+{
+  "id": "vf_reinforced_steam_engine",
+  "title": "Ashlands reinforced engine",
+  "material_profile": "valheim",
+  "coordinates": "right-handed, Y-up, metres; scale 1",
+  "front": "view toward origin from negative Z",
+  "bounds": [
+    [
+      -1.25,
+      0.0,
+      -1.3
+    ],
+    [
+      1.25,
+      2.69,
+      1.3
+    ]
+  ],
+  "triangles": 1260,
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Beam",
+      "pivot": [
+        0.8,
+        1.27,
+        0.05
+      ],
+      "rotation_axis": "x",
+      "motion": "swing"
+    },
+    {
+      "name": "Rotor",
+      "pivot": [
+        0.88,
+        0.5,
+        0.73
+      ],
+      "rotation_axis": "x"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Kinetic_Out",
+      "position": [
+        1.1,
+        0.5,
+        0.73
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    },
+    {
+      "name": "Water_Probe",
+      "position": [
+        -0.67,
+        0.4,
+        0.25
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "water_connection"
+    },
+    {
+      "name": "Smoke_Out",
+      "position": [
+        0,
+        2.72,
+        -0.2
+      ],
+      "forward": [
+        0,
+        1,
+        0
+      ],
+      "kind": "environment"
+    },
+    {
+      "name": "Item_In",
+      "position": [
+        0,
+        0.38,
+        -0.95
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "fuel"
+    },
+    {
+      "name": "Interact",
+      "position": [
+        0.65,
+        0.9,
+        -0.98
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "service"
+    }
+  ],
+  "box_colliders": [
+    {
+      "name": "Box_0",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.06,
+        0
+      ],
+      "size": [
+        2.5,
+        0.12,
+        2.6
+      ]
+    },
+    {
+      "name": "Box_1",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.48,
+        0.36,
+        -0.2
+      ],
+      "size": [
+        0.25,
+        0.48,
+        1.3
+      ]
+    },
+    {
+      "name": "Box_2",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.48,
+        0.36,
+        -0.2
+      ],
+      "size": [
+        0.25,
+        0.48,
+        1.3
+      ]
+    },
+    {
+      "name": "Box_3",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.7,
+        -0.2
+      ],
+      "size": [
+        1.22,
+        0.18,
+        1.3
+      ]
+    },
+    {
+      "name": "Box_4",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.36,
+        0.42
+      ],
+      "size": [
+        1.18,
+        0.48,
+        0.18
+      ]
+    },
+    {
+      "name": "Box_5",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.8,
+        0.55,
+        -0.7
+      ],
+      "size": [
+        0.17,
+        1.1,
+        0.17
+      ]
+    },
+    {
+      "name": "Box_6",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.8,
+        0.55,
+        0.8
+      ],
+      "size": [
+        0.17,
+        1.1,
+        0.17
+      ]
+    },
+    {
+      "name": "Box_7",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.8,
+        0.22,
+        0.73
+      ],
+      "size": [
+        0.2,
+        0.44,
+        0.2
+      ]
+    },
+    {
+      "name": "Box_8",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.66,
+        0.77,
+        -0.7
+      ],
+      "size": [
+        0.18,
+        1.3,
+        0.18
+      ]
+    },
+    {
+      "name": "Box_9",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.66,
+        0.77,
+        -0.7
+      ],
+      "size": [
+        0.18,
+        1.3,
+        0.18
+      ]
+    },
+    {
+      "name": "Box_10",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        -0.66,
+        0.77,
+        0.3
+      ],
+      "size": [
+        0.18,
+        1.3,
+        0.18
+      ]
+    },
+    {
+      "name": "Box_11",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0.66,
+        0.77,
+        0.3
+      ],
+      "size": [
+        0.18,
+        1.3,
+        0.18
+      ]
+    },
+    {
+      "name": "Box_12",
+      "parent": "Static",
+      "shape": "box",
+      "center": [
+        0,
+        0.2,
+        -1.05
+      ],
+      "size": [
+        1.8,
+        0.22,
+        0.26
+      ]
+    }
+  ],
+  "notes": [
+    "Stone and Iron remain the only stone/metal material names. Native grausten/flametal appearance requires asset-ID-aware runtime selection; no forbidden extra material names or textures are embedded.",
+    "Smoke outlet is above and separated from beam/rotor. Firebox opening is clear. Beam rocks; wheel rotates. No explosion, gauge or pressure dial geometry."
+  ],
+  "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded."
+}

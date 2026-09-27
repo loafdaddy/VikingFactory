@@ -1,0 +1,101 @@
+{
+  "id": "vf_feeder",
+  "label": "Bronze feeder",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 180,
+  "bounds": [
+    [
+      -0.4,
+      0.0,
+      -0.4
+    ],
+    [
+      0.4,
+      1.1993977506603168,
+      1.1400000000000001
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Arm_Yaw",
+      "pivot": [
+        0,
+        0.8,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Pickup",
+      "position": [
+        0,
+        0.68,
+        1.08
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Dropoff",
+      "position": [
+        0,
+        0.68,
+        -1.08
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic",
+      "position": [
+        0.4,
+        0.4,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Base",
+      "type": "box",
+      "size": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "center": [
+        0,
+        0.4,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

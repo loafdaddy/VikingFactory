@@ -1,0 +1,143 @@
+{
+  "id": "vf_recipe_mill",
+  "label": "Recipe mill",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 424,
+  "bounds": [
+    [
+      -0.825,
+      0.0,
+      -0.855
+    ],
+    [
+      0.825,
+      2.1950000000000003,
+      1.18
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    },
+    {
+      "name": "Millstone",
+      "pivot": [
+        0,
+        1.43,
+        0
+      ],
+      "rotation_axis": "y"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In_0",
+      "position": [
+        -0.84,
+        1.13,
+        0
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_In_1",
+      "position": [
+        0.84,
+        1.13,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_In_2",
+      "position": [
+        0,
+        1.13,
+        -0.74
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_In_3",
+      "position": [
+        0,
+        1.7,
+        -0.87
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        0,
+        1.06,
+        1.18
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic",
+      "position": [
+        0.86,
+        0.65,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Table",
+      "type": "box",
+      "size": [
+        1.65,
+        1.15,
+        1.4
+      ],
+      "center": [
+        0,
+        0.575,
+        0
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}

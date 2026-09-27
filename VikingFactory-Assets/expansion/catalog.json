@@ -1,0 +1,5291 @@
+{
+  "version": "1.0",
+  "assets": [
+    {
+      "id": "vf_rope_4m",
+      "title": "Rope transmission \u00b7 4 m",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.51,
+          0.0,
+          -2.003505319190101
+        ],
+        [
+          0.11250000000000002,
+          0.72,
+          2.003505319190101
+        ]
+      ],
+      "triangles": 2200,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0.04,
+            0.5,
+            -1.8
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Rotor_Output",
+          "pivot": [
+            0.04,
+            0.5,
+            1.8
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Belt_Surface",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": "x",
+          "scroll": "u"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -0.51,
+            0.5,
+            -1.8
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            -0.51,
+            0.5,
+            1.8
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            -0.4,
+            0.7,
+            -1.8
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.2,
+            0.05,
+            -1.8
+          ],
+          "size": [
+            0.55,
+            0.1,
+            0.4
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.25,
+            0.36,
+            -1.8
+          ],
+          "size": [
+            0.15,
+            0.72,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.2,
+            0.05,
+            1.8
+          ],
+          "size": [
+            0.55,
+            0.1,
+            0.4
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.25,
+            0.36,
+            1.8
+          ],
+          "size": [
+            0.15,
+            0.72,
+            0.15
+          ]
+        }
+      ],
+      "notes": [
+        "Nominal 4 m module; pulley centres 3.6 m apart. UV U follows the closed rope loop and advances by an integer at its seam.",
+        "Belt_Surface scrolls only; do not rotate its transform. Runtime scales/rebuilds sag for shorter spans."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "vf_reversing_cog",
+      "title": "Reversing cog pair",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.4,
+          0.0,
+          -0.75
+        ],
+        [
+          0.4345,
+          0.86,
+          0.75
+        ]
+      ],
+      "triangles": 1236,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.5,
+            -0.36
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Rotor_Output",
+          "pivot": [
+            0,
+            0.5,
+            0.36
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -0.37,
+            0.5,
+            -0.36
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            0.37,
+            0.5,
+            0.36
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.8,
+            0.12,
+            1.5
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.25,
+            0.24,
+            -0.36
+          ],
+          "size": [
+            0.12,
+            0.48,
+            0.12
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.25,
+            0.24,
+            -0.36
+          ],
+          "size": [
+            0.12,
+            0.48,
+            0.12
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.25,
+            0.24,
+            0.36
+          ],
+          "size": [
+            0.12,
+            0.48,
+            0.12
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.25,
+            0.24,
+            0.36
+          ],
+          "size": [
+            0.12,
+            0.48,
+            0.12
+          ]
+        }
+      ],
+      "notes": [
+        "Two meshing external gears; Rotor_Output must run at the opposite angular velocity. Fixed timber chevrons indicate opposing rotation."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "vf_merger",
+      "title": "Three-mouth merger",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.825,
+          0.0,
+          -0.825
+        ],
+        [
+          0.825,
+          0.9824999999999999,
+          0.825
+        ]
+      ],
+      "triangles": 348,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Selector",
+          "pivot": [
+            0,
+            0.8,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.8,
+            -0.85
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_In_Left",
+          "position": [
+            -0.85,
+            0.8,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_In_Right",
+          "position": [
+            0.85,
+            0.8,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.8,
+            0.85
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0.85,
+            0.5,
+            0.65
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.68,
+            0.305,
+            -0.68
+          ],
+          "size": [
+            0.16,
+            0.61,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.68,
+            0.305,
+            0.68
+          ],
+          "size": [
+            0.16,
+            0.61,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.68,
+            0.305,
+            -0.68
+          ],
+          "size": [
+            0.16,
+            0.61,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.68,
+            0.305,
+            0.68
+          ],
+          "size": [
+            0.16,
+            0.61,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.65,
+            0
+          ],
+          "size": [
+            1.65,
+            0.12,
+            1.65
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.64,
+            0.83,
+            -0.64
+          ],
+          "size": [
+            0.23,
+            0.24,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.64,
+            0.83,
+            -0.64
+          ],
+          "size": [
+            0.23,
+            0.24,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_7",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.64,
+            0.83,
+            0.64
+          ],
+          "size": [
+            0.23,
+            0.24,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_8",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.64,
+            0.83,
+            0.64
+          ],
+          "size": [
+            0.23,
+            0.24,
+            0.23
+          ]
+        }
+      ],
+      "notes": [
+        "All four mouths remain open; selector is a low central bronze guide."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        14,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "vf_iron_belt_2m",
+      "title": "Iron chain-deck conveyor",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.5700000000000001,
+          0.0,
+          -1.0
+        ],
+        [
+          0.5700000000000001,
+          0.915,
+          1.0
+        ]
+      ],
+      "triangles": 1116,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Belt_Surface",
+          "pivot": [
+            0,
+            0.77,
+            0
+          ],
+          "rotation_axis": "x",
+          "scroll": "u"
+        },
+        {
+          "name": "Roller_Rear",
+          "pivot": [
+            0,
+            0.7,
+            -0.85
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Roller_Front",
+          "pivot": [
+            0,
+            0.7,
+            0.85
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.85,
+            -1
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.85,
+            1
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0.57,
+            0.5,
+            -0.75
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.46,
+            0.31,
+            -0.74
+          ],
+          "size": [
+            0.14,
+            0.62,
+            0.14
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.46,
+            0.31,
+            0.74
+          ],
+          "size": [
+            0.14,
+            0.62,
+            0.14
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.46,
+            0.31,
+            -0.74
+          ],
+          "size": [
+            0.14,
+            0.62,
+            0.14
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.46,
+            0.31,
+            0.74
+          ],
+          "size": [
+            0.14,
+            0.62,
+            0.14
+          ]
+        },
+        {
+          "name": "Deck",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.69,
+            0
+          ],
+          "size": [
+            0.86,
+            0.15,
+            2
+          ]
+        }
+      ],
+      "notes": [
+        "Iron ladder chassis, overlapping timber treads, forged wear caps and braced feet distinguish it from the timber tier. Decorative treads stay static; scroll only the loop or add runtime cyclic treads."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        21,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "vf_iron_feeder",
+      "title": "Iron counterweighted feeder",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.45,
+          0.0,
+          -0.525
+        ],
+        [
+          0.45,
+          1.38,
+          1.1700000000000002
+        ]
+      ],
+      "triangles": 228,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Arm_Yaw",
+          "pivot": [
+            0,
+            0.94,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pickup",
+          "position": [
+            0,
+            0.73,
+            1.08
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Dropoff",
+          "position": [
+            0,
+            0.73,
+            -1.08
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0.47,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.9,
+            0.12,
+            0.9
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.25,
+            0.48,
+            0
+          ],
+          "size": [
+            0.12,
+            0.72,
+            0.32
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.25,
+            0.48,
+            0
+          ],
+          "size": [
+            0.12,
+            0.72,
+            0.32
+          ]
+        }
+      ],
+      "notes": [
+        "Twin forged arms, stone counterweight and iron clevis pedestal; not a recolour of the bronze feeder."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        28,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "vf_timber_saw",
+      "title": "Reciprocating frame saw",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.83,
+          0.0,
+          -0.85
+        ],
+        [
+          0.83,
+          2.23,
+          0.85
+        ]
+      ],
+      "triangles": 396,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Roller_-0.75",
+          "pivot": [
+            0,
+            0.63,
+            -0.75
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Roller_0.75",
+          "pivot": [
+            0,
+            0.63,
+            0.75
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Saw_Frame",
+          "pivot": [
+            0,
+            1.28,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "slide",
+          "travel": 0.28
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.79,
+            -1
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.79,
+            1
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0.85,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.7,
+            1.075,
+            -0.72
+          ],
+          "size": [
+            0.18,
+            2.15,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.7,
+            1.075,
+            0.72
+          ],
+          "size": [
+            0.18,
+            2.15,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.7,
+            2.13,
+            0
+          ],
+          "size": [
+            0.2,
+            0.2,
+            1.7
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.7,
+            1.075,
+            -0.72
+          ],
+          "size": [
+            0.18,
+            2.15,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.7,
+            1.075,
+            0.72
+          ],
+          "size": [
+            0.18,
+            2.15,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.7,
+            2.13,
+            0
+          ],
+          "size": [
+            0.2,
+            0.2,
+            1.7
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            2.13,
+            -0.72
+          ],
+          "size": [
+            1.6,
+            0.2,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_7",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            2.13,
+            0.72
+          ],
+          "size": [
+            1.6,
+            0.2,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_8",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.49,
+            -0.75
+          ],
+          "size": [
+            1.4,
+            0.14,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_9",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.49,
+            0.75
+          ],
+          "size": [
+            1.4,
+            0.14,
+            0.17
+          ]
+        }
+      ],
+      "notes": [
+        "Saw_Frame translates vertically \u00b10.14 m. Log axis is Z, supported at y=0.72. Only the cutting blade enters the open log path; no static collider spans the mouth."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "id": "vf_coppice_bed",
+      "title": "Coppice nursery bed",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -2.135,
+          0.0,
+          -2.18
+        ],
+        [
+          2.135,
+          1.0,
+          2.135
+        ]
+      ],
+      "triangles": 676,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Gate",
+          "pivot": [
+            -0.5,
+            0.55,
+            -2.08
+          ],
+          "rotation_axis": "y",
+          "motion": "swing"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Interact",
+          "position": [
+            0.48,
+            0.6,
+            -2.16
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "service"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0.03,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.85,
+            0.1,
+            -2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.85,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4388888888888889,
+            0.1,
+            -2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4388888888888889,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.0277777777777777,
+            0.1,
+            -2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.0277777777777777,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_7",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.6166666666666667,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_9",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.2055555555555555,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_11",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.2055555555555557,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_13",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.6166666666666667,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_14",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.0277777777777781,
+            0.1,
+            -2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_15",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.0277777777777781,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_16",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.438888888888889,
+            0.1,
+            -2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_17",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.438888888888889,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_18",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.85,
+            0.1,
+            -2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_19",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.85,
+            0.1,
+            2.0
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_20",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            -1.65
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_21",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            -1.65
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_22",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            -1.2374999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_23",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            -1.2374999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_24",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            -0.825
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_25",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            -0.825
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_26",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            -0.4125000000000001
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_27",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            -0.4125000000000001
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_28",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            0.0
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_29",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            0.0
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_30",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            0.4125000000000001
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_31",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            0.4125000000000001
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_32",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            0.8249999999999997
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_33",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            0.8249999999999997
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_34",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            1.2374999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_35",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            1.2374999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_36",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            1.65
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_37",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            1.65
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_38",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.36,
+            -2.0
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        },
+        {
+          "name": "Box_39",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.36,
+            2.0
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        },
+        {
+          "name": "Box_40",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.36,
+            -2.0
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        },
+        {
+          "name": "Box_41",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.36,
+            2.0
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        }
+      ],
+      "notes": [
+        "Open bed interior: actual terrain remains visible. No floor slab or central collider; vegetation is supplied by gameplay."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        7,
+        0,
+        7
+      ]
+    },
+    {
+      "id": "vf_planter",
+      "title": "Rail planter",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.33,
+          0.0,
+          -1.5
+        ],
+        [
+          1.33,
+          1.33,
+          1.5
+        ]
+      ],
+      "triangles": 504,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Tool_Head",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": "z",
+          "motion": "slide",
+          "travel": 2.2
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -1.4,
+            0.5,
+            -1.5
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.7,
+            -1.5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.25,
+            0.08,
+            0
+          ],
+          "size": [
+            0.16,
+            0.16,
+            3.0
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.25,
+            0.08,
+            0
+          ],
+          "size": [
+            0.16,
+            0.16,
+            3.0
+          ]
+        }
+      ],
+      "notes": [
+        "Tool_Head is a complete travelling carriage along Z. Root marker is the parked service dock; moving operation points must be derived from the carriage."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        14,
+        0,
+        7
+      ]
+    },
+    {
+      "id": "vf_harvester",
+      "title": "Rail harvester",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.33,
+          0.0,
+          -1.5
+        ],
+        [
+          1.33,
+          1.33,
+          1.5
+        ]
+      ],
+      "triangles": 360,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Tool_Head",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": "z",
+          "motion": "slide",
+          "travel": 2.2
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -1.4,
+            0.5,
+            -1.5
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.7,
+            -1.5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.25,
+            0.08,
+            0
+          ],
+          "size": [
+            0.16,
+            0.16,
+            3.0
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.25,
+            0.08,
+            0
+          ],
+          "size": [
+            0.16,
+            0.16,
+            3.0
+          ]
+        }
+      ],
+      "notes": [
+        "Tool_Head is a complete travelling carriage along Z. Root marker is the parked service dock; moving operation points must be derived from the carriage."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        21,
+        0,
+        7
+      ]
+    },
+    {
+      "id": "vf_steam_engine",
+      "title": "Stone boiler beam engine",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.0,
+          0.0,
+          -1.075
+        ],
+        [
+          1.08,
+          2.69,
+          1.16
+        ]
+      ],
+      "triangles": 1152,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Beam",
+          "pivot": [
+            0.8,
+            1.27,
+            0.05
+          ],
+          "rotation_axis": "x",
+          "motion": "swing"
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0.88,
+            0.5,
+            0.73
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            1.1,
+            0.5,
+            0.73
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Water_Probe",
+          "position": [
+            -0.67,
+            0.4,
+            0.25
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "water_connection"
+        },
+        {
+          "name": "Smoke_Out",
+          "position": [
+            0,
+            2.72,
+            -0.2
+          ],
+          "forward": [
+            0,
+            1,
+            0
+          ],
+          "kind": "environment"
+        },
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.38,
+            -0.95
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "fuel"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0.65,
+            0.9,
+            -0.98
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            2.0,
+            0.12,
+            2.15
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.48,
+            0.36,
+            -0.2
+          ],
+          "size": [
+            0.25,
+            0.48,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.48,
+            0.36,
+            -0.2
+          ],
+          "size": [
+            0.25,
+            0.48,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.7,
+            -0.2
+          ],
+          "size": [
+            1.22,
+            0.18,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.36,
+            0.42
+          ],
+          "size": [
+            1.18,
+            0.48,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.55,
+            -0.7
+          ],
+          "size": [
+            0.17,
+            1.1,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.55,
+            0.8
+          ],
+          "size": [
+            0.17,
+            1.1,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_7",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.22,
+            0.73
+          ],
+          "size": [
+            0.2,
+            0.44,
+            0.2
+          ]
+        }
+      ],
+      "notes": [
+        "Smoke outlet is above and separated from beam/rotor. Firebox opening is clear. Beam rocks; wheel rotates. No explosion, gauge or pressure dial geometry."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        28,
+        0,
+        7
+      ]
+    },
+    {
+      "id": "vf_water_intake",
+      "title": "Short water intake",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.325,
+          0.0,
+          -0.685
+        ],
+        [
+          0.325,
+          0.47741376002574887,
+          0.65
+        ]
+      ],
+      "triangles": 288,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Water_Probe",
+          "position": [
+            0,
+            0.33,
+            -0.73
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "environment"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0,
+            0.33,
+            0.73
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "water_connection"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.65,
+            0.12,
+            1.3
+          ]
+        }
+      ],
+      "notes": [
+        "Short open pipe with bronze collars; Interact marks boiler-side coupling."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        0,
+        0,
+        14
+      ]
+    },
+    {
+      "id": "vf_sail_wheel",
+      "title": "Linen sail wheel",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.9,
+          0.0,
+          -0.725
+        ],
+        [
+          1.9,
+          4.3,
+          1.74
+        ]
+      ],
+      "triangles": 408,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            2.4,
+            -0.28
+          ],
+          "rotation_axis": "z"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            0,
+            2.4,
+            0.25
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Wind_Probe",
+          "position": [
+            0,
+            3.5,
+            -0.45
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            1.25,
+            0.12,
+            1.45
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.4,
+            1.2,
+            0
+          ],
+          "size": [
+            0.17,
+            2.4,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.4,
+            1.2,
+            0
+          ],
+          "size": [
+            0.17,
+            2.4,
+            0.17
+          ]
+        }
+      ],
+      "notes": [
+        "Axle height exception: 2.4 m, required by sail clearance. Hide is the mandated sail slot; runtime should select a linen-compatible native surface by this asset ID."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        7,
+        0,
+        14
+      ]
+    },
+    {
+      "id": "vf_flywheel",
+      "title": "Heavy timber flywheel",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.425,
+          0.0,
+          -0.5
+        ],
+        [
+          0.425,
+          0.97,
+          0.5
+        ]
+      ],
+      "triangles": 816,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.5,
+            0
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Left",
+          "position": [
+            -0.4,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Right",
+          "position": [
+            0.4,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.85,
+            0.12,
+            1.0
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.3,
+            0.24,
+            0
+          ],
+          "size": [
+            0.17,
+            0.48,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.3,
+            0.24,
+            0
+          ],
+          "size": [
+            0.17,
+            0.48,
+            0.17
+          ]
+        }
+      ],
+      "notes": [],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        14,
+        0,
+        14
+      ]
+    },
+    {
+      "id": "vf_governor",
+      "title": "Centrifugal governor",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.4,
+          0.0,
+          -0.35
+        ],
+        [
+          0.4,
+          0.965,
+          0.35
+        ]
+      ],
+      "triangles": 360,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.22,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0,
+            0.15,
+            -0.36
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0.37,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.7,
+            0.12,
+            0.7
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.28,
+            0.41,
+            0
+          ],
+          "size": [
+            0.08,
+            0.82,
+            0.08
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.28,
+            0.41,
+            0
+          ],
+          "size": [
+            0.08,
+            0.82,
+            0.08
+          ]
+        }
+      ],
+      "notes": [],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        21,
+        0,
+        14
+      ]
+    },
+    {
+      "id": "vf_finite_mining_head",
+      "title": "Finite mining head",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.8,
+          0.0,
+          -0.865
+        ],
+        [
+          0.8,
+          2.2,
+          1.3
+        ]
+      ],
+      "triangles": 568,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Drill",
+          "pivot": [
+            0,
+            1.05,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            0.8,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.4,
+            1.3
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.65,
+            1.05,
+            -0.75
+          ],
+          "size": [
+            0.15,
+            2.1,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.65,
+            1.05,
+            0.75
+          ],
+          "size": [
+            0.15,
+            2.1,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.65,
+            1.05,
+            -0.75
+          ],
+          "size": [
+            0.15,
+            2.1,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.65,
+            1.05,
+            0.75
+          ],
+          "size": [
+            0.15,
+            2.1,
+            0.15
+          ]
+        }
+      ],
+      "notes": [
+        "Drill is vertical; perimeter-only colliders keep bore and output clear."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        28,
+        0,
+        14
+      ]
+    },
+    {
+      "id": "vf_deep_extractor",
+      "title": "Deep extraction derrick",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.05,
+          0.0,
+          -1.135
+        ],
+        [
+          1.05,
+          3.4,
+          1.55
+        ]
+      ],
+      "triangles": 640,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Drill",
+          "pivot": [
+            0,
+            1.65,
+            0
+          ],
+          "rotation_axis": "y"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            1.05,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.4,
+            1.55
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.9,
+            1.65,
+            -1.0
+          ],
+          "size": [
+            0.19,
+            3.3,
+            0.19
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.9,
+            1.65,
+            1.0
+          ],
+          "size": [
+            0.19,
+            3.3,
+            0.19
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.9,
+            1.65,
+            -1.0
+          ],
+          "size": [
+            0.19,
+            3.3,
+            0.19
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.9,
+            1.65,
+            1.0
+          ],
+          "size": [
+            0.19,
+            3.3,
+            0.19
+          ]
+        }
+      ],
+      "notes": [
+        "Drill is vertical; perimeter-only colliders keep bore and output clear.",
+        "Iron is the named metal slot; black-metal variant must be selected by runtime using vf_deep_extractor."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        0,
+        0,
+        21
+      ]
+    },
+    {
+      "id": "vf_advanced_assembler",
+      "title": "Roofed multi-tool assembler",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.3023850274571345,
+          0.0,
+          -0.975
+        ],
+        [
+          1.3023850274571345,
+          2.7657292153715023,
+          0.975
+        ]
+      ],
+      "triangles": 460,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Tool_Head_0",
+          "pivot": [
+            -0.65,
+            1.6,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "slide",
+          "travel": 0.22
+        },
+        {
+          "name": "Tool_Head_1",
+          "pivot": [
+            0,
+            1.6,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "slide",
+          "travel": 0.22
+        },
+        {
+          "name": "Tool_Head_2",
+          "pivot": [
+            0.65,
+            1.6,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "slide",
+          "travel": 0.22
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            1.05,
+            -0.88
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            1.05,
+            0.88
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -1.2,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.05,
+            1.15,
+            -0.75
+          ],
+          "size": [
+            0.16,
+            2.3,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.05,
+            1.15,
+            0.75
+          ],
+          "size": [
+            0.16,
+            2.3,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.05,
+            1.15,
+            -0.75
+          ],
+          "size": [
+            0.16,
+            2.3,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.05,
+            1.15,
+            0.75
+          ],
+          "size": [
+            0.16,
+            2.3,
+            0.16
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.88,
+            0
+          ],
+          "size": [
+            2.25,
+            0.16,
+            1.65
+          ]
+        }
+      ],
+      "notes": [
+        "Roofed table with three separate tool heads. Roof remains static."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        7,
+        0,
+        21
+      ]
+    },
+    {
+      "id": "vf_farm_gantry",
+      "title": "Twin-head field gantry",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -2.11,
+          0.0,
+          -2.0
+        ],
+        [
+          2.11,
+          2.19,
+          2.0
+        ]
+      ],
+      "triangles": 492,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Carriage",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": "z",
+          "motion": "slide",
+          "travel": 3.0
+        },
+        {
+          "name": "Tool_Head_0",
+          "pivot": [
+            -0.9,
+            1.08,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "slide",
+          "follow_group": "Carriage"
+        },
+        {
+          "name": "Tool_Head_1",
+          "pivot": [
+            0.9,
+            1.08,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "slide",
+          "follow_group": "Carriage"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -2.2,
+            0.5,
+            -2
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.6,
+            -2
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.6,
+            2
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -2.0,
+            0.1,
+            0
+          ],
+          "size": [
+            0.22,
+            0.2,
+            4.0
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            2.0,
+            0.1,
+            0
+          ],
+          "size": [
+            0.22,
+            0.2,
+            4.0
+          ]
+        }
+      ],
+      "notes": [
+        "Carriage travels along Z. Root-level tool heads follow Carriage translation and retain independent strokes. No collision slab through growing area."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        14,
+        0,
+        21
+      ]
+    },
+    {
+      "id": "vf_eitr_motor",
+      "title": "Contained eitr motor",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.75,
+          0.0,
+          -0.65
+        ],
+        [
+          0.75,
+          1.19,
+          0.65
+        ]
+      ],
+      "triangles": 568,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.5,
+            0
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Left",
+          "position": [
+            -0.75,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Right",
+          "position": [
+            0.75,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.45,
+            -0.7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "fuel"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            1.3,
+            0.12,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.47,
+            0.48,
+            -0.47
+          ],
+          "size": [
+            0.23,
+            0.72,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.47,
+            0.48,
+            0.47
+          ],
+          "size": [
+            0.23,
+            0.72,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.47,
+            0.48,
+            -0.47
+          ],
+          "size": [
+            0.23,
+            0.72,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.47,
+            0.48,
+            0.47
+          ],
+          "size": [
+            0.23,
+            0.72,
+            0.23
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.52,
+            0.31,
+            0
+          ],
+          "size": [
+            0.18,
+            0.38,
+            0.22
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.52,
+            0.31,
+            0
+          ],
+          "size": [
+            0.18,
+            0.38,
+            0.22
+          ]
+        }
+      ],
+      "notes": [
+        "Contained faceted core suggests energy geometrically; no emission, neon or UI runes. Black marble/black metal must be selected by asset-ID-aware runtime material binding."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        21,
+        0,
+        21
+      ]
+    },
+    {
+      "id": "vf_cooking_tender",
+      "title": "Hearth-side tender",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.325,
+          0.0,
+          -0.325
+        ],
+        [
+          0.325,
+          0.9072511148213589,
+          1.1800000000000002
+        ]
+      ],
+      "triangles": 132,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Arm_Yaw",
+          "pivot": [
+            0,
+            0.74,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "swing"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pickup",
+          "position": [
+            0,
+            0.8,
+            1.12
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Dropoff",
+          "position": [
+            0,
+            0.8,
+            -0.65
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_out"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -0.36,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            0.65,
+            0.12,
+            0.65
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.35,
+            0
+          ],
+          "size": [
+            0.16,
+            0.7,
+            0.16
+          ]
+        }
+      ],
+      "notes": [
+        "Standalone reaching arm only; no vanilla hearth or cooking-rack mesh included."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        28,
+        0,
+        21
+      ]
+    },
+    {
+      "id": "vf_oven_extension",
+      "title": "Open hood extension",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.975,
+          0.0,
+          -0.475
+        ],
+        [
+          0.975,
+          2.4850000000000003,
+          0.475
+        ]
+      ],
+      "triangles": 140,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Smoke_Out",
+          "position": [
+            0,
+            2.52,
+            0
+          ],
+          "forward": [
+            0,
+            1,
+            0
+          ],
+          "kind": "environment"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0,
+            1,
+            -0.48
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.85,
+            0.725,
+            0
+          ],
+          "size": [
+            0.24,
+            1.45,
+            0.75
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.85,
+            0.725,
+            0
+          ],
+          "size": [
+            0.24,
+            1.45,
+            0.75
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            1.55,
+            0
+          ],
+          "size": [
+            1.95,
+            0.2,
+            0.9
+          ]
+        }
+      ],
+      "notes": [
+        "Open under the canopy and on both Z faces; no existing oven mesh or inner solid collider. Footprint must be checked against the target station in game."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        0,
+        0,
+        28
+      ]
+    },
+    {
+      "id": "vf_livestock_feed_gate",
+      "title": "Livestock feeding gate",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.915,
+          0.0,
+          -0.915
+        ],
+        [
+          0.915,
+          1.27,
+          0.11499999999999999
+        ]
+      ],
+      "triangles": 264,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Gate",
+          "pivot": [
+            -0.72,
+            0.58,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "swing"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.48,
+            -0.95
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_in"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -0.95,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0.65,
+            0.8,
+            -0.16
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.8,
+            0.6,
+            0
+          ],
+          "size": [
+            0.15,
+            1.2,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.6,
+            0
+          ],
+          "size": [
+            0.15,
+            1.2,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.12,
+            -0.6
+          ],
+          "size": [
+            1.4,
+            0.08,
+            0.5
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.3,
+            -0.88
+          ],
+          "size": [
+            1.5,
+            0.3,
+            0.07
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.3,
+            -0.32
+          ],
+          "size": [
+            1.5,
+            0.3,
+            0.07
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.74,
+            0.3,
+            -0.6
+          ],
+          "size": [
+            0.07,
+            0.3,
+            0.6
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.74,
+            0.3,
+            -0.6
+          ],
+          "size": [
+            0.07,
+            0.3,
+            0.6
+          ]
+        }
+      ],
+      "notes": [
+        "Static collider data covers posts/fence/trough only. Add a moving gate collider attached to Gate if gameplay requires collision during its swing."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        7,
+        0,
+        28
+      ]
+    },
+    {
+      "id": "vf_livestock_culling_gate",
+      "title": "Livestock sorting gate",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.5150000000000001,
+          0.0,
+          -0.11499999999999999
+        ],
+        [
+          1.5150000000000001,
+          1.27,
+          1.34
+        ]
+      ],
+      "triangles": 348,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Gate",
+          "pivot": [
+            -0.72,
+            0.58,
+            0
+          ],
+          "rotation_axis": "y",
+          "motion": "swing"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Dropoff",
+          "position": [
+            0,
+            0.15,
+            1.3
+          ],
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "kind": "sorting_exit"
+        },
+        {
+          "name": "Kinetic_In",
+          "position": [
+            -0.95,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0.65,
+            0.8,
+            -0.16
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.8,
+            0.6,
+            0
+          ],
+          "size": [
+            0.15,
+            1.2,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.6,
+            0
+          ],
+          "size": [
+            0.15,
+            1.2,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.0750000000000002,
+            0.475,
+            0.55
+          ],
+          "size": [
+            0.1,
+            0.95,
+            0.1
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.425,
+            0.475,
+            1.25
+          ],
+          "size": [
+            0.1,
+            0.95,
+            0.1
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.0750000000000002,
+            0.475,
+            0.55
+          ],
+          "size": [
+            0.1,
+            0.95,
+            0.1
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.425,
+            0.475,
+            1.25
+          ],
+          "size": [
+            0.1,
+            0.95,
+            0.1
+          ]
+        }
+      ],
+      "notes": [
+        "Sorting gate with diverging lanes, no blade or gore. Gameplay culling is not represented visually.",
+        "Static collider data covers posts/fence/trough only. Add a moving gate collider attached to Gate if gameplay requires collision during its swing."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        14,
+        0,
+        28
+      ]
+    },
+    {
+      "id": "vf_fishing_winch",
+      "title": "Waterside fishing winch",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -0.525,
+          0.0,
+          -0.65
+        ],
+        [
+          0.525,
+          1.2000000000000002,
+          1.701358645409111
+        ]
+      ],
+      "triangles": 1620,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0,
+            0.5,
+            0
+          ],
+          "rotation_axis": "x"
+        },
+        {
+          "name": "Line_Surface",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rotation_axis": "x",
+          "scroll": "u"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Left",
+          "position": [
+            -0.45,
+            0.5,
+            0
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Kinetic_Right",
+          "position": [
+            0.45,
+            0.5,
+            0
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Water_Probe",
+          "position": [
+            0,
+            0.12,
+            1.65
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        },
+        {
+          "name": "Item_Out",
+          "position": [
+            0,
+            0.4,
+            -0.7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "item_out"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            1.05,
+            0.12,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.36,
+            0.25,
+            0
+          ],
+          "size": [
+            0.15,
+            0.5,
+            0.15
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.36,
+            0.25,
+            0
+          ],
+          "size": [
+            0.15,
+            0.5,
+            0.15
+          ]
+        }
+      ],
+      "notes": [
+        "Rotor is drum/spool; Line_Surface uses longitudinal UVs, no physical rope simulation."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        21,
+        0,
+        28
+      ]
+    },
+    {
+      "id": "vf_reinforced_steam_engine",
+      "title": "Ashlands reinforced engine",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.25,
+          0.0,
+          -1.3
+        ],
+        [
+          1.25,
+          2.69,
+          1.3
+        ]
+      ],
+      "triangles": 1260,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Beam",
+          "pivot": [
+            0.8,
+            1.27,
+            0.05
+          ],
+          "rotation_axis": "x",
+          "motion": "swing"
+        },
+        {
+          "name": "Rotor",
+          "pivot": [
+            0.88,
+            0.5,
+            0.73
+          ],
+          "rotation_axis": "x"
+        }
+      ],
+      "markers": [
+        {
+          "name": "Kinetic_Out",
+          "position": [
+            1.1,
+            0.5,
+            0.73
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "kind": "kinetic"
+        },
+        {
+          "name": "Water_Probe",
+          "position": [
+            -0.67,
+            0.4,
+            0.25
+          ],
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "water_connection"
+        },
+        {
+          "name": "Smoke_Out",
+          "position": [
+            0,
+            2.72,
+            -0.2
+          ],
+          "forward": [
+            0,
+            1,
+            0
+          ],
+          "kind": "environment"
+        },
+        {
+          "name": "Item_In",
+          "position": [
+            0,
+            0.38,
+            -0.95
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "fuel"
+        },
+        {
+          "name": "Interact",
+          "position": [
+            0.65,
+            0.9,
+            -0.98
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "service"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.06,
+            0
+          ],
+          "size": [
+            2.5,
+            0.12,
+            2.6
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.48,
+            0.36,
+            -0.2
+          ],
+          "size": [
+            0.25,
+            0.48,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.48,
+            0.36,
+            -0.2
+          ],
+          "size": [
+            0.25,
+            0.48,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.7,
+            -0.2
+          ],
+          "size": [
+            1.22,
+            0.18,
+            1.3
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.36,
+            0.42
+          ],
+          "size": [
+            1.18,
+            0.48,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.55,
+            -0.7
+          ],
+          "size": [
+            0.17,
+            1.1,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.55,
+            0.8
+          ],
+          "size": [
+            0.17,
+            1.1,
+            0.17
+          ]
+        },
+        {
+          "name": "Box_7",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8,
+            0.22,
+            0.73
+          ],
+          "size": [
+            0.2,
+            0.44,
+            0.2
+          ]
+        },
+        {
+          "name": "Box_8",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.66,
+            0.77,
+            -0.7
+          ],
+          "size": [
+            0.18,
+            1.3,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_9",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.66,
+            0.77,
+            -0.7
+          ],
+          "size": [
+            0.18,
+            1.3,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_10",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.66,
+            0.77,
+            0.3
+          ],
+          "size": [
+            0.18,
+            1.3,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_11",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.66,
+            0.77,
+            0.3
+          ],
+          "size": [
+            0.18,
+            1.3,
+            0.18
+          ]
+        },
+        {
+          "name": "Box_12",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0,
+            0.2,
+            -1.05
+          ],
+          "size": [
+            1.8,
+            0.22,
+            0.26
+          ]
+        }
+      ],
+      "notes": [
+        "Stone and Iron remain the only stone/metal material names. Native grausten/flametal appearance requires asset-ID-aware runtime selection; no forbidden extra material names or textures are embedded.",
+        "Smoke outlet is above and separated from beam/rotor. Firebox opening is clear. Beam rocks; wheel rotates. No explosion, gauge or pressure dial geometry."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        28,
+        0,
+        28
+      ]
+    },
+    {
+      "id": "vf_forage_bed",
+      "title": "Wild forage bed",
+      "material_profile": "valheim",
+      "coordinates": "right-handed, Y-up, metres; scale 1",
+      "front": "view toward origin from negative Z",
+      "bounds": [
+        [
+          -1.535,
+          0.0,
+          -1.535
+        ],
+        [
+          1.535,
+          0.845,
+          1.535
+        ]
+      ],
+      "triangles": 472,
+      "parts": [
+        {
+          "name": "Static",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "name": "Ground_Probe",
+          "position": [
+            0,
+            0.03,
+            0
+          ],
+          "forward": [
+            0,
+            -1,
+            0
+          ],
+          "kind": "environment"
+        }
+      ],
+      "box_colliders": [
+        {
+          "name": "Box_0",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.25,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_1",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.25,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_2",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.8333333333333333,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_3",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.8333333333333333,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_4",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.41666666666666663,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_5",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -0.41666666666666663,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_6",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.0,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_7",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.0,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_8",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.41666666666666674,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_9",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.41666666666666674,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_10",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8333333333333335,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_11",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            0.8333333333333335,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_12",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.25,
+            0.1,
+            -1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_13",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.25,
+            0.1,
+            1.4
+          ],
+          "size": [
+            0.36,
+            0.2,
+            0.27
+          ]
+        },
+        {
+          "name": "Box_14",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.1,
+            -1.0499999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_15",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.1,
+            -1.0499999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_16",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.1,
+            -0.6299999999999999
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_17",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.1,
+            -0.6299999999999999
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_18",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.1,
+            -0.20999999999999996
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_19",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.1,
+            -0.20999999999999996
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_20",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.1,
+            0.20999999999999996
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_21",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.1,
+            0.20999999999999996
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_22",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.1,
+            0.6299999999999999
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_23",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.1,
+            0.6299999999999999
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_24",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.1,
+            1.0499999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_25",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.1,
+            1.0499999999999998
+          ],
+          "size": [
+            0.27,
+            0.2,
+            0.36
+          ]
+        },
+        {
+          "name": "Box_26",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.36,
+            -1.4
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        },
+        {
+          "name": "Box_27",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            -1.4,
+            0.36,
+            1.4
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        },
+        {
+          "name": "Box_28",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.36,
+            -1.4
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        },
+        {
+          "name": "Box_29",
+          "parent": "Static",
+          "shape": "box",
+          "center": [
+            1.4,
+            0.36,
+            1.4
+          ],
+          "size": [
+            0.09,
+            0.72,
+            0.09
+          ]
+        }
+      ],
+      "notes": [
+        "Open bed interior: actual terrain remains visible. No floor slab or central collider; vegetation is supplied by gameplay."
+      ],
+      "limitations": "Native material cloning, procedural motion and working game components are runtime work; no textures, shaders, physics simulation or game scripts are embedded.",
+      "combined_scene_offset": [
+        0,
+        0,
+        35
+      ]
+    }
+  ]
+}

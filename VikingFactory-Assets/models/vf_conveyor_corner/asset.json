@@ -1,0 +1,92 @@
+{
+  "id": "vf_conveyor_corner",
+  "label": "Timber conveyor \u00b7 corner",
+  "units": "metres",
+  "coordinates": "right-handed Y-up; positions in authoring coordinates, let importer convert",
+  "triangles": 396,
+  "bounds": [
+    [
+      -0.6000000000000001,
+      0.0,
+      -0.6000000000000001
+    ],
+    [
+      0.6598555418001658,
+      0.93,
+      0.6598555418001658
+    ]
+  ],
+  "parts": [
+    {
+      "name": "Static",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation_axis": null
+    }
+  ],
+  "markers": [
+    {
+      "name": "Item_In",
+      "position": [
+        0.21,
+        0.82,
+        -0.6
+      ],
+      "forward": [
+        0,
+        0,
+        -1
+      ],
+      "kind": "item_in"
+    },
+    {
+      "name": "Item_Out",
+      "position": [
+        -0.6,
+        0.82,
+        0.21
+      ],
+      "forward": [
+        -1,
+        0,
+        0
+      ],
+      "kind": "item_out"
+    },
+    {
+      "name": "Kinetic",
+      "position": [
+        0.65,
+        0.65,
+        0
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "kind": "kinetic"
+    }
+  ],
+  "suggested_colliders": [
+    {
+      "name": "Deck",
+      "type": "box",
+      "size": [
+        1.3,
+        0.22,
+        1.3
+      ],
+      "center": [
+        0.05,
+        0.76,
+        0.05
+      ],
+      "parent": "Static"
+    }
+  ],
+  "status": "prototype; not a Unity prefab or game-tested asset"
+}
