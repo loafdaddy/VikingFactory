@@ -1,0 +1,979 @@
+# VikingFactory automation coverage. Mod 0.3.0. Game catalogue 2026-09-27
+# Denominator: 969 items with a $item_ shared name. Attacks, VFX, and debug prefabs excluded.
+# RenewableChain: 28 (2.9%)
+# NativeRenewableCollection: 71 (7.3%)
+# FiniteSupplyAutomatedProcessing: 181 (18.7%)
+# CombatOrHusbandrySupplyAutomatedProcessing: 434 (44.8%)
+# TraderSupplyAutomatedProcessing: 118 (12.2%)
+# ManualOrUniqueByDesign: 92 (9.5%)
+# UnsupportedPendingAdapter: 45 (4.6%)
+prefab,shared_name,category,reason
+Acorn,$item_oakseeds,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Amber,$item_amber,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AmberPearl,$item_amberpearl,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AncientCoin,$item_ancientcoin,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AncientGemstoneBlack,$item_ancientgemstone_black,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AncientGemstoneGreen,$item_ancientgemstone_green,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AncientGemstoneOrange,$item_ancientgemstone_orange,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AncientGemstonePurple,$item_ancientgemstone_purple,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AncientSeed,$item_ancientseed,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+ArmorAshlandsMediumChest,$item_chest_medium_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorAshlandsMediumlegs,$item_legs_medium_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorBerserkerChest,$item_chest_berserker,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorBerserkerLegs,$item_legs_berserker,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorBerserkerUndeadChest,$item_chest_berserker_undead,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorBerserkerUndeadLegs,$item_legs_berserker_undead,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorBronzeChest,$item_chest_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorBronzeLegs,$item_legs_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorCarapaceChest,$item_chest_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorCarapaceLegs,$item_legs_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorDeepNorthHeavyChest,$item_chest_heavy_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ArmorDeepNorthHeavylegs,$item_legs_heavy_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ArmorDeepNorthMageChest,$item_chest_mage_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ArmorDeepNorthMagelegs,$item_legs_mage_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ArmorDeepNorthMediumChest,$item_chest_medium_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ArmorDeepNorthMediumlegs,$item_legs_medium_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ArmorDress1,$item_chest_dress1,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress10,$item_chest_dress10,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress2,$item_chest_dress2,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress3,$item_chest_dress3,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress4,$item_chest_dress4,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress5,$item_chest_dress5,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress6,$item_chest_dress6,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress7,$item_chest_dress7,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress8,$item_chest_dress8,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorDress9,$item_chest_dress9,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorFenringChest,$item_chest_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorFenringLegs,$item_legs_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorFlametalChest,$item_chest_flametal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorFlametalLegs,$item_legs_flametal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldHeavyChestUncooked,$item_chest_heavy_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldHeavyHelmetUncooked,$item_helmet_heavy_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldHeavyLegsUncooked,$item_legs_heavy_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldMageChestUncooked,$item_chest_mage_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldMageHelmetUncooked,$item_helmet_mage_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldMageLegsUncooked,$item_legs_mage_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldMediumChestUncooked,$item_chest_medium_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldMediumHelmetUncooked,$item_helmet_medium_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorGoldMediumLegsUncooked,$item_legs_medium_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorHarvester1,$item_chest_harvester1,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorHarvester2,$item_chest_harvester2,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorIronChest,$item_chest_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorIronLegs,$item_legs_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorLeatherChest,$item_chest_leather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorLeatherLegs,$item_legs_leather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorLoxChest,$item_chest_lox,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorLoxLegs,$item_legs_lox,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorMageChest,$item_chest_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorMageChest_Ashlands,$item_chest_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorMageLegs,$item_legs_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorMageLegs_Ashlands,$item_legs_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorPaddedCuirass,$item_chest_pcuirass,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+ArmorPaddedGreaves,$item_legs_pgreaves,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+ArmorRagsChest,$item_chest_rags,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorRagsLegs,$item_legs_rags,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorRootChest,$item_chest_root,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorRootLegs,$item_legs_root,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorTrollLeatherChest,$item_chest_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorTrollLeatherLegs,$item_legs_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorTunic1,$item_chest_tunic1,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic10,$item_chest_tunic10,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic2,$item_chest_tunic2,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic3,$item_chest_tunic3,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic4,$item_chest_tunic4,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic5,$item_chest_tunic5,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic6,$item_chest_tunic6,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic7,$item_chest_tunic7,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic8,$item_chest_tunic8,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorTunic9,$item_chest_tunic9,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ArmorWolfChest,$item_chest_wolf,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArmorWolfLegs,$item_legs_wolf,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowBloodGold,$item_arrow_bloodgold,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowBronze,$item_arrow_bronze,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_forge (recipe mill)
+ArrowCarapace,$item_arrow_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowCharred,$item_arrow_charred,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowFire,$item_arrow_fire,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_workbench (recipe mill)
+ArrowFlint,$item_arrow_flint,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_workbench (recipe mill)
+ArrowFrost,$item_arrow_frost,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowIron,$item_arrow_iron,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_forge (recipe mill)
+ArrowNeedle,$item_arrow_needle,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowObsidian,$item_arrow_obsidian,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowPoison,$item_arrow_poison,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ArrowSilver,$item_arrow_silver,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_forge (recipe mill)
+ArrowWood,$item_arrow_wood,RenewableChain,Automated chain from renewable inputs: recipe at $piece_workbench (recipe mill)
+AskBladder,$item_askbladder,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AskHide,$item_askhide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AsksvinCarrionNeck,$item_asksvincarrionneck,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AsksvinCarrionPelvic,$item_asksvincarrionpelvic,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AsksvinCarrionRibcage,$item_asksvincarrionribcage,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AsksvinCarrionSkull,$item_asksvincarrionskull,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AsksvinEgg,$item_asksvin_egg,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AsksvinMeat,$item_asksvin_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+AtgeirBlackmetal,$item_atgeir_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+AtgeirBronze,$item_atgeir_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AtgeirGold,$item_atgeir_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+AtgeirGoldUncooked,$item_atgeir_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+AtgeirGold_BloodLightning,$item_atgeir_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AtgeirGold_FrostFire,$item_atgeir_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AtgeirHimminAfl,$item_atgeir_himminafl,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AtgeirIron,$item_atgeir_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AtgeirWood,$item_atgeir_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+AxeBerzerkr,$item_axe_berzerkr,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeBerzerkrBlood,$item_axe_berzerkr_blood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeBerzerkrLightning,$item_axe_berzerkr_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeBerzerkrNature,$item_axe_berzerkr_nature,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeBlackMetal,$item_axe_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+AxeBronze,$item_axe_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeEarly,$item_axe_early,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeFlint,$item_axe_flint,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeGold,$item_axe_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+AxeGoldUncooked,$item_axe_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+AxeGold_BloodLightning,$item_axe_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeGold_FrostFire,$item_axe_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeHead1,$item_axehead1,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AxeHead2,$item_axehead2,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+AxeIron,$item_axe_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeJotunBane,$item_axe_jotunbane,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeStone,$item_axe_stone,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+AxeWood,$item_axe_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+BakedPoteitr,$item_bakedpoteitr,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+BakedPoteitrUncooked,$item_bakedpoteitr_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BarberKit,$item_barberkit,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+BarkaBranch,$item_barkabranch,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Barley,$item_barley,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+BarleyFlour,$item_barleyflour,NativeRenewableCollection,Automated chain from native renewable inputs: station at windmill (feeder adapter)
+BarleyWine,$item_barleywine,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+BarleyWineBase,$item_barleywinebase,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+BarrelRings,$item_barrelrings,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+Battleaxe,$item_battleaxe,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BattleaxeBlackmetal,$item_battleaxe_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+BattleaxeCrystal,$item_battleaxe_crystal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BattleaxeGold,$item_axe2h_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+BattleaxeGoldUncooked,$item_battleaxe_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+BattleaxeGold_BloodLightning,$item_axe2h_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BattleaxeGold_FrostFire,$item_axe2h_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BattleaxeSkullSplittur,$item_battleaxe_skullsplittur,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+BattleaxeWood,$item_battleaxe_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+BeechSeeds,$item_beechseeds,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Bell,$item_bell,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+BellFragment,$item_bellfragment,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+BeltStrength,$item_beltstrength,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+Bilebag,$item_bilebag,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BirchSeeds,$item_birchseeds,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+BjornHide,$item_bjornhide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BjornMeat,$item_bjorn_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BjornPaw,$item_bjornpaw,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BlackCore,$item_blackcore,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+BlackMarble,$item_blackmarble,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BlackMetal,$item_blackmetal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BlackMetalScrap,$item_blackmetalscrap,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BlackSoup,$item_blacksoup,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Blackwood,$item_blackwood,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+BlobVial,$item_blobvial,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+BloodGoldKey,$item_bloodgoldkey,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+BloodPudding,$item_bloodpudding,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Bloodbag,$item_bloodbag,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Blueberries,$item_blueberries,RenewableChain,Mod renewable source
+BoarJerky,$item_boarjerky,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoltBlackmetal,$item_bolt_blackmetal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoltBloodGold,$item_bolt_bloodgold,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoltBone,$item_bolt_bone,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoltCarapace,$item_bolt_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoltCharred,$item_bolt_charred,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoltIron,$item_bolt_iron,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_blackforge (recipe mill)
+BombBile,$item_bilebomb,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BombBlob_Frost,$item_bombblob_frost,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+BombBlob_Lava,$item_bombblob_lava,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+BombBlob_Morkhalla,$item_bombblob_morkhalla,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+BombBlob_Poison,$item_bombblob_poison,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+BombBlob_PoisonElite,$item_bombblob_poisonelite,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+BombBlob_Tar,$item_bombblob_tar,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+BombDynamite,$item_bomb_dynamite,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BombLava,$item_lavabomb,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BombOoze,$item_oozebomb,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BombSiege,$item_catapult_ammo,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BombSmoke,$item_smokebomb,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BoneFragments,$item_bonefragments,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BoneMawSerpentMeat,$item_bonemawmeat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+BonemawSerpentScale,$item_bonemawscale,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+BonemawSerpentTooth,$item_bonemawtooth,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Bow,$item_bow,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowAshlands,$item_bow_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowAshlandsBlood,$item_bow_ashlandsblood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowAshlandsRoot,$item_bow_ashlandsroot,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowAshlandsStorm,$item_bow_ashlandsstorm,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowDraugrFang,$item_bow_draugrfang,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowFineWood,$item_bow_finewood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowGold,$item_bow_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+BowGoldUncooked,$item_bow_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+BowGold_BloodLightning,$item_bow_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowGold_FrostFire,$item_bow_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowHuntsman,$item_bow_huntsman,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+BowSpineSnap,$item_bow_snipesnap,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Bread,$item_bread,NativeRenewableCollection,Automated chain from native renewable inputs: cooking at piece_oven (cooking tender)
+BreadDough,$item_breaddough,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_preptable (recipe mill)
+Bronze,$item_bronze,RenewableChain,Automated chain from renewable inputs: recipe at $piece_forge (recipe mill); station at smelter (feeder adapter)
+BronzeNails,$item_bronzenails,RenewableChain,Automated chain from renewable inputs: recipe at $piece_forge (recipe mill)
+BronzeScrap,$item_bronzescrap,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+BugMeat,$item_bug_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+CandleWick,$item_candlewick,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+CapeAsh,$item_cape_ash,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeAsksvin,$item_cape_asksvin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeDeepNorth,$item_cape_deepnorth,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeDeepNorthMage,$item_cape_deepnorth_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeDeerHide,$item_cape_deerhide,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeFeather,$item_cape_feather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeLinen,$item_cape_linen,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_workbench (recipe mill)
+CapeLox,$item_cape_lox,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeOdin,$item_cape_odin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeTrollHide,$item_cape_trollhide,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CapeWolf,$item_cape_wolf,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Carapace,$item_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Carrot,$item_carrot,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+CarrotSeeds,$item_carrotseeds,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+CarrotSoup,$item_carrotsoup,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+Catapult_Ammo_BloodGold,$item_catapult_bloodgold_ammo,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Catapult_ammo,$item_catapult_training_ammo,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_workbench (recipe mill)
+CelestialFeather,$item_celestialfeather,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+CeramicPlate,$item_ceramicplate,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Chain,$item_chain,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+CharcoalResin,$item_charcoalresin,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+CharredBone,$item_charredbone,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+CharredCogwheel,$item_charredcogwheel,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Charredskull,$item_charredskull,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+ChickenEgg,$item_chicken_egg,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+ChickenMeat,$item_chicken_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Chitin,$item_chitin,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Cloudberry,$item_cloudberries,RenewableChain,Mod renewable source
+Club,$item_club,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Coal,$item_coal,RenewableChain,Automated chain from renewable inputs: station at charcoal_kiln (feeder adapter)
+Coins,$item_coins,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+CookedAsksvinMeat,$item_asksvin_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedBjornMeat,$item_bjorn_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedBoneMawSerpentMeat,$item_bonemawmeat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedBugMeat,$item_bug_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedChickenMeat,$item_chicken_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedDeerMeat,$item_deer_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedEgg,$item_egg_cooked,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+CookedHareMeat,$item_hare_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedLoxMeat,$item_loxmeat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedMeat,$item_boar_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedMooseMeat,$item_moose_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedSealBlubber,$item_blubber_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedVoltureMeat,$item_volture_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CookedWolfMeat,$item_wolf_meat_cooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Copper,$item_copper,RenewableChain,Automated chain from renewable inputs: station at smelter (feeder adapter)
+CopperOre,$item_copperore,RenewableChain,Mod renewable source
+CopperScrap,$item_copperscrap,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+CrossbowArbalest,$item_crossbow_arbalest,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrossbowGold,$item_crossbow_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+CrossbowGoldUncooked,$item_crossbow_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+CrossbowGold_BloodLightning,$item_crossbow_bloodlightning_gold,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrossbowGold_FrostFire,$item_crossbow_frostfire_gold,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrossbowRipper,$item_crossbow_ripper,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrossbowRipperBlood,$item_crossbow_ripper_blood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrossbowRipperLightning,$item_crossbow_ripper_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrossbowRipperNature,$item_crossbow_ripper_nature,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+CrownJewel,$item_crownjewel,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+CryptKey,$item_cryptkey,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+Crystal,$item_crystal,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Cultivator,$item_cultivator,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+CuredSquirrelHamstring,$item_curedsquirrelhamstring,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+Dandelion,$item_dandelion,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+DeerHide,$item_deerhide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+DeerMeat,$item_deer_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+DeerStew,$item_deerstew,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_cauldron (recipe mill)
+Demister,$item_demister,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+DragonEgg,$item_dragonegg,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+DragonTear,$item_dragontear,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+DvergerArbalest,$item_crossbow_arbalest,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+DvergerArbalest_shoot,$item_crossbow_arbalest,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+DvergerArbalest_shootAshlands,$item_crossbow_arbalest,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+DvergerArbalest_shootDeepNorth,$item_crossbow_arbalest,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+DvergrKey,$item_dvergrkey,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+DvergrKeyFragment,$item_dvergrkeyfragment,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+DvergrNeedle,$item_dvergrneedle,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+DyrnwynBladeFragment,$item_Dyrnwyn_blade,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+DyrnwynHiltFragment,$item_Dyrnwyn_hilt,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+DyrnwynTipFragment,$item_Dyrnwyn_tip,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Ectoplasm,$item_ectoplasm,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Eitr,$item_eitr,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ElakingHairBundle,$item_elakinghairbundle,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+ElderBark,$item_elderbark,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Entrails,$item_entrails,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Eyescream,$item_eyescream,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorBronzeChest,$item_chest_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorBronzeLegs,$item_legs_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorFenringChest,$item_chest_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorFenringLegs,$item_legs_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorMageChest,$item_chest_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorMageChest_Ashlands,$item_chest_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorMageLegs,$item_legs_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorMageLegs_Ashlands,$item_legs_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorPaddedCuirass,$item_chest_pcuirass,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+FW_ArmorPaddedGreaves,$item_legs_pgreaves,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+FW_ArmorTrollLeatherChest,$item_chest_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_ArmorTrollLeatherLegs,$item_legs_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_AxeBronze,$item_axe_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_BattleaxeCrystal,$item_battleaxe_crystal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_BowDraugrFang,$item_bow_draugrfang,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_CapeLinen,$item_cape_linen,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_workbench (recipe mill)
+FW_CapeTrollHide,$item_cape_trollhide,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_CapeWolf,$item_cape_wolf,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_HelmetBronze,$item_helmet_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_KnifeSilver,$item_knife_silver,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_KnifeSkollAndHati,$item_knife_skollandhati,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+FW_ShieldBlackmetalTower,$item_shield_blackmetal_tower,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_StaffFireball,$item_stafffireball,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_StaffLightning,$item_staff_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FW_SwordBlackmetal,$item_sword_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+FaderDrop,$item_fader_drop,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+FaderEmber,$item_faderember,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+FeastAshlands,$item_feastashlands,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastAshlands_Material,$item_feastashlands,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastBlackforest,$item_feastblackforest,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastBlackforest_Material,$item_feastblackforest,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastDeepNorth,$item_feastdeepnorth,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastDeepNorth_Material,$item_feastdeepnorth,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastMeadows,$item_feastmeadows,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastMeadows_Material,$item_feastmeadows,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastMistlands,$item_feastmistlands,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastMistlands_Material,$item_feastmistlands,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastMountains,$item_feastmountains,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastMountains_Material,$item_feastmountains,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastOceans,$item_feastoceans,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastOceans_Material,$item_feastoceans,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastPlains,$item_feastplains,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastPlains_Material,$item_feastplains,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastSwamps,$item_feastswamps,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FeastSwamps_Material,$item_feastswamps,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+Feaster,$item_feaster,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+Feathers,$item_feathers,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+Fiddleheadfern,$item_fiddleheadfern,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+FierySvinstew,$item_fierysvinstew,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FineWood,$item_finewood,RenewableChain,Mod renewable source
+FirCone,$item_fircone,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+FirConeFrost,$item_fircone_big,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+FireworksRocket_Blue,$item_fireworkrocket_blue,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FireworksRocket_Cyan,$item_fireworkrocket_cyan,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FireworksRocket_Green,$item_fireworkrocket_green,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FireworksRocket_Purple,$item_fireworkrocket_purple,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FireworksRocket_Red,$item_fireworkrocket_red,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FireworksRocket_White,$item_fireworkrocket_white,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+FireworksRocket_Yellow,$item_fireworkrocket_yellow,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishAndBread,$item_fishandbread,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+FishAndBreadUncooked,$item_fishandbreaduncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_preptable (recipe mill)
+FishAnglerRaw,$item_fish_raw,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_preptable (any-one-ingredient recipe)
+FishCooked,$item_fish_cooked,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_cookingstation_iron (cooking tender); cooking at piece_cookingstation (cooking tender)
+FishRaw,$item_fish_raw,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_preptable (any-one-ingredient recipe)
+FishSoup,$item_fishsoup,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FishWraps,$item_fishwraps,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_cauldron (recipe mill)
+FishingBait,$item_fishingbait,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+FishingBaitAshlands,$item_fishingbait_ashlands,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitCave,$item_fishingbait_cave,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitDeepNorth,$item_fishingbait_deepnorth,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitForest,$item_fishingbait_forest,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitMistlands,$item_fishingbait_mistlands,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitOcean,$item_fishingbait_ocean,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitPlains,$item_fishingbait_plains,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingBaitSwamp,$item_fishingbait_swamp,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+FishingRod,$item_fishingrod,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+FistBjornClaw,$item_fistweapon_bjorn,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FistBjornUndeadClaw,$item_fistweapon_bjorn_undead,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FistFenrirClaw,$item_fistweapon_fenris,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+FistGold,$item_fistweapon_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+FistGoldUncooked,$item_fistweapon_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FistGold_BloodLightning,$item_fistweapon_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FistGold_FrostFire,$item_fistweapon_frostfire_gold,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Flametal,$item_flametal_old,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+FlametalNew,$item_flametal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+FlametalOre,$item_flametalore_old,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+FlametalOreNew,$item_flametalore,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Flax,$item_flax,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+Flint,$item_flint,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+FragrantBundle,$item_fragrantbundle,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+FreezeGland,$item_freezegland,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+FreshSeaweed,$item_freshseaweed,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+FrostCore,$item_frostcore,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Frostwood,$item_frostwood,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+FrozenFuel,$item_frozenfuel,UnsupportedPendingAdapter,Made only by an unreviewed producer: station at piece_FrostKiln (unreviewed station)
+FrozenKingDrop,$item_frozenking_drop,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+GemstoneBlue,$item_gemstone_blue,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+GemstoneGreen,$item_gemstone_green,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+GemstoneRed,$item_gemstone_red,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+GenericMoldUncooked,$item_smallparts_gold_uncooked,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+GiantBloodSack,$item_bloodclot,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+GlowWorm,$item_glowworm,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+GoblinTotem,$item_goblintotem,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Gold,$item_gold,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+GoldOre,$item_goldore,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+GrapplingHook,$item_graplinghook,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Grausten,$item_grausten,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+GreydwarfEye,$item_greydwarfeye,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Guck,$item_guck,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Hammer,$item_hammer,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HardAntler,$item_hardantler,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+HareMeat,$item_hare_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+HatefulBlood,$item_hatefulblood,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+HelmetAshlandsMediumHood,$item_helmet_medium_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetBerserkerHood,$item_helmet_berserker,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetBerserkerUndead,$item_helmet_berserker_undead,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetBronze,$item_helmet_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetCarapace,$item_helmet_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetCelebration,$item_helmet_celebration,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetCrownofValheim,$item_helmet_crown_of_valheim,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetDNHeavy,$item_helmet_heavy_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+HelmetDNMage,$item_helmet_mage_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+HelmetDNMediumHood,$item_helmet_medium_deepnorth,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+HelmetDrake,$item_helmet_drake,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetDverger,$item_helmet_dverger,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetFenring,$item_helmet_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetFishingHat,$item_helmet_fishinghat,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (no ingredients)
+HelmetFlametal,$item_helmet_flametal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetHat1,$item_helmet_hat1,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat10,$item_helmet_hat10,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat2,$item_helmet_hat2,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat3,$item_helmet_hat3,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat4,$item_helmet_hat4,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat5,$item_helmet_hat5,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat6,$item_helmet_hat6,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat7,$item_helmet_hat7,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat8,$item_helmet_hat8,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetHat9,$item_helmet_hat9,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetIron,$item_helmet_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetLeather,$item_helmet_leather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetLox,$item_helmet_lox,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetMage,$item_helmet_mage,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_magetable (recipe mill)
+HelmetMage_Ashlands,$item_helmet_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetMidsummerCrown,$item_helmet_midsummercrown,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+HelmetOdin,$item_helmet_odin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetPadded,$item_helmet_padded,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+HelmetPointyHat,$item_helmet_witchhat,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+HelmetRoot,$item_helmet_root,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetRootCrown,$item_helmet_rootcrown,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetStrawHat,$item_helmet_strawhat,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetSweatBand,$item_helmet_sweatband,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HelmetTrollLeather,$item_helmet_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+HelmetYule,$item_helmet_yule,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+HildirKey_forestcrypt,$item_hildirkey1,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+HildirKey_mountaincave,$item_hildirkey2,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+HildirKey_plainsfortress,$item_hildirkey3,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+Hoe,$item_hoe,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Honey,$item_honey,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+HoneyGlazedChicken,$item_honeyglazedchicken,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+HoneyGlazedChickenUncooked,$item_honeyglazedchickenuncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Hook,$item_hook,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Ice,$item_ice,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+IceShoes,$item_iceshoes,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+IceSkates,$item_iceskates,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Iron,$item_iron,RenewableChain,Automated chain from renewable inputs: station at smelter (feeder adapter)
+IronNails,$item_ironnails,RenewableChain,Automated chain from renewable inputs: recipe at $piece_forge (recipe mill)
+IronOre,$item_ironore,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+IronScrap,$item_ironscrap,RenewableChain,Mod renewable source
+Ironpit,$item_ironpit,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+JuteBlue,$item_juteblue,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+JuteRed,$item_jutered,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Kale,$item_kale,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+KaleChips,$item_kalechips,NativeRenewableCollection,Automated chain from native renewable inputs: cooking at piece_oven (cooking tender)
+KaleChipsUncooked,$item_kalechips_uncooked,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+KaleSeeds,$item_kaleseeds,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+KeysGoldUncooked,$item_keys_gold_uncooked,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+KnifeBlackMetal,$item_knife_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+KnifeButcher,$item_knife_butcher,RenewableChain,Automated chain from renewable inputs: recipe at $piece_forge (recipe mill)
+KnifeChitin,$item_knife_chitin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+KnifeCopper,$item_knife_copper,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+KnifeFlint,$item_knife_flint,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+KnifeGold,$item_knife_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+KnifeGoldUncooked,$item_knife_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+KnifeGold_BloodLightning,$item_knife_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+KnifeGold_FrostFire,$item_knife_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+KnifeSilver,$item_knife_silver,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+KnifeSkollAndHati,$item_knife_skollandhati,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+KnifeVoid,$item_knife_void,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+KnifeWood,$item_knife_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+Lantern,$item_lantern,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Lantern_DN,$item_lanternDN,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Larva,$item_larva,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+LastBossGate_RuneTile,$item_runetile,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+LeatherScraps,$item_leatherscraps,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Leatherstraps,$item_leatherstraps,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+LinenThread,$item_linenthread,NativeRenewableCollection,Automated chain from native renewable inputs: station at piece_spinningwheel (feeder adapter)
+Lingonberry,$item_lingonberries,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+Lingondricka,$item_lingondricka,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+LoxMeat,$item_loxmeat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+LoxPelt,$item_loxpelt,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+LoxPie,$item_loxpie,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+LoxPieUncooked,$item_loxpie_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceBronze,$item_mace_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceEldner,$item_mace_eldner,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceEldnerBlood,$item_mace_eldner_blood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceEldnerLightning,$item_mace_eldner_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceEldnerNature,$item_mace_eldner_nature,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceGold,$item_mace_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+MaceGoldUncooked,$item_mace_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+MaceGold_BloodLightning,$item_mace_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceGold_FrostFire,$item_mace_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceIron,$item_mace_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceNeedle,$item_mace_needle,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MaceSilver,$item_mace_silver,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MaceWood,$item_mace_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+MagicallyStuffedShroom,$item_magicallystuffedmushroom,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+MagicallyStuffedShroomUncooked,$item_magicallystuffedmushroomuncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Mandible,$item_mandible,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MarinatedGreens,$item_marinatedgreens,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+MashedMeat,$item_mashedmeat,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeadBaseBugRepellent,$item_meadbasebugrepellent,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MeadBaseBzerker,$item_meadbasebzerker,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MeadBaseEitrLingering,$item_meadbaseeitr_lingering,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseEitrMinor,$item_meadbaseeitr,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseFrostResist,$item_meadbasefrostresist,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeadBaseHasty,$item_meadbasehasty,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MeadBaseHealthLingering,$item_meadbasehealth_lingering,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseHealthMajor,$item_meadbasehealth_major,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeadBaseHealthMedium,$item_meadbasehealth_medium,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeadBaseHealthMinor,$item_meadbasehealth,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseLightFoot,$item_meadbaselightfoot,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeadBasePoisonResist,$item_meadbasepoisonresist,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeadBaseStaminaLingering,$item_meadbasestamina_lingering,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseStaminaMedium,$item_meadbasestamina_medium,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseStaminaMinor,$item_meadbasestamina,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBaseStrength,$item_meadbasestrength,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MeadBaseSwimmer,$item_meadbaseswimmer,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MeadBaseTamer,$item_meadbasetamer,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MeadBaseTasty,$item_meadbasetasty,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_meadcauldron (recipe mill)
+MeadBugRepellent,$item_mead_bugrepellent,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadBzerker,$item_mead_bzerker,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadEitrLingering,$item_mead_eitr_lingering,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadEitrMinor,$item_mead_eitr_minor,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadFrostResist,$item_mead_frostres,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadHasty,$item_mead_hasty,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadHealthLingering,$item_mead_hp_lingering,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadHealthMajor,$item_mead_hp_major,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadHealthMedium,$item_mead_hp_medium,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadHealthMinor,$item_mead_hp_minor,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadLightfoot,$item_mead_lightfoot,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadPoisonResist,$item_mead_poisonres,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadStaminaLingering,$item_mead_stamina_lingering,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadStaminaMedium,$item_mead_stamina_medium,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadStaminaMinor,$item_mead_stamina_minor,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadStrength,$item_mead_strength,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadSwimmer,$item_mead_swimmer,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadTamer,$item_mead_tamer,FiniteSupplyAutomatedProcessing,Processing automated: fermenter at fermenter (feeder adapter)
+MeadTasty,$item_mead_tasty,NativeRenewableCollection,Automated chain from native renewable inputs: fermenter at fermenter (feeder adapter)
+MeadTrollPheromones,$item_mead_trollpheromones,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+MeatPlatter,$item_meatplatter,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+MeatPlatterUncooked,$item_meatplatteruncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MeatballsMashedPoteitr,$item_meatballsmashedpoteitr,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MechanicalSpring,$item_mechanicalspring,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+MemorialCoal,$item_memorialcoal,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MinceMeatSauce,$item_mincemeatsauce,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MisthareSupreme,$item_mistharesupreme,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+MisthareSupremeUncooked,$item_mistharesupremeuncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MoldArmorGoldChest,$item_mold_armor_gold_chest,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorGoldHelmet,$item_mold_armor_gold_helmet,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorGoldLegs,$item_mold_armor_gold_legs,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorMageChest,$item_mold_armor_mage_chest,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorMageHelmet,$item_mold_armor_mage_helmet,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorMageLegs,$item_mold_armor_mage_legs,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorMediumHelmet,$item_mold_armor_medium_helmet,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmorMediumLegs,$item_mold_armor_medium_legs,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldArmormediumChest,$item_mold_armor_medium_chest,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoldAtgeir,$item_mold_atgeir,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldAxe,$item_mold_axe,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldAxe2H,$item_mold_axe2h,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldBow,$item_mold_bow,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldCrossbow,$item_mold_crossbow,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldFistweapon,$item_mold_fistweapon,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldKeys,$item_mold_keys,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+MoldKnife,$item_mold_knife,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldMace,$item_mold_mace,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldMace2H,$item_mold_mace2h,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldShieldBuckler,$item_mold_shield_buckler,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldShieldRound,$item_mold_shield_round,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldShieldTower,$item_mold_shield_tower,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldSmallParts,$item_mold_smallparts,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldSpear,$item_mold_spear,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldStaffOrbofAhri,$item_mold_stafforbofahri,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldStafffrostorbs,$item_mold_stafffrostorbs,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldStaffspiritcaller,$item_mold_staffspiritcaller,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldStaffthunderblood,$item_mold_staffthunderblood,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldSword,$item_mold_sword,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoldSword2H,$item_mold_sword2h,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MoleClaws,$item_moleclaws,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MoltenCore,$item_moltencore,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+MooseHide,$item_moosehide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MooseKebab,$item_moosekebab,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+MooseMeat,$item_moose_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MooseSinew,$item_moosesinew,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MorgenHeart,$item_morgenheart,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+MorgenSinew,$item_morgensinew,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Mushroom,$item_mushroomcommon,RenewableChain,Mod renewable source
+MushroomBlue,$item_mushroomblue,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+MushroomBzerker,$item_mushroom_bzerker,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+MushroomJotunPuffs,$item_jotunpuffs,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+MushroomMagecap,$item_magecap,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+MushroomOmelette,$item_mushroomomelette,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+MushroomSmokePuff,$item_smokepuff,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+MushroomYellow,$item_mushroomyellow,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+NeckTail,$item_necktail,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+NeckTailGrilled,$item_necktailgrilled,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Needle,$item_needle,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+NornThread,$item_nornthread,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Oat,$item_oat,NativeRenewableCollection,Automated chain from native renewable inputs: station at windmill (feeder adapter)
+OatFlour,$item_oatflour,NativeRenewableCollection,Automated chain from native renewable inputs: station at windmill (feeder adapter)
+OatMilk,$item_oatmilk,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+OatSeeds,$item_oatseeds,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+OatmealLingonberryJam,$item_oatmeallingonberryjam,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Obsidian,$item_obsidian,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Onion,$item_onion,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+OnionSeeds,$item_onionseeds,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+OnionSoup,$item_onionsoup,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+Ooze,$item_ooze,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+OozeMork,$item_ooze_mork,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+OrbFrostFire,$item_orbfrostfire,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+OrbThunderBlood,$item_orbthunderblood,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+OvenPancake,$item_ovenpancake,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+OvenPancakeUncooked,$item_ovenpancake_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Pancakes,$item_pancakes,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+PickaxeAntler,$item_pickaxe_antler,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+PickaxeBlackMetal,$item_pickaxe_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+PickaxeBronze,$item_pickaxe_bronze,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+PickaxeIron,$item_pickaxe_iron,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+PickaxeStone,$item_pickaxe_stone,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+PineCone,$item_pinecone,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+PiquantPie,$item_piquantpie,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+PiquantPieUncooked,$item_piquantpie_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Pot_Shard_Green,$item_pot_shard_green,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Pot_Shard_Red,$item_pot_shard_red,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Poteitr,$item_poteitr,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+PoteitrSeeds,$item_poteitrseeds,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+PowderedDragonEgg,$item_powdereddragonegg,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+ProustitePowder,$item_proustitepowder,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Pukeberries,$item_pukeberries,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+PulledBear,$item_pulledbear,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_cauldron (recipe mill)
+PungentPebbles,$item_pungentpebbles,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+QueenBee,$item_queenbee,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+QueenDrop,$item_seekerqueen_drop,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+QueensJam,$item_queensjam,RenewableChain,Automated chain from renewable inputs: recipe at $piece_cauldron (recipe mill)
+Raspberry,$item_raspberries,RenewableChain,Mod renewable source
+RawMeat,$item_boar_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Resin,$item_resin,RenewableChain,Mod renewable source
+RoastedCrustPie,$item_roastedcrustpie,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+RoastedCrustPieUncooked,$item_roastedcrustpie_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Root,$item_root,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+RottenMeat,$item_meat_rotten,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+RoundLog,$item_roundlog,RenewableChain,Mod renewable source
+RoyalJelly,$item_royaljelly,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+Ruby,$item_ruby,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+SP_ArmorBronzeChest,$item_chest_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorBronzeLegs,$item_legs_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorDress1,$item_chest_dress1,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SP_ArmorFenringChest,$item_chest_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorFenringLegs,$item_legs_fenris,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorLeatherLegs,$item_legs_leather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorMageChest,$item_chest_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorMageChest_Ashlands,$item_chest_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorMageLegs,$item_legs_mage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorMageLegs_Ashlands,$item_legs_mage_ashlands,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorPaddedCuirass,$item_chest_pcuirass,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+SP_ArmorPaddedGreaves,$item_legs_pgreaves,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+SP_ArmorTrollLeatherChest,$item_chest_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorTrollLeatherLegs,$item_legs_trollleather,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_ArmorTunic5,$item_chest_tunic5,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SP_AxeBronze,$item_axe_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_BattleaxeCrystal,$item_battleaxe_crystal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_BowDraugrFang,$item_bow_draugrfang,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_CapeLinen,$item_cape_linen,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_workbench (recipe mill)
+SP_CapeTrollHide,$item_cape_trollhide,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_CapeWolf,$item_cape_wolf,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_HelmetBronze,$item_helmet_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_KnifeSilver,$item_knife_silver,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_KnifeSkollAndHati,$item_knife_skollandhati,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+SP_ShieldBlackmetalTower,$item_shield_blackmetal_tower,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_StaffFireball,$item_stafffireball,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_StaffLightning,$item_staff_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SP_SwordBlackmetal,$item_sword_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+SaddleAsksvin,$item_saddleasksvin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SaddleLox,$item_saddlelox,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SaddleMoose,$item_saddlemoose,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Salad,$item_salad,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+Sap,$item_sap,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+Sausages,$item_sausages,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ScaleHide,$item_scalehide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+ScorchingMedley,$item_scorchingmedley,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+Scythe,$item_scythe,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+ScytheHandle,$item_scythehandle,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SealBlubber,$item_blubber,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+SealHide,$item_sealhide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+SealSoup,$item_sealsoup,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SeekerAspic,$item_seekeraspic,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SerpentMeat,$item_serpentmeat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+SerpentMeatCooked,$item_serpentmeatcooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SerpentScale,$item_serpentscale,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+SerpentStew,$item_serpentstew,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_cauldron (recipe mill)
+SharpeningStone,$item_sharpeningstone,RenewableChain,Automated chain from renewable inputs: recipe at $piece_stonecutter (recipe mill)
+ShieldBanded,$item_shield_banded,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+ShieldBlackmetal,$item_shield_blackmetal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldBlackmetalTower,$item_shield_blackmetal_tower,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldBoneTower,$item_shield_bonetower,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldBronzeBuckler,$item_shield_bronzebuckler,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldBucklerGoldUncooked,$item_shield_buckler_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+ShieldCarapace,$item_shield_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldCarapaceBuckler,$item_shield_carapacebuckler,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldCore,$item_shieldcore,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldFlametal,$item_shield_flametal,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldFlametalTower,$item_shield_flametal_tower,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldGold,$item_shield_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ShieldGoldBuckler,$item_shield_goldbuckler,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ShieldGoldTower,$item_shield_gold_tower,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+ShieldIronBuckler,$item_shield_ironbuckler,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+ShieldIronSquare,$item_shield_iron_square,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_forge (disabled recipe)
+ShieldIronTower,$item_shield_iron_tower,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+ShieldKnight,$item_shield_knight,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+ShieldRoots,$item_shield_roots,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldRoundGoldUncooked,$item_shield_round_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+ShieldSerpentscale,$item_shield_serpentscale,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldSilver,$item_shield_silver,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+ShieldTowerGoldUncooked,$item_shield_tower_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+ShieldWood,$item_shield_wood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShieldWoodTower,$item_shield_woodtower,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+ShocklateSmoothie,$item_shocklatesmoothie,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Shovel,$item_snowshovel,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+Silver,$item_silver,RenewableChain,Automated chain from renewable inputs: station at smelter (feeder adapter)
+SilverNecklace,$item_silvernecklace,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+SilverOre,$item_silverore,RenewableChain,Mod renewable source
+SizzlingBerryBroth,$item_sizzlingberrybroth,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+SledgeDemolisher,$item_sledge_demolisher,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+SledgeGold,$item_sledge_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+SledgeGoldUncooked,$item_sledge_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+SledgeGold_BloodLightning,$item_mace2h_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SledgeGold_FrostFire,$item_mace2h_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SledgeIron,$item_sledge_iron,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+SledgeStagbreaker,$item_stagbreaker,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SledgeWood,$item_sledge_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+SmallPartsGoldUncooked,$item_smallparts_gold_uncooked,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+SmokedFish,$item_smokedfish,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_cauldron (recipe mill)
+SmokedMooseMeat,$item_smokedmoosemeat,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Snowball,$item_snowball,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Softtissue,$item_softtissue,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Sparkler,$item_sparkler,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SparklingShroomshake,$item_sparklingshroomshake,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+SpearBronze,$item_spear_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearCarapace,$item_spear_carapace,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearChitin,$item_spear_chitin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearElderbark,$item_spear_ancientbark,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearFlint,$item_spear_flint,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearGold,$item_spear_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+SpearGoldUncooked,$item_spear_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+SpearGold_BloodLightning,$item_spear_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearGold_FrostFire,$item_spear_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearSplitner,$item_spear_splitner,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearSplitner_Blood,$item_spear_splitner_blood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearSplitner_Lightning,$item_spear_splitner_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearSplitner_Nature,$item_spear_splitner_nature,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearWolfFang,$item_spear_wolffang,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SpearWood,$item_spear_wood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+SpiceAshlands,$item_spiceashlands,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpiceDeepNorth,$item_spicedeepnorth,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpiceForests,$item_spiceforests,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpiceMistlands,$item_spicemistlands,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpiceMountains,$item_spicemountains,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpiceOceans,$item_spiceoceans,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpicePlains,$item_spiceplains,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+SpicyMarmalade,$item_spicymarmalade,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+StaffClusterbomb,$item_staffclusterbomb,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffFireball,$item_stafffireball,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffFrostOrbs,$item_staff_frostorbs,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+StaffFrostOrbsUncooked,$item_frostorbs_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffGreenRoots,$item_staffgreenroots,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffIceShards,$item_stafficeshards,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffLightning,$item_staff_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffOrbofAhri,$item_staff_orbofahri,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+StaffOrbofAhriUncooked,$item_staff_orbofahri_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffRedTroll,$item_staffredtroll,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffShield,$item_staffshield,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffSkeleton,$item_staffskeleton,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffSpiritCaller,$item_staff_spiritcaller,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+StaffSpiritCallerUncooked,$item_staff_spiritcaller_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+StaffThunderBlood,$item_staff_thunderblood,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+StaffThunderbloodUncooked,$item_staff_thunderblood_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Stone,$item_stone,RenewableChain,Mod renewable source
+StoneRock,$item_stonerock,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+SulfurStone,$item_sulfurstone,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+SurtlingCore,$item_surtlingcore,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+SwordBlackmetal,$item_sword_blackmetal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_forge (recipe mill)
+SwordBronze,$item_sword_bronze,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordDyrnwyn,$item_sword_dyrnwyn,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordGold,$item_sword_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+SwordGoldUncooked,$item_sword_gold_uncooked,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+SwordGold_BloodLightning,$item_sword_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordGold_FrostFire,$item_sword_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordIron,$item_sword_iron,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordIronFire,$item_sword_fire,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+SwordMistwalker,$item_sword_mistwalker,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_blackforge (recipe mill)
+SwordNiedhogg,$item_sword_niedhogg,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordNiedhoggBlood,$item_sword_niedhogg_blood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordNiedhoggLightning,$item_sword_niedhogg_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordNiedhoggNature,$item_sword_niedhogg_nature,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordSilver,$item_sword_silver,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+SwordWood,$item_sword_wood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordGold,$item_sword2h_gold,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_blackforge (upgrade only); cooking at piece_FrostFoundry (unreviewed station)
+THSwordGoldUncooked,$item_sword2h_gold_uncooked,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordGold_BloodLightning,$item_sword2h_gold_bloodlightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordGold_FrostFire,$item_sword2h_gold_frostfire,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordKrom,$item_sword_krom,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordSlayer,$item_sword_slayer,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordSlayerBlood,$item_sword_slayer_blood,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordSlayerLightning,$item_sword_slayer_lightning,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordSlayerNature,$item_sword_slayer_nature,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+THSwordWood,$item_sword_wood_2h,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_workbench (disabled recipe)
+Tankard,$item_tankard,RenewableChain,Automated chain from renewable inputs: recipe at $piece_workbench (recipe mill)
+TankardAnniversary,$item_tankard_anniversary,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TankardOdin,$item_tankard_odin,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+Tankard_dvergr,$item_dvergrtankard,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Tar,$item_tar,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Thistle,$item_thistle,RenewableChain,Mod renewable source
+Thunderstone,$item_thunderstone,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+Tin,$item_tin,RenewableChain,Automated chain from renewable inputs: station at smelter (feeder adapter)
+TinOre,$item_tinore,RenewableChain,Mod renewable source
+Torch,$item_torch,RenewableChain,Automated chain from renewable inputs: recipe (recipe mill)
+TorchMist,$item_torchmist,UnsupportedPendingAdapter,Made only by an unreviewed producer: recipe at $piece_magetable (disabled recipe)
+TrinketBlackDamageHealth,$item_trinketblackdamagedealth,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketBlackStamina,$item_trinketblackdtamina,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketBloodGoldHealth,$item_trinketbloodgoldhealth,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketBloodGoldStamina,$item_trinketbloodgoldstamina,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketBronzeHealth,$item_trinketbronzehealth,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketBronzeStamina,$item_trinketbronzestamina,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketCarapaceEitr,$item_trinketcarapaceeitr,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketChitinSwim,$item_trinketchitinswim,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketFlametalEitr,$item_trinketflametaleitr,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketFlametalStaminaHealth,$item_trinketflametalstaminahealth,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketIronHealth,$item_trinketironhealth,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketIronStamina,$item_trinketironstamina,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketScaleStaminaDamage,$item_trinketscalestaminadamage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketSilverDamage,$item_trinketsilverdamage,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrinketSilverResist,$item_trinketsilverresist,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TrollHide,$item_trollhide,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+TrophyAbomination,$item_trophy_abomination,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyAsksvin,$item_trophy_asksvin,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBarka,$item_trophy_barka,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBjorn,$item_trophy_bjorn,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBjornUndead,$item_trophy_bjorn_undead,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBlob,$item_trophy_blob,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBlob_Frost,$item_trophy_blob_frost,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBlob_Lava,$item_trophy_blob_lava,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBlob_Morkhalla,$item_trophy_blob_morkhalla,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBoar,$item_trophy_boar,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBonemass,$item_trophy_bonemass,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyBonemawSerpent,$item_trophy_bonemaw,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyCharredArcher,$item_trophy_charredarcher,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyCharredMage,$item_trophy_charredmage,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyCharredMelee,$item_trophy_charredmelee,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyCultist,$item_trophy_cultist,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyCultist_Hildir,$item_trophy_cultist_hildir,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDeathsquito,$item_trophy_deathsquito,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDeer,$item_trophy_deer,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDeerWhite,$item_trophy_deer_white,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDragonQueen,$item_trophy_dragonqueen,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDraugr,$item_trophy_draugr,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDraugrElite,$item_trophy_draugrelite,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDraugrFem,$item_trophy_draugr,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyDvergr,$item_trophy_dvergr,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyEikthyr,$item_trophy_eikthyr,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyElaking,$item_trophy_elaking,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyFader,$item_trophy_fader,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyFallenValkyrie,$item_trophy_fallenvalkyrie,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyFenring,$item_trophy_fenring,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyForestTroll,$item_trophy_troll,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyFrostTroll,$item_trophy_troll,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGhost,$item_trophy_ghost,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGjall,$item_trophy_gjall,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGoblin,$item_trophy_goblin,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGoblinBrute,$item_trophy_goblinbrute,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGoblinBruteBrosBrute,$item_trophy_brutebro,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGoblinBruteBrosShaman,$item_trophy_shamanbro,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGoblinKing,$item_trophy_goblinking,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGoblinShaman,$item_trophy_goblinshaman,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGreydwarf,$item_trophy_greydwarf,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGreydwarfBrute,$item_trophy_greydwarfbrute,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGreydwarfShaman,$item_trophy_greydwarfshaman,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyGrowth,$item_trophy_growth,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyHare,$item_trophy_hare,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyHatchling,$item_trophy_hatchling,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyJotunWarrior,$item_trophy_jotunwarrior,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyJotunWitch,$item_trophy_jotunwitch,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyLeech,$item_trophy_leech,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyLox,$item_trophy_lox,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyMole,$item_trophy_mole,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyMoose,$item_trophy_moose,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyMorgen,$item_trophy_morgen,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyNeck,$item_trophy_neck,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySGolem,$item_trophy_sgolem,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySeal,$item_trophy_seal,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySeeker,$item_trophy_seeker,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySeekerBrute,$item_trophy_seeker_brute,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySeekerQueen,$item_trophy_seekerqueen,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySerpent,$item_trophy_serpent,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySkeleton,$item_trophy_skeleton,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySkeletonHildir,$item_trophy_skeleton_hildir,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySkeletonPoison,$item_trophy_skeletonpoison,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophySurtling,$item_trophy_surtling,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyTheElder,$item_trophy_elder,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyTick,$item_trophy_tick,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyUlv,$item_trophy_ulv,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyVolture,$item_trophy_volture,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyWolf,$item_trophy_wolf,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyWraith,$item_trophy_wraith,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+TrophyWrithan,$item_trophy_writhan,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+Turnip,$item_turnip,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+TurnipSeeds,$item_turnipseeds,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+TurnipStew,$item_turnipstew,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TurretBolt,$item_turretbolt,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+TurretBoltBloodgold,$item_turretbolt_bloodgold,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_artisanstation (recipe mill)
+TurretBoltBone,$item_turretboltbone,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+TurretBoltFlametal,$item_turretbolt_flametal,FiniteSupplyAutomatedProcessing,Processing automated: recipe at $piece_artisanstation (recipe mill)
+TurretBoltWood,$item_turretboltwood,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_artisanstation (recipe mill)
+UndeadBjornRibcage,$item_UndeadBjornRibcage,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Upgrader0Armor,$item_upgrader_tier0 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader0Weapon,$item_upgrader_tier0 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader1Armor,$item_upgrader_tier1 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader1Weapon,$item_upgrader_tier1 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader2Armor,$item_upgrader_tier2 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader2Weapon,$item_upgrader_tier2 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader3Armor,$item_upgrader_tier3 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader3Weapon,$item_upgrader_tier3 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader4Armor,$item_upgrader_tier4 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader4Weapon,$item_upgrader_tier4 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader5Armor,$item_upgrader_tier5 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader5Weapon,$item_upgrader_tier5 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader6Armor,$item_upgrader_tier6 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader6Weapon,$item_upgrader_tier6 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader7Armor,$item_upgrader_tier7 $item_upgrader_armor $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Upgrader7Weapon,$item_upgrader_tier7 $item_upgrader_weapon $item_upgrader_name,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+VikingCupcake,$item_vikingcupcake,FiniteSupplyAutomatedProcessing,Processing automated: cooking at piece_oven (cooking tender)
+VikingCupcakeUncooked,$item_vikingcupcake_uncooked,TraderSupplyAutomatedProcessing,Processing automated; a trader supplies an input
+VineGreenSeeds,$item_vinegreenseeds,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+Vineberry,$item_vineberry,NativeRenewableCollection,"Native respawn, crop, hive, or sap source"
+VineberrySeeds,$item_vineberryseeds,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+Voidplasm,$item_ectoplasm,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+VoltureEgg,$item_voltureegg,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+VoltureMeat,$item_volture_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Wishbone,$item_wishbone,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+Wisp,$item_wisp,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+WitheredBone,$item_witheredbone,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+WolfClaw,$item_wolfclaw,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+WolfFang,$item_wolffang,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+WolfHairBundle,$item_wolfhairbundle,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+WolfJerky,$item_wolfjerky,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+WolfMeat,$item_wolf_meat,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+WolfMeatSkewer,$item_wolf_skewer,CombatOrHusbandrySupplyAutomatedProcessing,Processing automated; creature drops supply an input
+WolfPelt,$item_wolfpelt,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+Wood,$item_wood,RenewableChain,Mod renewable source
+WrithanRoots,$item_writhanroots,CombatOrHusbandrySupplyAutomatedProcessing,Creature drop; collection and downstream processing only
+YagluthDrop,$item_yagluththing,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+YggdrasilPorridge,$item_yggdrasilporridge,NativeRenewableCollection,Automated chain from native renewable inputs: recipe at $piece_cauldron (recipe mill)
+YggdrasilWood,$item_yggdrasilwood,FiniteSupplyAutomatedProcessing,"Found or mined in the world; no producer recorded. Belts, feeders, and docks can move it."
+YmirRemains,$item_ymirremains,TraderSupplyAutomatedProcessing,Bought from a trader; storage and downstream recipes only
+chest_hildir1,$item_chest_hildir1,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+chest_hildir2,$item_chest_hildir2,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"
+chest_hildir3,$item_chest_hildir3,ManualOrUniqueByDesign,"Trophy, key, boss drop, or unique progression item"

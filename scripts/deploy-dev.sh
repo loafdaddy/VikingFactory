@@ -42,28 +42,22 @@ fi
 cp "$core" "$dest/VikingFactory.Core.dll"
 mkdir -p "$dest/Assets"
 pack="$root/VikingFactory-Assets"
-copy_model() {
-  local id="$1"
-  local polished="$pack/polished/$id/$id.glb"
-  local proto="$pack/models/$id/$id.glb"
+# Every GLB a registered piece names: polished models first, then the expansion set.
+models="$(grep -o '"vf_[a-z0-9_]*\.glb"' "$root/src/VikingFactory.Plugin/Machines/MachineCatalog.cs" | tr -d '"' | sort -u)"
+for file in $models; do
+  id="${file%.glb}"
+  polished="$pack/polished/$id/$file"
+  expansion="$pack/expansion/models/$id/$file"
   if [[ -f "$polished" ]]; then
-    cp "$polished" "$dest/Assets/$id.glb"
-    echo "Copied polished $id.glb"
-  elif [[ -f "$proto" ]]; then
-    cp "$proto" "$dest/Assets/$id.glb"
-    echo "Polished $id.glb is missing. Copied the prototype."
+    cp "$polished" "$dest/Assets/$file"
+  elif [[ -f "$expansion" ]]; then
+    cp "$expansion" "$dest/Assets/$file"
   else
     echo "No GLB for $id" >&2
     exit 2
   fi
-}
-copy_model vf_shaft_2m
-copy_model vf_water_wheel
-copy_model vf_hand_crank
-copy_model vf_clutch
-copy_model vf_conveyor_2m
-copy_model vf_feeder
-copy_model vf_catch_basket
+done
+echo "Copied $(echo "$models" | wc -w) workshop GLBs"
 mkdir -p "$dest/Assets/icons"
 icon_dir="$pack/polished/icons"
 if [[ ! -d "$icon_dir" ]]; then

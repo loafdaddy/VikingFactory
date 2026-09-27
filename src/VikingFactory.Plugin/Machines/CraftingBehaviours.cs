@@ -322,6 +322,31 @@ namespace VikingFactory.Machines
             };
         }
 
+        /// <summary>A feeder may take finished products from the output.</summary>
+        public override IItemEndpoint OutputAt(Transform port)
+        {
+            return new DelegateEndpoint
+            {
+                Name = M.Spec.Name,
+                Machine = M,
+                PeekFn = filter =>
+                {
+                    var product = _mill.PeekOutput();
+                    return product != null && (filter == null || filter(product)) ? product.Copy(1) : null;
+                },
+                RemoveFn = one =>
+                {
+                    var product = _mill.PeekOutput();
+                    if (product == null || !product.SameIdentity(one))
+                        return false;
+                    _mill.TakeOneOutput();
+                    SaveNow();
+                    return true;
+                },
+                CountFn = prefab => _mill.Output.Where(s => s.Prefab == prefab).Sum(s => s.Count)
+            };
+        }
+
         private bool IsUpgradeTarget(ItemStack one)
         {
             return _mill.Recipe != null && one.Prefab == _mill.Recipe.OutputPrefab;
@@ -358,6 +383,12 @@ namespace VikingFactory.Machines
             if (recipe == null)
             {
                 WorkshopMachine.Message(user, "No recipe makes that.");
+                return true;
+            }
+
+            if (Jotunn.Managers.ItemManager.Instance.GetRecipe(recipe.name) != null && !WorkshopConfig.ModdedRecipeAllowed(recipe.name))
+            {
+                WorkshopMachine.Message(user, "Recipe " + recipe.name + " comes from another mod. The server must list it in ModdedRecipeAllowlist.");
                 return true;
             }
 

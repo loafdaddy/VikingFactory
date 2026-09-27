@@ -2,6 +2,9 @@
   "name": "VikingFactory",
   "version_number": "0.3.0",
   "website_url": "https://github.com/loafdaddy/VikingFactory",
-  "description": "Mechanical power and physical automation for Valheim. Not ready to upload.",
-  "dependencies": []
+  "description": "Mechanical power, belts, and powered workshops for Valheim. Early development test build.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2351",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
 }

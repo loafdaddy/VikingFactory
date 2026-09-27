@@ -326,7 +326,7 @@ namespace VikingFactory.Machines
     /// </summary>
     public sealed class SmelterEndpoint : DropEndpoint
     {
-        public static readonly HashSet<string> Reviewed = new HashSet<string> { "smelter", "charcoal_kiln", "blastfurnace", "windmill", "piece_spinningwheel", "eitrrefinery" };
+        public static readonly HashSet<string> Reviewed = Core.Diagnostics.ReviewedStations.Smelters;
 
         private readonly Smelter _smelter;
         private readonly ZNetView _view;
@@ -423,7 +423,7 @@ namespace VikingFactory.Machines
     /// </summary>
     public sealed class CookingEndpoint : DropEndpoint
     {
-        public static readonly HashSet<string> Reviewed = new HashSet<string> { "piece_cookingstation", "piece_cookingstation_iron", "piece_oven" };
+        public static readonly HashSet<string> Reviewed = Core.Diagnostics.ReviewedStations.Cooking;
 
         private readonly CookingStation _station;
         private readonly ZNetView _view;

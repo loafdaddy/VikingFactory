@@ -140,6 +140,31 @@ namespace VikingFactory.Machines
             };
         }
 
+ 
+        /// <summary>A feeder may take the ready front item from the belt's end.</summary>
+        public override IItemEndpoint OutputAt(Transform port)
+        {
+            return new DelegateEndpoint
+            {
+                Name = M.Spec.Name,
+                Machine = M,
+                PeekFn = filter =>
+                {
+                    var front = _queue.PeekReady();
+                    return front != null && (filter == null || filter(front)) ? front.Copy(1) : null;
+                },
+                RemoveFn = one =>
+                {
+                    var front = _queue.PeekReady();
+                    if (front == null || !front.SameIdentity(one))
+                        return false;
+                    _queue.TakeReady();
+                    SaveNow();
+                    return true;
+                }
+            };
+        }
+
         public override List<ItemStack> Drain() { return _queue.TakeAll(); }
 
         public override string Status()

@@ -169,6 +169,8 @@ namespace VikingFactory
                 json.Append(", \"enabled\": ").Append(recipe.m_enabled ? "true" : "false");
                 json.Append(", \"station\": \"").Append(Esc(recipe.m_craftingStation != null ? recipe.m_craftingStation.m_name : "")).Append("\"");
                 json.Append(", \"stationLevel\": ").Append(recipe.m_minStationLevel);
+                json.Append(", \"onlyOne\": ").Append(recipe.m_requireOnlyOneIngredient ? "true" : "false");
+                json.Append(", \"upgradeOnly\": ").Append(recipe.m_noCraftOnlyUpgrade ? "true" : "false");
                 json.Append(", \"resources\": [");
                 var resources = recipe.m_resources;
                 if (resources != null)

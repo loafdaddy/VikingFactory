@@ -648,10 +648,11 @@ namespace VikingFactory.Machines
 
                 if (source.CountOf(seed.Prefab) < cost)
                     return;
-                source.TakeExact(seed.Prefab, cost);
+                var taken = source.TakeExact(seed.Prefab, cost);
                 if (!Planting.Plant(sapling, position))
                 {
-                    source.TryAdd(new ItemStack { Prefab = seed.Prefab, Count = cost, WorldLevel = seed.WorldLevel });
+                    foreach (var stack in taken)
+                        source.TryAdd(stack);
                     return;
                 }
 

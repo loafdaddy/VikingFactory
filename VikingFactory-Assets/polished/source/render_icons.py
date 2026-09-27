@@ -5,14 +5,47 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "icons"
+EXPANSION = ROOT.parent / "expansion" / "models"
+# Placed piece id -> model name. Found under polished/ first, then expansion/models/.
 MODELS = {
-    "vf_crank": ROOT / "vf_hand_crank" / "vf_hand_crank.glb",
-    "vf_shaft": ROOT / "vf_shaft_2m" / "vf_shaft_2m.glb",
-    "vf_clutch": ROOT / "vf_clutch" / "vf_clutch.glb",
-    "vf_water_wheel": ROOT / "vf_water_wheel" / "vf_water_wheel.glb",
-    "vf_belt": ROOT / "vf_conveyor_2m" / "vf_conveyor_2m.glb",
-    "vf_feeder": ROOT / "vf_feeder" / "vf_feeder.glb",
-    "vf_basket": ROOT / "vf_catch_basket" / "vf_catch_basket.glb",
+    "vf_crank": "vf_hand_crank",
+    "vf_shaft": "vf_shaft_2m",
+    "vf_rope": "vf_rope_4m",
+    "vf_cog": "vf_cog",
+    "vf_reversing_cog": "vf_reversing_cog",
+    "vf_clutch": "vf_clutch",
+    "vf_water_wheel": "vf_water_wheel",
+    "vf_belt": "vf_conveyor_2m",
+    "vf_belt_corner": "vf_conveyor_corner",
+    "vf_iron_belt": "vf_iron_belt_2m",
+    "vf_trough": "vf_gravity_trough",
+    "vf_feeder": "vf_feeder",
+    "vf_iron_feeder": "vf_iron_feeder",
+    "vf_basket": "vf_catch_basket",
+    "vf_splitter": "vf_splitter",
+    "vf_merger": "vf_merger",
+    "vf_recipe_mill": "vf_recipe_mill",
+    "vf_assembler": "vf_advanced_assembler",
+    "vf_quarry": "vf_quarry",
+    "vf_coppice_bed": "vf_coppice_bed",
+    "vf_timber_saw": "vf_timber_saw",
+    "vf_planter": "vf_planter",
+    "vf_harvester": "vf_harvester",
+    "vf_farm_gantry": "vf_farm_gantry",
+    "vf_forage_bed": "vf_forage_bed",
+    "vf_mining_head": "vf_finite_mining_head",
+    "vf_deep_extractor": "vf_deep_extractor",
+    "vf_steam_engine": "vf_steam_engine",
+    "vf_reinforced_steam": "vf_reinforced_steam_engine",
+    "vf_water_intake": "vf_water_intake",
+    "vf_sail_wheel": "vf_sail_wheel",
+    "vf_governor": "vf_governor",
+    "vf_flywheel": "vf_flywheel",
+    "vf_eitr_motor": "vf_eitr_motor",
+    "vf_cooking_tender": "vf_cooking_tender",
+    "vf_oven_extension": "vf_oven_extension",
+    "vf_feed_gate": "vf_livestock_feed_gate",
+    "vf_culling_gate": "vf_livestock_culling_gate",
 }
 
 
@@ -114,11 +147,20 @@ def render_model(path, source):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    render_marker(OUT / "vf_marker.png")
-    for name, source in MODELS.items():
+    import sys
+    redo = "--all" in sys.argv
+    if redo or not (OUT / "vf_marker.png").is_file():
+        render_marker(OUT / "vf_marker.png")
+    for name, model in MODELS.items():
+        target = OUT / (name + ".png")
+        if target.is_file() and not redo:
+            continue
+        source = ROOT / model / (model + ".glb")
         if not source.is_file():
-            raise SystemExit("Missing model: " + str(source))
-        render_model(OUT / (name + ".png"), source)
+            source = EXPANSION / model / (model + ".glb")
+        if not source.is_file():
+            raise SystemExit("Missing model: " + model)
+        render_model(target, source)
         print("rendered", name)
 
 

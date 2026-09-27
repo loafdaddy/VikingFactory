@@ -17,6 +17,13 @@ namespace VikingFactory.Core.Diagnostics
         UnsupportedPendingAdapter
     }
 
+    /// <summary>Native stations with a reviewed adapter. Anything else reports "Unsupported adapter".</summary>
+    public static class ReviewedStations
+    {
+        public static readonly HashSet<string> Smelters = new HashSet<string> { "smelter", "charcoal_kiln", "blastfurnace", "windmill", "piece_spinningwheel", "eitrrefinery" };
+        public static readonly HashSet<string> Cooking = new HashSet<string> { "piece_cookingstation", "piece_cookingstation_iron", "piece_oven" };
+    }
+
     public sealed class CoverageItem
     {
         public string Prefab = "";
