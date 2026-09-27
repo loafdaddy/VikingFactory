@@ -1,9 +1,12 @@
 using System;
 using System.IO;
+using System.Linq;
 using BepInEx;
+using BepInEx.Bootstrap;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
+using Jotunn.Utils;
 using UnityEngine;
 using VikingFactory.Machines;
 
@@ -11,37 +14,42 @@ namespace VikingFactory
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
     [BepInDependency(Jotunn.Main.ModGuid)]
+    [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Minor)]
     public class VikingFactoryPlugin : BaseUnityPlugin
     {
         public const string PluginGuid = "com.vikingfactory";
         public const string PluginName = "VikingFactory";
         public const string PluginVersion = "0.3.0";
 
+        private static readonly string[] CompetingHints = { "hopper", "pipe", "automatic", "autofuel", "auto_fuel", "craftfromcontainers", "autofeed", "lazyviking", "serversideqol" };
+
         private void Awake()
         {
+            WorkshopConfig.Bind(Config);
             var localization = new CustomLocalization(Info.Metadata);
-            localization.AddTranslation("$piece_vf_marker", "Workshop marker");
-            localization.AddTranslation("$piece_vf_marker_desc", "A timber marker. It does not move items yet.");
-            localization.AddTranslation("$piece_vf_crank", "Hand crank");
-            localization.AddTranslation("$piece_vf_crank_desc", "Hold interact to turn the connected line. It stops when you let go.");
-            localization.AddTranslation("$piece_vf_shaft", "Wooden shaft");
-            localization.AddTranslation("$piece_vf_shaft_desc", "Carries rotation. Point the forward end at the next piece.");
-            localization.AddTranslation("$piece_vf_clutch", "Clutch");
-            localization.AddTranslation("$piece_vf_clutch_desc", "Interact to disconnect the branch beyond the forward end.");
-            localization.AddTranslation("$piece_vf_wheel", "Water wheel");
-            localization.AddTranslation("$piece_vf_wheel_desc", "Stands on the ground. It is meant for a stream.");
-            localization.AddTranslation("$piece_vf_belt", "Timber belt");
-            localization.AddTranslation("$piece_vf_belt_desc", "Draws a little power along the line. A feeder moves the items.");
-            localization.AddTranslation("$piece_vf_feeder", "Bronze feeder");
-            localization.AddTranslation("$piece_vf_feeder_desc", "Moves one item every two seconds from the back port to the forward port while the line turns.");
-            localization.AddTranslation("$piece_vf_basket", "Catch basket");
-            localization.AddTranslation("$piece_vf_basket_desc", "A small buffer. Point a feeder at it, or stand it against a chest.");
-            LocalizationManager.Instance.AddLocalization(localization);
+            foreach (var spec in MachineCatalog.All)
+            {
+                localization.AddTranslation(spec.Token, spec.Name);
+                localization.AddTranslation(spec.DescriptionToken, spec.Description);
+            }
 
+            LocalizationManager.Instance.AddLocalization(localization);
             gameObject.AddComponent<WorkshopSimulator>();
             CommandManager.Instance.AddConsoleCommand(new ExportCatalogueCommand());
+            CommandManager.Instance.AddConsoleCommand(new WorkshopCommand());
             PrefabManager.OnVanillaPrefabsAvailable += AddPieces;
             Logger.LogInfo(PluginName + " " + PluginVersion + " loaded. Waiting for vanilla prefabs.");
+        }
+
+        private void Start()
+        {
+            // Other automation mods are not blocked. They are named so a report can say which ones were present.
+            foreach (var info in Chainloader.PluginInfos.Values)
+            {
+                var id = (info.Metadata.GUID + " " + info.Metadata.Name).ToLowerInvariant();
+                if (info.Metadata.GUID != PluginGuid && CompetingHints.Any(id.Contains))
+                    Logger.LogWarning("Automation-related mod present: " + info.Metadata.Name + " " + info.Metadata.Version + ". Combined behaviour is untested.");
+            }
         }
 
         private void AddPieces()
@@ -49,15 +57,16 @@ namespace VikingFactory
             PrefabManager.OnVanillaPrefabsAvailable -= AddPieces;
             try
             {
-                var catalogue = CatalogueExport.Write();
-                Logger.LogInfo("Catalogue exported to " + catalogue);
-                var materials = MaterialProbe.Write();
-                Logger.LogInfo("Material probe wrote " + materials);
+                Logger.LogInfo("Catalogue exported to " + CatalogueExport.Write());
+                Logger.LogInfo("Material probe wrote " + MaterialProbe.Write());
             }
             catch (Exception ex)
             {
                 Logger.LogError("Catalogue export failed: " + ex.Message);
             }
+
+            Logger.LogInfo("Boss keys: " + Progression.Resolve());
+            Planting.Reset();
 
             if (PrefabManager.Instance.GetPrefab("Wood") == null)
             {
@@ -65,114 +74,107 @@ namespace VikingFactory
                 return;
             }
 
-            Add("vf_marker", "$piece_vf_marker", "$piece_vf_marker_desc", null, new Vector3(0.6f, 0.6f, 0.6f), new Color(0.55f, 0.38f, 0.2f), new[] { Req("Wood", 2) }, null, null);
-            Add("vf_crank", "$piece_vf_crank", "$piece_vf_crank_desc", MachineRole.Crank, new Vector3(0.4f, 0.9f, 0.4f), new Color(0.62f, 0.42f, 0.22f), new[] { Req("Wood", 6), Req("LeatherScraps", 2) }, "vf_hand_crank.glb", new[]
+            var registered = 0;
+            foreach (var spec in MachineCatalog.All)
             {
-                Box(new Vector3(0f, 0.55f, 0f), new Vector3(0.7f, 1.1f, 0.65f))
-            });
-            Add("vf_shaft", "$piece_vf_shaft", "$piece_vf_shaft_desc", MachineRole.Shaft, new Vector3(0.2f, 0.2f, 2f), new Color(0.45f, 0.3f, 0.16f), new[] { Req("Wood", 2) }, "vf_shaft_2m.glb", new[]
-            {
-                Box(new Vector3(0f, 0.3f, 0f), new Vector3(0.42f, 0.6f, 2f))
-            });
-            Add("vf_clutch", "$piece_vf_clutch", "$piece_vf_clutch_desc", MachineRole.Clutch, new Vector3(0.45f, 0.45f, 0.7f), new Color(0.55f, 0.4f, 0.18f), new[] { Req("Wood", 4), Req("Bronze", 1) }, "vf_clutch.glb", new[]
-            {
-                Box(new Vector3(0f, 0.35f, 0f), new Vector3(0.5f, 0.7f, 0.8f))
-            });
-            Add("vf_water_wheel", "$piece_vf_wheel", "$piece_vf_wheel_desc", MachineRole.WaterWheel, new Vector3(2f, 2f, 0.35f), new Color(0.35f, 0.28f, 0.16f), new[] { Req("Wood", 30), Req("RoundLog", 10), Req("Bronze", 4), Req("DeerHide", 4) }, "vf_water_wheel.glb", new[]
-            {
-                Box(new Vector3(-0.95f, 1.075f, 0f), new Vector3(0.3f, 2.15f, 1.95f)),
-                Box(new Vector3(0.95f, 1.075f, 0f), new Vector3(0.3f, 2.15f, 1.95f))
-            });
-            Add("vf_belt", "$piece_vf_belt", "$piece_vf_belt_desc", MachineRole.Belt, new Vector3(0.7f, 0.15f, 2f), new Color(0.42f, 0.28f, 0.14f), new[] { Req("Wood", 4), Req("LeatherScraps", 2), Req("BronzeNails", 2) }, "vf_conveyor_2m.glb", new[]
-            {
-                Box(new Vector3(0f, 0.73f, 0f), new Vector3(1.1f, 0.25f, 2f))
-            });
-            Add("vf_feeder", "$piece_vf_feeder", "$piece_vf_feeder_desc", MachineRole.Feeder, new Vector3(0.55f, 0.8f, 0.7f), new Color(0.72f, 0.48f, 0.22f), new[] { Req("Wood", 6), Req("Bronze", 2), Req("LeatherScraps", 2) }, "vf_feeder.glb", new[]
-            {
-                Box(new Vector3(0f, 0.4f, 0f), new Vector3(0.8f, 0.8f, 0.8f))
-            });
-            Add("vf_basket", "$piece_vf_basket", "$piece_vf_basket_desc", MachineRole.Basket, new Vector3(0.8f, 0.45f, 0.8f), new Color(0.5f, 0.34f, 0.18f), new[] { Req("Wood", 6), Req("LeatherScraps", 2) }, "vf_catch_basket.glb", new[]
-            {
-                Box(new Vector3(-0.48f, 0.4f, 0f), new Vector3(0.1f, 0.75f, 0.95f)),
-                Box(new Vector3(0.48f, 0.4f, 0f), new Vector3(0.1f, 0.75f, 0.95f)),
-                Box(new Vector3(0f, 0.4f, -0.43f), new Vector3(0.95f, 0.75f, 0.1f)),
-                Box(new Vector3(0f, 0.4f, 0.43f), new Vector3(0.95f, 0.75f, 0.1f)),
-                Box(new Vector3(0f, 0.05f, 0f), new Vector3(1f, 0.1f, 0.9f))
-            });
-        }
-
-        private void Add(string name, string title, string description, MachineRole? role, Vector3 scale, Color color, Requirement[] requirements, string modelFile, GlbPieceVisual.BoxSpec[] boxes)
-        {
-            for (var i = 0; i < requirements.Length; i++)
-            {
-                if (PrefabManager.Instance.GetPrefab(requirements[i].Item) != null)
-                    continue;
-                Logger.LogError("Prefab '" + requirements[i].Item + "' was not found. " + name + " was not registered.");
-                return;
+                try
+                {
+                    if (Add(spec))
+                        registered++;
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogError("Registering " + spec.Id + " failed: " + ex);
+                }
             }
 
-            // Valheim's water-piece flag rejects dry ground unless Shift is held, and it
-            // forces the pivot 3 metres above the surface. The wheel's pivot is its feet.
+            Logger.LogInfo("Registered " + registered + " of " + MachineCatalog.All.Count + " workshop pieces.");
+        }
+
+        private bool Add(MachineSpec spec)
+        {
+            foreach (var cost in spec.Costs)
+            {
+                if (PrefabManager.Instance.GetPrefab(cost.Item) != null)
+                    continue;
+                Logger.LogError("Prefab '" + cost.Item + "' was not found. " + spec.Id + " was not registered.");
+                return false;
+            }
+
+            var assets = Path.Combine(Path.GetDirectoryName(Info.Location) ?? "", "Assets");
             var config = new PieceConfig
             {
-                Name = title,
-                Description = description,
+                Name = spec.Token,
+                Description = spec.DescriptionToken,
                 PieceTable = PieceTables.Hammer,
-                CraftingStation = CraftingStations.Workbench,
+                CraftingStation = Station(spec.Station),
                 Category = "Crafting",
                 Usage = new[] { "Crafting" },
-                Icon = LoadIcon(Path.Combine(Path.GetDirectoryName(Info.Location) ?? "", "Assets", "icons", name + ".png"), color)
+                Icon = LoadIcon(Path.Combine(assets, Path.Combine("icons", spec.Id + ".png")))
             };
-            for (var i = 0; i < requirements.Length; i++)
-                config.AddRequirement(requirements[i].Item, requirements[i].Amount, true);
+            foreach (var cost in spec.Costs)
+                config.AddRequirement(cost.Item, cost.Amount, true);
 
-            var piece = new CustomPiece(name, true, config);
+            var piece = new CustomPiece(spec.Id, true, config);
             var prefab = piece.PiecePrefab;
-            prefab.transform.localScale = scale;
+            var color = new Color(0.55f, 0.38f, 0.2f);
+            prefab.transform.localScale = Vector3.one * 0.6f;
             var renderer = prefab.GetComponent<Renderer>();
             if (renderer != null)
                 renderer.material.color = color;
-            WorkshopMachine machine = null;
-            if (role.HasValue)
-            {
-                machine = prefab.AddComponent<WorkshopMachine>();
-                machine.Role = role.Value;
-            }
 
-            if (!string.IsNullOrEmpty(modelFile))
+            if (!string.IsNullOrEmpty(spec.Model))
             {
-                var path = Path.Combine(Path.GetDirectoryName(Info.Location) ?? "", "Assets", modelFile);
                 string report;
-                if (GlbPieceVisual.TryAttach(prefab, path, boxes, out report))
+                if (GlbPieceVisual.TryAttach(prefab, Path.Combine(assets, spec.Model), spec.Boxes, out report))
                 {
                     prefab.transform.localScale = Vector3.one;
-                    if (machine != null)
-                        machine.BindPorts();
-                    Logger.LogInfo("Attached " + name + " from " + modelFile + ". " + report);
+                    Logger.LogInfo("Attached " + spec.Id + " from " + spec.Model + ". " + report);
                 }
                 else
-                    Logger.LogWarning("Kept the block visual for " + name + ". " + report);
+                    Logger.LogWarning("Kept the block visual for " + spec.Id + ". " + report);
             }
 
+            var pieceLayer = LayerMask.NameToLayer("piece");
+            if (pieceLayer >= 0)
+            {
+                foreach (var t in prefab.GetComponentsInChildren<Transform>(true))
+                    t.gameObject.layer = pieceLayer;
+            }
+
+            var wear = prefab.GetComponent<WearNTear>() ?? prefab.AddComponent<WearNTear>();
+            wear.m_health = spec.Health;
+            wear.m_materialType = spec.Material;
+            wear.m_noRoofWear = false;
+            wear.m_noSupportWear = true;
+
+            var machine = prefab.GetComponent<WorkshopMachine>() ?? prefab.AddComponent<WorkshopMachine>();
+            machine.SpecId = spec.Id;
+            machine.Spec = spec;
+            WorkshopMachine.AddSnapPoints(prefab);
+
             PieceManager.Instance.AddPiece(piece);
-            Logger.LogInfo("Registered " + name + ". Valid=" + piece.IsValid());
+            Logger.LogInfo("Registered " + spec.Id + ". Valid=" + piece.IsValid());
+            return true;
         }
 
-        private static GlbPieceVisual.BoxSpec Box(Vector3 center, Vector3 size)
+        private static string Station(string name)
         {
-            return new GlbPieceVisual.BoxSpec { Center = center, Size = size };
+            switch (name)
+            {
+                case "Forge": return CraftingStations.Forge;
+                case "Stonecutter": return CraftingStations.Stonecutter;
+                case "ArtisanTable": return CraftingStations.ArtisanTable;
+                case "BlackForge": return CraftingStations.BlackForge;
+                default: return CraftingStations.Workbench;
+            }
         }
 
-        private static Requirement Req(string item, int amount)
-        {
-            return new Requirement { Item = item, Amount = amount };
-        }
-
-        private static Sprite LoadIcon(string path, Color fallback)
+        private static Sprite LoadIcon(string path)
         {
             Texture2D texture;
             if (!PngIcon.TryLoad(path, out texture))
-                return SolidIcon(fallback);
+                return SolidIcon(new Color(0.55f, 0.38f, 0.2f));
             return Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100f);
         }
 
@@ -186,12 +188,6 @@ namespace VikingFactory
             texture.SetPixels(pixels);
             texture.Apply();
             return Sprite.Create(texture, new Rect(0f, 0f, size, size), new Vector2(0.5f, 0.5f), 100f);
-        }
-
-        private struct Requirement
-        {
-            public string Item;
-            public int Amount;
         }
     }
 }

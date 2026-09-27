@@ -85,6 +85,12 @@ namespace VikingFactory
             json.Append("  ],\n");
             json.Append("  \"pieces\": [\n");
             WritePieces(json, prefabs ?? FromCache(typeof(Piece)));
+            json.Append("  ],\n");
+            json.Append("  \"creatureDrops\": [\n");
+            WriteCreatureDrops(json, prefabs ?? FromCache(typeof(CharacterDrop)));
+            json.Append("  ],\n");
+            json.Append("  \"traders\": [\n");
+            WriteTraders(json, prefabs ?? FromCache(typeof(Trader)));
             json.Append("  ]\n");
             json.Append("}\n");
             return json.ToString();
@@ -360,6 +366,48 @@ namespace VikingFactory
                     json.Append(", \"amount\": ").Append(requirement != null ? requirement.m_amount : 0);
                     json.Append(", \"recover\": ").Append(requirement != null && requirement.m_recover ? "true" : "false");
                     json.Append("}");
+                }
+                json.Append("]}");
+                return true;
+            });
+        }
+
+        private static void WriteCreatureDrops(StringBuilder json, List<GameObject> prefabs)
+        {
+            WriteWhere(json, prefabs, go =>
+            {
+                var drop = go.GetComponent<CharacterDrop>();
+                if (drop == null || drop.m_drops == null)
+                    return false;
+                json.Append("    {\"prefab\": \"").Append(Esc(go.name)).Append("\", \"items\": [");
+                var first = true;
+                foreach (var d in drop.m_drops)
+                {
+                    if (d == null || d.m_prefab == null)
+                        continue;
+                    if (!first)
+                        json.Append(", ");
+                    first = false;
+                    json.Append("\"").Append(Esc(ItemName(d.m_prefab.GetComponent<ItemDrop>()))).Append("\"");
+                }
+                json.Append("]}");
+                return true;
+            });
+        }
+
+        private static void WriteTraders(StringBuilder json, List<GameObject> prefabs)
+        {
+            WriteWhere(json, prefabs, go =>
+            {
+                var trader = go.GetComponent<Trader>();
+                if (trader == null || trader.m_items == null)
+                    return false;
+                json.Append("    {\"prefab\": \"").Append(Esc(go.name)).Append("\", \"items\": [");
+                for (var i = 0; i < trader.m_items.Count; i++)
+                {
+                    if (i > 0)
+                        json.Append(", ");
+                    json.Append("\"").Append(Esc(ItemName(trader.m_items[i].m_prefab))).Append("\"");
                 }
                 json.Append("]}");
                 return true;

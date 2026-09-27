@@ -156,13 +156,32 @@ namespace VikingFactory.Core.Kinetics
             }
 
             var seen = new HashSet<string>();
+            var index = 0;
             foreach (var id in _nodes.Keys.OrderBy(k => k, StringComparer.Ordinal))
             {
                 if (!seen.Add(id))
                     continue;
                 var component = Collect(id, seen);
+                foreach (var member in component)
+                    _nodes[member].Component = index;
+                index++;
                 Evaluate(component, Math.Max(0, dtSeconds));
             }
+
+            ComponentCount = index;
+        }
+
+        public int ComponentCount { get; private set; }
+
+        public bool Contains(string id)
+        {
+            return _nodes.ContainsKey(id);
+        }
+
+        /// <summary>Index of the connected component this node belongs to after Solve.</summary>
+        public int ComponentOf(string id)
+        {
+            return _nodes[id].Component;
         }
 
         public bool IsProducing(string id)
@@ -503,6 +522,7 @@ namespace VikingFactory.Core.Kinetics
             public bool Contributing { get; set; }
             public double Speed { get; set; }
             public double FlywheelFlowDu { get; set; }
+            public int Component { get; set; }
             public KineticStop Stop { get; set; }
         }
 

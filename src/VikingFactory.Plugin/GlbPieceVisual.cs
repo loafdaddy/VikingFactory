@@ -105,6 +105,7 @@ namespace VikingFactory
                     parents[Convert.ToInt32(children[c])] = i;
             }
 
+            var colliderNodes = new List<KeyValuePair<GameObject, Vector3>>();
             var visual = new GameObject("model");
             visual.transform.SetParent(prefab.transform, false);
             for (var i = 0; i < nodes.Count; i++)
@@ -126,6 +127,12 @@ namespace VikingFactory
                 }
                 if (Extras(node, "scroll") == "u")
                     go.AddComponent<ScrollingPart>();
+                if (Extras(node, "collider") == "box")
+                {
+                    var size = ExtrasList(node, "size");
+                    if (size != null && size.Count >= 3)
+                        colliderNodes.Add(new KeyValuePair<GameObject, Vector3>(go, new Vector3(Num(size[0]), Num(size[1]), Num(size[2]))));
+                }
             }
 
             for (var i = 0; i < created.Length; i++)
@@ -151,14 +158,31 @@ namespace VikingFactory
                     .Append(created[i].localPosition.z.ToString("0.###", CultureInfo.InvariantCulture)).Append(")");
             }
 
-            if (staticPart != null && staticBoxes != null)
+            var colliderHost = staticPart != null ? staticPart : visual.transform;
+            if (staticBoxes != null)
             {
                 for (var i = 0; i < staticBoxes.Length; i++)
                 {
-                    var box = staticPart.gameObject.AddComponent<BoxCollider>();
+                    var box = colliderHost.gameObject.AddComponent<BoxCollider>();
                     box.center = staticBoxes[i].Center;
                     box.size = staticBoxes[i].Size;
                 }
+            }
+            else if (colliderNodes.Count > 0)
+            {
+                // Expansion models carry collider boxes as metadata on empty nodes under Static.
+                foreach (var pair in colliderNodes)
+                {
+                    var box = pair.Key.AddComponent<BoxCollider>();
+                    box.size = pair.Value;
+                }
+            }
+            else
+            {
+                var bounds = LocalBounds(prefab.transform, visual);
+                var box = colliderHost.gameObject.AddComponent<BoxCollider>();
+                box.center = colliderHost.InverseTransformPoint(prefab.transform.TransformPoint(bounds.center));
+                box.size = bounds.size;
             }
 
             if (renderer != null)
@@ -311,6 +335,41 @@ namespace VikingFactory
             return Convert.ToSingle(value, CultureInfo.InvariantCulture);
         }
 
+        private static Bounds LocalBounds(Transform root, GameObject visual)
+        {
+            var filters = visual.GetComponentsInChildren<MeshFilter>(true);
+            var has = false;
+            var bounds = new Bounds(Vector3.zero, Vector3.one * 0.5f);
+            foreach (var filter in filters)
+            {
+                if (filter.sharedMesh == null)
+                    continue;
+                var mesh = filter.sharedMesh.bounds;
+                for (var i = 0; i < 8; i++)
+                {
+                    var corner = mesh.center + Vector3.Scale(mesh.extents, new Vector3((i & 1) == 0 ? -1 : 1, (i & 2) == 0 ? -1 : 1, (i & 4) == 0 ? -1 : 1));
+                    var local = root.InverseTransformPoint(filter.transform.TransformPoint(corner));
+                    if (!has)
+                    {
+                        bounds = new Bounds(local, Vector3.zero);
+                        has = true;
+                    }
+                    else
+                        bounds.Encapsulate(local);
+                }
+            }
+
+            return bounds;
+        }
+
+        private static List<object> ExtrasList(Dictionary<string, object> node, string key)
+        {
+            if (!node.ContainsKey("extras"))
+                return null;
+            var extras = node["extras"] as Dictionary<string, object>;
+            return extras != null && extras.ContainsKey(key) ? extras[key] as List<object> : null;
+        }
+
         private static string Extras(Dictionary<string, object> node, string key)
         {
             if (!node.ContainsKey("extras"))
@@ -333,20 +392,24 @@ namespace VikingFactory
     {
         public Vector3 LocalAxis = Vector3.forward;
         public bool Swing;
+        private Machines.WorkshopMachine _machine;
+        private float _phase;
 
         private void Update()
         {
-            var machine = GetComponentInParent<Machines.WorkshopMachine>();
-            if (machine == null || machine.Stop != "Turning.")
+            if (_machine == null)
+                _machine = GetComponentInParent<Machines.WorkshopMachine>();
+            if (_machine == null || !_machine.Turning)
                 return;
             if (Swing)
             {
-                var angle = Mathf.Sin(Time.time * 1.6f) * 50f;
-                transform.localRotation = Quaternion.AngleAxis(angle, LocalAxis);
+                _phase += Time.deltaTime * 1.6f * (float)(_machine.VisualRpm / BalanceDefaults.MilestoneRpm);
+                transform.localRotation = Quaternion.AngleAxis(Mathf.Sin(_phase) * 50f, LocalAxis);
                 return;
             }
 
-            transform.Rotate(LocalAxis, BalanceDefaults.MilestoneRpm * 6f * Time.deltaTime, Space.Self);
+            // Degrees per second = RPM × 6. The sign shows which way this segment turns.
+            transform.Rotate(LocalAxis, (float)_machine.VisualSpeed * 6f * Time.deltaTime, Space.Self);
         }
     }
 
@@ -368,9 +431,9 @@ namespace VikingFactory
         private void Update()
         {
             var machine = GetComponentInParent<Machines.WorkshopMachine>();
-            if (machine == null || machine.Stop != "Turning." || _renderers == null)
+            if (machine == null || !machine.Turning || _renderers == null)
                 return;
-            _offset = Mathf.Repeat(_offset + Time.deltaTime * 0.35f, 1f);
+            _offset = Mathf.Repeat(_offset + Time.deltaTime * 0.35f * Mathf.Sign((float)machine.VisualSpeed), 1f);
             for (var i = 0; i < _renderers.Length; i++)
             {
                 var renderer = _renderers[i];

@@ -163,7 +163,7 @@ namespace VikingFactory.Core.Crafting
         {
             if (Recipe == null)
                 return 0;
-            var ingredient = Recipe.Ingredients.FirstOrDefault(i => i.Prefab == prefab);
+            var ingredient = Recipe.Ingredients.FirstOrDefault(i => i.Prefab == prefab && i.Amount > 0);
             return ingredient == null ? 0 : ingredient.Amount;
         }
 
@@ -211,6 +211,23 @@ namespace VikingFactory.Core.Crafting
             first.Count -= 1;
             if (first.Count <= 0)
                 _output.RemoveAt(0);
+            return one;
+        }
+
+        public ItemStack? PeekRecovery()
+        {
+            return _recovery.Count == 0 ? null : _recovery[0];
+        }
+
+        public ItemStack? TakeOneRecovery()
+        {
+            if (_recovery.Count == 0)
+                return null;
+            var first = _recovery[0];
+            var one = first.Copy(1);
+            first.Count -= 1;
+            if (first.Count <= 0)
+                _recovery.RemoveAt(0);
             return one;
         }
 
@@ -280,7 +297,7 @@ namespace VikingFactory.Core.Crafting
                     return;
                 }
 
-                var missing = Recipe.Ingredients.FirstOrDefault(i => Buffered(i.Prefab) < i.Amount);
+                var missing = Recipe.Ingredients.FirstOrDefault(i => i.Amount > 0 && Buffered(i.Prefab) < i.Amount);
                 if (missing != null)
                 {
                     State = MillState.WaitingForInput;
@@ -302,7 +319,7 @@ namespace VikingFactory.Core.Crafting
                     return;
                 }
 
-                foreach (var ingredient in Recipe.Ingredients)
+                foreach (var ingredient in Recipe.Ingredients.Where(i => i.Amount > 0))
                     _escrow.AddRange(TakeInput(ingredient.Prefab, ingredient.Amount));
                 Progress = 0;
             }
