@@ -16,7 +16,7 @@ A change to workshop behaviour should also say how you would check it in a world
 
 ## Choosing work
 
-Read [ROADMAP.md](ROADMAP.md) and [docs/ImplementationStatus.md](docs/ImplementationStatus.md) before starting. The useful gaps are the ones already called out there: an in-game look at the pieces that load, item movement that does not lose a stack, and documentation that matches the code.
+Read [ROADMAP.md](ROADMAP.md) and [docs/ImplementationStatus.md](docs/ImplementationStatus.md) before starting. The most useful work now is playing [docs/QA-Checklist.md](docs/QA-Checklist.md) and reporting what a world shows.
 
 Open an issue before a large change. A new machine needs a progression tier, a power cost, and a reason it does not skip a vanilla station. Models without that are welcome as art, and they should not be registered as hammer pieces in the same pull request unless the behaviour exists.
 

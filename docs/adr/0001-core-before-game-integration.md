@@ -29,3 +29,11 @@ Valheim is now installed, and the plugin is in the solution. A headless load reg
 - [x] Core simulation and its tests
 - [x] Plugin compiled against the local assemblies, copied into the game folder, and loaded headless
 - [ ] A placed piece or a save inside a world
+
+## Update, 0.3.0
+
+The same split holds for every milestone. Graph solving, fuel accounting, belt queues, routing, the recipe mill's escrow, upgrades, production, field reserves, culling, scheduling, ownership epochs, schema gating, and coverage are in the core with 66 tests. The plugin adapts them to live game objects and calls the stations' own RPCs.
+
+- [x] Core logic for M0–M8 and its tests
+- [x] Plugin compiled, packaged, and loaded headless with 39 pieces
+- [ ] A placed piece or a save inside a world

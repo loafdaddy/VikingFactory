@@ -1,15 +1,11 @@
 # VikingFactory package template
 
-This directory is not a Thunderstore upload and not a player readme. The project readme is the repository `README.md`.
+This directory is the source for the test ZIP, not an upload. `scripts/package.sh` stages it with the built DLLs, models, and hammer pictures under `artifacts/`, runs `scripts/validate-package.sh`, and zips it.
 
-`scripts/validate-package.sh` checks that this folder has `manifest.json`, this file, and a 256×256 `icon.png`, and that it does not contain game DLLs. The manifest website is the GitHub repository. Dependencies are still empty.
+- `manifest.json` names BepInExPack Valheim 5.4.2351 and Jötunn 2.30.2.
+- `PLAYER-README.md` becomes the package's `README.md`.
+- `icon.png` is a flat 256×256 mark. The repository lockup is `branding/vikingfactory-logo.png`.
 
-`icon.png` is a flat mark. The lockup used on the repository front page is `branding/vikingfactory-logo.png`.
+Install path inside the package: `plugins/VikingFactory/VikingFactory.dll`, `VikingFactory.Core.dll`, and `Assets/`.
 
-Planned install path, once a tested build exists:
-
-`BepInEx/plugins/VikingFactory/VikingFactory.dll`
-
-`BepInEx/plugins/VikingFactory/VikingFactory.Core.dll`
-
-Server and every client will need the same build. Remote factories are not meant to keep running when nobody is nearby. That rule has not been tested.
+The `0.3.0` ZIP loaded 39 of 39 pieces headless. It has not been tested in a world, with two clients, or on a dedicated server. There is no license file. Do not publish.

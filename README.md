@@ -46,19 +46,17 @@ The full target is written up as a design proposal in [`docs/VikingFactory-Maste
 
 ## What works today
 
-Checked in code, by a headless load, and by one windowed session on 27 September 2026. That session entered an isolated world and placed one water wheel. The wheel floated. The placement fix after that has not been repeated in a world.
+Update `0.3.0` contains code for every planned milestone. It has been compiled, covered by 66 core tests, and loaded headless. **None of it has been placed in a world yet**, so treat everything below as built, not proven. The in-world test script is [docs/QA-Checklist.md](docs/QA-Checklist.md).
 
-- The plugin loads under BepInEx and Jötunn. This update is `0.2.0`. The first public snapshot was `0.1.0`.
-- Eight hammer pieces register: a workshop marker, hand crank, wooden shaft, clutch, water wheel, timber belt, bronze feeder, and catch basket. They are on the hammer’s Crafting tag.
-- Those seven machines, other than the marker, load original GLB models. Material names are swapped at runtime for cloned Valheim shaders. The game’s own textures are not in this repository.
-- Each hammer button has a rendered picture of that machine. Those pictures have not been seen in the menu yet.
-- A core simulation, covered by tests that do not start Valheim, runs one feeder from a crank and stalls when a second feeder is added. Shafts add no load. A closed clutch drops the branch beyond it.
+- The plugin loads under BepInEx and Jötunn and registers 39 hammer pieces on the Crafting tag, each with a model and a rendered picture.
+- **Power:** hand crank, water wheel, steam engines, sail wheel, and eitr motor. Shafts, rope, cogs with ratios, reversing cogs, clutches, a governor, and a flywheel. A line stalls when load exceeds drive, or when its ratios or sources disagree. Every segment shows which way it turns.
+- **Items:** belts and troughs carry real item queues. Feeders, splitters, mergers, baskets, and docked chests move items without deleting or duplicating them, as far as the tests can show.
+- **Native stations:** feeders load and unload kilns, smelters, blast furnaces, windmills, spinning wheels, eitr refineries, fermenters, hives, sap collectors, cooking racks, and ovens through the game's own actions. Timers stay native.
+- **Crafting:** a recipe mill runs a recipe you know, next to the real station, from belts. An advanced assembler can also upgrade an item one level.
+- **Supply:** bedrock quarry, managed coppice, a timber saw for staked plantations, planters and harvesters, forage beds, a mining head, late deep extraction of older ores, and livestock feed and culling gates.
+- A coverage report classifies all 969 items in this game by how they can be supplied and processed.
 
-The hammer only lists pieces the character has discovered. A new character sees Repair, so the grid looks empty until `debugmode` is on or the materials have been learned. `debugmode` resets every launch.
-
-Present in code, and not yet watched in a world: spinning parts, a scrolling belt surface, a feeder moving a real item, and basket or clutch state saved on the piece.
-
-Not gameplay yet: item-carrying belts, smelters, kilns, recipe crafting, farming, forestry, mining, cooking, steam, sail, and livestock. Some of those have models only. See the [roadmap](ROADMAP.md).
+The hammer only lists pieces the character has discovered. `debugmode` shows every piece and resets every launch.
 
 ## Build and test
 
@@ -76,8 +74,8 @@ cp Environment.props.example Environment.props
 ## Known limits
 
 - No in-game screenshots, save/load test, second client, or dedicated server.
-- The belt draws a little power and can scroll its hide surface. It does not carry items.
-- The water wheel places on the ground. Valheim’s water-piece flag lifted it about 3 m and demanded Shift on dry ground, so that flag is off. Spacing and immersion are not checked. The corrected place has not been repeated in a world.
+- No `0.3.0` machine has been placed in a world. Rates, pivots, colliders, and snap points are unverified.
+- The water wheel places on the ground and gives drive only with its paddles in real water. That has not been seen in a world.
 - Multiplayer is not implemented as a tested feature. The intention is that the piece owner simulates, and that a factory stops when nobody is nearby. That has not been tried with two clients.
 - Unity `6000.0.75f1` matches the current game player. No AssetBundle has been built.
 - There is no license file yet. Do not treat the source as free to relicense or ship until one is added.
@@ -97,8 +95,10 @@ cp Environment.props.example Environment.props
 | [ROADMAP.md](ROADMAP.md) | Current focus, next, later, and what “ready” would mean |
 | [docs/Development.md](docs/Development.md) | Prerequisites, build, assets, multiplayer notes |
 | [docs/ImplementationStatus.md](docs/ImplementationStatus.md) | Checked boxes for work that exists |
+| [docs/QA-Checklist.md](docs/QA-Checklist.md) | The in-world steps that close each milestone gate |
+| [docs/AutomationCoverage.csv](docs/AutomationCoverage.csv) | Every item in the game and how it can be supplied |
 | [docs/Compatibility.md](docs/Compatibility.md) | Game, BepInEx, and Jötunn versions this tree was built against |
-| [docs/Balance.md](docs/Balance.md) | The few power numbers the tests actually use |
+| [docs/Balance.md](docs/Balance.md) | Every proposed rate and power number |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Bugs, proposals, and pull requests |
 
 ---

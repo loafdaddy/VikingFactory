@@ -1,142 +1,198 @@
 # Implementation status
 
-Updated 27 September 2026. This is the living cross-off list. The master prompt and the Thunderstore roadmap stay the target design. A checked box means the work exists in this repository or was observed on this machine.
+Updated 27 September 2026 for `0.3.0`. This is the living cross-off list. The master prompt and the Thunderstore roadmap stay the target design. A checked box means the work exists in this repository or was observed on this machine. Code that compiles is not a gate that passed.
 
-A windowed client on 27 September 2026 loaded `VikingFactory 0.2.0`, entered an isolated world, and placed one water wheel. That place used Valheim's water-piece flag, so the wheel sat about 3 m above the ground and dry ground required Shift. That flag is no longer set. The hammer menu lists only pieces the character has discovered, so a new character with `debugmode` off sees Repair and an empty grid. `debugmode` does not persist between launches. Hammer buttons now use rendered pictures of the machines. The corrected placement and those pictures have not been checked in a world. Appearance, rain, torchlight, save/load of a corrected piece, and a second client are unverified. The public summary is `ROADMAP.md`. Setup is `docs/Development.md`.
+`0.3.0` wrote the code for every milestone, M0 through M8. The core has 66 passing tests. A headless launch registered all 39 hammer pieces, and a second headless launch did the same from the packaged ZIP. **No `0.3.0` piece has been placed in a world.** Every milestone gate that says "in a world", "save and reload", "second client", or "dedicated server" is still open. `docs/QA-Checklist.md` is the script for closing them. The public summary is `ROADMAP.md`. Setup is `docs/Development.md`.
 
 ## Milestone gates
 
+Two columns per milestone: the code exists, and the gate was observed.
+
+| Milestone | Code in 0.3.0 | Gate observed |
+|---|---|---|
+| M0 audit and scaffold | [x] | [x] load. [ ] world placement of a corrected piece |
+| M1 power and logistics | [x] | [ ] two feeders stall a crank in a world, items survive save and reload, direction visible |
+| M2 native production line | [x] | [ ] native rates and smoke, full output never duplicates, authority change |
+| M3 recipe mill | [x] | [ ] bronze nails and one food recipe in a world, station removal, recipe change, cancellation |
+| M4 renewable wood and stone | [x] | [ ] repeatable wood and stone loop, no overlapping plots, no refund duplication |
+| M5 fields and kitchens | [x] | [ ] root-crop two-field loop, one food or mead chain, burn risk kept |
+| M6 steam, sail, governor, ratios, flywheel | [x] | [x] energy accounting, contradictory cycles, split and merge, fuel stall, in core tests. [ ] in a world |
+| M7 later extraction | [x] | [x] progression fails closed, commissioning not refundable, in core tests. [ ] in a world |
+| M8 livestock, coverage, soak, package | [x] | [x] coverage report generated. [x] package ZIP loaded headless. [ ] dedicated-server soak. [ ] livestock in a world |
+
+The original gate list, kept for continuity:
+
 - [x] M0 scaffold is in the repository: versions, core tests, build, deploy, and an inert piece in code
-- [x] M0 load: `BepInEx/LogOutput.log` shows `VikingFactory 0.1.0 loaded` and `Registered vf_marker. Valid=True` through `Registered vf_basket. Valid=True`
-- [ ] M0 world: an isolated world exists. One water wheel was placed on 27 September 2026, before the placement fix, and it floated. The corrected place has not been repeated, and save/load of that piece was not confirmed beyond the quit-time world write.
+- [x] M0 load: `0.3.0` headless on 27 September 2026 logged `VikingFactory 0.3.0 loaded` and `Registered 39 of 39 workshop pieces`, each `Valid=True`
+- [ ] M0 world: an isolated world exists. One `0.2.0` water wheel was placed before the placement fix, and it floated. No `0.3.0` piece has been placed.
 - [x] M1 machines are registered in code: crank, shaft, clutch, water wheel, belt, feeder, basket
 - [ ] M1 gate: two feeders stall a crank in a world, items survive save and reload, direction is visible
-- [ ] M2 native kiln and smelter line, splitter, and merger
-- [ ] M3 recipe mill
-- [ ] M4 renewable wood and stone
-- [ ] M5 fields and kitchens
-- [ ] M6 steam, sail, governor, ratios, and flywheel
-- [ ] M7 later extraction
-- [ ] M8 livestock, coverage report, dedicated-server soak, and a tested package
+- [ ] M2 gate: native kiln and smelter line, splitter, and merger in a world. Code exists.
+- [ ] M3 gate: recipe mill in a world. Code exists.
+- [ ] M4 gate: renewable wood and stone in a world. Code exists.
+- [ ] M5 gate: fields and kitchens in a world. Code exists.
+- [ ] M6 gate: steam, sail, governor, ratios, and flywheel in a world. Code and core tests exist.
+- [ ] M7 gate: later extraction in a world. Code and core tests exist.
+- [ ] M8 gate: livestock in a world and a dedicated-server soak. Coverage report and a validated package exist.
 
 ## M0 — audit and scaffold
 
 - [x] Valheim is installed. Unity `6000.0.75f1`, Steam build `25527674`. See `docs/Compatibility.md`.
 - [x] BepInEx pack 5.4.2351 and Jötunn 2.30.2 are in that game folder.
 - [x] Local paths live in gitignored `Environment.props`. Game DLLs are not in the repository.
-- [x] `scripts/build.sh`, `scripts/test.sh`, `scripts/deploy-dev.sh`, and `scripts/validate-package.sh` exist.
-- [x] Deploy refuses an empty path and any `Managed` folder, and copies `VikingFactory.dll` plus `VikingFactory.Core.dll`.
+- [x] `scripts/build.sh`, `test.sh`, `deploy-dev.sh`, `validate-package.sh`, and `package.sh` exist.
 - [x] `VikingFactory.Core` is `netstandard2.0` and has no game references.
-- [x] The plugin targets `net472` and compiles against the local assemblies, including `assembly_utils` for `Vector2i`.
-- [x] `vf_marker` is registered: hammer, workbench, Crafting category and Crafting usage tag, 2 Wood, a ZNetView, and a rendered picture in `VikingFactory-Assets/polished/icons/vf_marker.png`.
-- [x] Diagnostics print the core version and whether `assembly_valheim.dll` is present. The live catalogue is written by the plugin, not by that tool.
-- [x] Startup line confirmed. A headless launch on 27 September 2026 wrote `VikingFactory 0.1.0 loaded` and `Registered vf_marker. Valid=True` in `BepInEx/LogOutput.log`. The same launch registered the crank, shaft, clutch, water wheel, belt, feeder, and basket, each `Valid=True`.
-- [x] Live catalogue export. That launch wrote `BepInEx/config/VikingFactory/catalogue.json`: 1522 items, 481 recipes, 9 smelters, 4 cooking stations, 1 fermenter, 22 plants, 2 beehives, 1 sap collector, 84 pickables, and 662 pieces. `ZNetScene` was not created, because no world was loaded. The lists came from the prefab cache and `ObjectDB`.
-- [x] Isolated test world. `scripts/launch-dev.sh` starts the client with its own save directory, and `client2` is a second directory. The primary directory has a character and a world. `client2` was still empty. This install has no `valheim_server.x86_64`, so `scripts/launch-dev-server.sh` cannot create a server world. Existing play worlds were not modified. The server script reads `VF_DEV_SERVER_PASSWORD` from the environment.
-- [x] `scripts/validate-package.sh` passes. `packaging/icon.png` is a flat 256×256 mark. The manifest is still not an upload: empty website, empty dependencies, and no tested ZIP.
+- [x] Station, inventory, item-drop, recipe, crafting-station, plant, pickable, taming, and damage signatures were read from the local `assembly_valheim.dll` with ILSpy before any adapter was written. The decompiled text is not in the repository.
+- [x] Startup line and 39 registrations confirmed headless, twice: once from `deploy-dev.sh`, once from the packaged ZIP.
+- [x] Boss keys resolved from the boss prefabs in this game: `defeated_eikthyr`, `defeated_gdking`, `defeated_bonemass`, `defeated_dragon`, `defeated_goblinking`, `defeated_queen`, `defeated_fader`.
+- [x] Live catalogue export now includes creature drops, trader stock, and the any-one-ingredient and upgrade-only recipe flags.
+- [x] `vf status`, `vf network`, `vf exportcatalog`, `vf coverage`, `vf validate`, and admin-only `vf recover` console commands. Only the catalogue export has run, at startup. The commands have not been typed in a world.
+- [x] Server-synced configuration through Jötunn: preset, bedrock quarry, mining and saw tool tier, modded recipe allowlist. `NetworkCompatibility` requires the mod on server and every client, minor version strict.
+- [x] Per-machine save schema key `vf_schema`. Older saves migrate; a newer schema pauses the machine instead of overwriting it.
+- [ ] A corrected piece placed in a world. See `docs/QA-Checklist.md`, step 1.
 
 ## M1 — power and logistics
 
-The placed workshop pieces load polished GLBs and cloned vanilla materials. They use the hammer's Crafting tag. Cog, corner conveyor, splitter, trough, recipe mill, and quarry have polished files and are not hammer pieces. One water wheel has been placed. It floated. The rest has not been looked at in a world.
-
-- [x] Hand crank, `vf_crank`. 6 Wood, 2 Leather Scraps. 8 DU only while interact is held. The mesh is `vf_hand_crank`. A headless load put Crank at `(0, 1.05, 0)` and Kinetic_Out at `(-0.375, 1.05, 0)`. That output is the forward port. The old cube ports are gone.
-- [x] Wooden shaft, `vf_shaft`. The placed prefab id stays `vf_shaft`. The mesh is `vf_shaft_2m`. 2 Wood. Zero load. The same load put the Rotor at `(0, 0.5, 0)`, Kinetic_In at `(0, 0.5, 1)`, and Kinetic_Out at `(0, 0.5, -1)`. That Z order is the loader's mirror of the authored ends.
-- [x] Clutch, `vf_clutch`. 4 Wood, 1 Bronze. Interact stores closed state on ZDO key `vf_clutch`. Closed means the forward branch is disconnected. The pack had no clutch mesh; this one was built for the placed piece. Its ports are on the shaft axle, `y = 0.5`, `0.35` m from the centre. The old cube ports were at `y = 0`.
-- [x] Water wheel, `vf_water_wheel`. 30 Wood, 10 Round Log (`RoundLog`), 4 Bronze, 4 Deer Hide. The headless load attached the polished GLB: Rotor `(0, 2, 0)`, kinetic markers at `x = -1.25` and `x = 1.25`, both at axle height `y = 2`. Oak and OakLight cloned `woodwall_worn` (`Custom/Piece`), Iron cloned `Ironbeam_mat`, Bronze cloned `PotsNpans_mat`, Stone cloned `stonekit_floor_interior` (`Custom/StaticRock`). The support colliders stay on Static. A placed copy on 27 September 2026 used `m_waterPiece`. Valheim then refuses dry ground unless Shift is held, and it forces the pivot 3 m above the surface. The log recorded that wheel 2.9 m above the ground. `m_waterPiece` is no longer set, so the feet should sit on the hit surface. That corrected place has not been repeated. Grain, lighting, rain, and motion are unverified.
-- [x] Timber belt, `vf_belt`. 4 Wood, 2 Leather Scraps, 2 Bronze Nails. Reserves 1 DU. The mesh is `vf_conveyor_2m`. Power ports are 1 m from the centre at axle height `y = 0.5`, matching the shaft. The hide deck is a separate surface that scrolls only while the line is turning, and it does not move items. Rollers spin on local X.
-- [x] Bronze feeder, `vf_feeder`. 6 Wood, 2 Bronze, 2 Leather Scraps. 6 DU. One item every 2 seconds while the line is turning, and only if this peer owns it. Back is Pickup and forward is Dropoff, both at `y = 0.68` and about 1.08 m from the centre after the loader's Z mirror. The arm swings on Y and does not move items by itself.
-- [x] Catch basket, `vf_basket`. 6 Wood, 2 Leather Scraps. Up to 8 stacks on ZDO key `vf_items`. Colliders are the floor and walls, with the front left open.
-- [x] Chest dock: a vanilla container within 1.25 m of the feeder's back or forward port.
-- [x] Item copy keeps durability, quality, variant, crafter, world level, custom data, and `m_cheated`.
-- [x] Hover text shows supply, reserved load, and why the line is stopped.
-- [x] Fixed 16 RPM in `BalanceDefaults`. Ratios are not implemented.
-- [ ] Crank stamina, 3 per second. No public stamina method was used.
-- [ ] Water-wheel spacing, immersion, and terrain volume. Placement no longer uses the water-piece flag. The simulator still treats every placed wheel as a valid water site.
-- [ ] The Rotor spin has not been watched in a world. The code turns it at 16 RPM while the line is turning.
-- [ ] Hammer pieces for the expansion machines. `VikingFactory-Assets/expansion/` has 26 individual GLBs. Blender 5.1.1 opens each one. UVs are about 0.5 m per repeat so the cloned Valheim shaders tile with the timber and iron already used by the polished pieces. They are not registered, and they have not been loaded in a world. Polished GLBs for the cog, trough, splitter, corner belt, recipe mill, and quarry remain in `VikingFactory-Assets/polished/` and are also unregistered.
-- [ ] Belts that move a queue of items.
+- [x] Hand crank, 8 DU while held. Holding costs 3 stamina a second through `Player.UseStamina`; a tired player cannot turn it. The held state is written to the ZDO as world time, so every peer solves the same line.
+- [x] Shaft, rope drive (4 m), bronze cog (1:1, 2:1, 1:2), reversing cog, clutch.
+- [x] Kinetic links are made between `Kinetic*` markers within 0.45 m, found through a 1 m spatial hash. Hammer snap points sit on every kinetic and item port.
+- [x] Speed and direction per segment. Spinning parts turn at the signed RPM, so a reversed segment visibly turns the other way. Hover shows RPM and clockwise or counter-clockwise.
+- [x] Water wheel: 48 DU only when the lower paddles are at least 0.4 m into water, the water is at least 0.5 m deep, no other wheel is within 6 m, and no built piece blocks the wheel's volume. There is no current vector and no freeze rule.
+- [x] Timber belt, corner, and iron belt carry a real item queue: four items, 30 or 60 a minute, only while the line turns. The front item moves into the next belt, splitter, merger, machine input, or a docked chest. A full front blocks the belt. Items are saved on the belt's ZDO at every change.
+- [x] Gravity trough: no power, 15 a minute, and only when its output is at least 10 cm lower than its input.
+- [x] Bronze feeder 6 DU, 30 a minute; iron feeder 8 DU, 60 a minute. Ghost filter by using an item on it. Stock target with hysteresis by interacting.
+- [x] Feeder transfer order: the destination is asked first, the item is removed from the source, the item is saved "in hand" on the feeder's ZDO, then inserted. A refused insert keeps the item in hand and retries. It is never discarded or sent twice.
+- [x] Catch basket: eight stacks on ZDO key `vf_items`, the same key as `0.1` and `0.2`. Interact takes a stack.
+- [x] Chest dock: a vanilla chest within 1.25 m of a port. Tombstones are excluded. A private chest works only for a machine built by the chest's owner. A ward that denies access pauses the dock.
+- [x] Fixed bug: `0.2.0` stored the localisation token (`$item_wood`) as the prefab id, so a basket-to-chest move could never succeed. The prefab name is now read from `m_dropPrefab`.
+- [x] Fixed bug: basket text unescaping could corrupt a crafter name or custom data containing a backslash. The codec now escapes character by character and is tested.
+- [x] Destroying a machine drops everything it holds once, through `WearNTear.m_onDestroyed`, on the owner only. Unloading a machine does not.
 - [ ] Two feeders stalling one crank inside a world.
-- [ ] Save and reload of a placed line.
+- [ ] Save and reload of a placed line with items on belts, in a basket, and in a feeder's hand.
 - [ ] A second client, or a dedicated server.
 
-Both DLLs, `vf_shaft_2m.glb`, and `vf_water_wheel.glb` are in `BepInEx/plugins/VikingFactory/`. The headless load attached those two models. No piece was placed.
+## M2 — native production line
 
-## Prototype asset pack
+- [x] Smelter-family adapter for `smelter`, `charcoal_kiln`, `blastfurnace`, `windmill`, `piece_spinningwheel`, and `eitrrefinery`. Fuel and input come from the station's own `m_fuelItem` and `m_conversion`. Other `Smelter` prefabs, including the Deep North ones, report "Unsupported adapter".
+- [x] Insert calls `RPC_AddOre(prefab, cheated)` or `RPC_AddFuel` only while this peer owns the station, so the RPC runs locally and at once. The insert counts only if the station's queue or fuel on its ZDO actually rose. The item's cheated flag is passed through, not forced false.
+- [x] Output collection takes only the station's own products within 1.2 m of its `m_outputPoint`, only while this peer owns the drop, and calls `RPC_EmptyProcessed` for windmills and spinning wheels. Timers, smoke, roof, and capacity stay native.
+- [x] Splitter with fair, priority (manifold), and filter modes; merger with fair rotation. Both need a turning line.
+- [x] Ownership epoch: a machine acts only from its second consecutive observation as owner, after reloading state the previous owner wrote.
+- [ ] A kiln and a smelter run from belts and feeders in a world, at native rates, with smoke.
+- [ ] A full output belt does not duplicate station output.
+- [ ] Ownership handoff observed between two clients.
 
-The prototype pack stays in `VikingFactory-Assets/models/` and `VikingFactory-Assets/converted/`. Polished sources are in `VikingFactory-Assets/polished/`. Blender 5.1.1 executed `build_water_wheel.py` and `build_pack.py`. A later headless load attached the crank, shaft, clutch, water wheel, belt, feeder, and basket, and resolved `woodwall_worn`, `Ironbeam_mat`, `PotsNpans_mat`, `Tanningrack_mat`, and `stonekit_floor_interior`. The GLBs contain no images.
+## M3 — recipe mill
 
-Unity `6000.0.75f1` (`26349cd2a5c8`) matches the game player. A local install of that editor, including Linux IL2CPP build support, printed `6000.0.75f1` from `Unity -version`. A Unity Personal license is active inside the Flatpak Hub and grants the editor window. Host batchmode on 27 September 2026 still exited 198: that launch does not see the Hub license, and Personal does not include `com.unity.editor.headless`. Prefabs and AssetBundles are still blocked. An older `6000.6.3f1` editor is not the one to use for Valheim bundles. The placed pieces do not wait on a bundle. They load GLBs. Hammer pictures are PNGs rendered from those GLBs, not a Unity import.
+- [x] Teaching: use a crafted item on the mill. The player must know that recipe (`Player.IsRecipeKnown`) and have ward access. Teacher id and name are saved and become the crafter of the output.
+- [x] Recipes come from `ObjectDB` in the running game. Any-one-ingredient and upgrade-only recipes are refused with a reason. Recipes added by other mods through Jötunn are refused unless the server lists them in `ModdedRecipeAllowlist`.
+- [x] Dynamic ingredients: 8 types on the mill, 12 on the assembler. Five-ingredient recipes are covered by a core test.
+- [x] Station check each tick: the recipe's station within build range, at the required level, with the station's own roof and fire rules.
+- [x] Persistent escrow: inputs move into escrow only when output room exists. Station loss, power loss, or reload pauses with escrow held. Recipe change and shift-interact cancel return escrow once, through the output.
+- [x] Cycle `max(4, 4 + 2 × ingredient types)` seconds at 16 RPM, up to 2× faster on the mill and 4× on the assembler, never under 2 s.
+- [x] Stock quotas with hysteresis count the output buffer plus the chest or buffer at the output port.
+- [ ] Bronze nails and one cauldron or food-table recipe crafted in a world.
+- [ ] Station removal, recipe change, full output, and cancellation observed in a world.
 
-## M2 through M8
+## M4 — renewable wood and stone
 
-- [ ] M2 kiln and smelter adapters, fuel versus ore, output collection, splitter and merger
-- [ ] M2 gate: native rates, smoke, no duplicated output, authority change
-- [ ] M3 recipe teaching, dynamic ingredients, station in range, escrow, quality 1, quotas
-- [ ] M3 bronze nails and one food recipe, including a five-ingredient recipe
-- [ ] M4 bedrock quarry, plantation harvest, managed coppice, reserve routing
-- [ ] M5 planter, harvester, hives, fermenter, cooking rack, oven
-- [ ] M6 steam, sail, governor, gear ratios, flywheel, filters
-- [ ] M7 finite mining, deep extraction, sap, eitr, advanced assembler
-- [ ] M8 forage, livestock, upgrades, compatibility profiles, coverage report
-- [ ] Harmony patches into smelters, recipes, or inventories
-- [ ] Sounds, a Unity prefab, or an AssetBundle. The placed machines have polished GLBs and 256×256 hammer pictures in `VikingFactory-Assets/polished/icons/`. Those pictures have not been seen in the build menu.
+- [x] Bedrock quarry: 32 DU, one stone per 10 working seconds, holds 50, natural terrain only, not underwater, not in a dungeon, 12 m from another quarry. Built at a stonecutter. The server preset can turn it off.
+- [x] Managed coppice: five beech seeds, pine cones, or birch seeds or acorns found it once. The species is fixed by the first seed. The cycle is the longer of the master prompt's minimum and the sapling's native `m_growTimeMax`. It needs open sky, natural ground, the species' biome, and 8 m from another bed. Common coppice can switch to resin tapping between cycles.
+- [x] Timber saw: harvests mature beds within 6 m as a whole batch, or not at all. Inside a plot marked by two or more of the saw builder's stakes, it cuts trees and logs with native chop damage and tool tier, collects the native drops near what it hit, and replants felled trees from seeds in its input.
+- [x] Deterministic spacing: when two sites are too close, the one with the lower ZDO id works and the other is blocked.
+- [ ] A wood and stone loop run for an hour in a world.
+- [ ] Rebuilding a bed or quarry does not refund founding stock or reset a site.
+
+## M5 — fields and kitchens
+
+- [x] Planter (4 × 4 m), harvester (4 × 4 m), farm gantry (8 × 8 m). Planting instantiates the cultivator's own sapling prefabs after checking cultivated ground, biome, and grow space. Harvesting calls the pickable's own `RPC_Pick` and collects its drops.
+- [x] Field policies: replant, seed field, food field. The gantry reserves the next planting plus 10 % before exporting.
+- [x] Cooking tender for `piece_cookingstation`, `piece_cookingstation_iron`, and `piece_oven`. It unloads done or burnt food through `RPC_RemoveDoneItem`, and loads raw food only with fire or fuel, a free slot, and room in storage for the cooked result. A stalled tender leaves food on the heat, so it can burn. An oven extension within 3 m extends reach.
+- [x] Fermenter: loads one mead base when empty and taps when the native timer is past `m_fermentationDuration`.
+- [x] Beehive and bird nest: extract only the native level. Sap collector: the same.
+- [ ] A carrot seed field feeding a carrot food field in a world.
+- [ ] A mead base crafted by a mill, fermented, and tapped in a world.
+- [ ] Harvesting waits for a local player object because `Pickable.RPC_Pick` reads `Player.m_localPlayer`. On a dedicated server the harvester pauses with that reason.
+
+## M6 — steam, sail, governor, ratios, flywheel, filters
+
+- [x] Steam engine 160 DU at 32 RPM, one coal per 30 running seconds. Reinforced steam engine 320 DU at 64 RPM, one coal per 15 s. Both need a water intake whose probe is in real water within 4 m, and a clear chimney.
+- [x] Eitr motor 320 DU at 64 RPM, one refined eitr per 120 running seconds.
+- [x] Paid running time is on the engine's ZDO. A stall or reload does not take a second fuel item. Manual fuelling by using fuel on the engine always works.
+- [x] Sail wheel 32–256 DU at 32 RPM from `EnvMan.GetWindIntensity()` and the share of eight 6 m rays from the sail that are clear. Below 10 % effective wind it gives nothing.
+- [x] Governor fixes the line at 8, 16, 32, or 64 RPM. Without one, sources at different speeds stall the line as a rotation conflict.
+- [x] Gear ratios and reversal on edges. A contradictory loop stalls the whole line as a rotation conflict.
+- [x] Flywheel: 2400 DU·s, 80 DU charge and discharge, 80 % charging efficiency, energy stored on the wheel.
+- [x] Filters on feeders and splitters, stock targets on feeders and mills.
+- [ ] Any of these in a world.
+
+## M7 — later extraction
+
+- [x] Mining head: pickaxe damage at the configured tier (default 2) on the `MineRock` or `MineRock5` in front of it. Depletion and drops stay native. Dungeon interiors are excluded.
+- [x] Deep extractor: allowlist of copper ore and tin ore after Moder in the Black Forest, scrap iron after Yagluth in the Swamp, silver ore after Fader in the Mountains. Ten samples commission it once, not refunded. 32 m spacing, capacity 20, no RPM speed-up, no offline catch-up. Unknown outputs are denied.
+- [x] Sap and eitr: sap collector extraction and the eitr refinery through the smelter-family adapter.
+- [x] Advanced assembler with upgrade mode: one existing item plus the next level's resources, identity kept, one level at a time, station level checked.
+- [ ] Tin extraction is checked for Black Forest biome, not for coastline.
+- [ ] Any of these in a world.
+
+## M8 — broader supply and release hardening
+
+- [x] Forage beds for raspberries, blueberries, mushrooms, thistle, and cloudberries (after Moder). Five specimens found a bed. One item per 10 minutes or the native respawn, whichever is slower. Holds five for a feeder or harvester.
+- [x] Livestock feed gate: releases one real food item when a tame animal within 10 m is hungry and none is on the pad.
+- [x] Culling gate: off by default. Only unnamed tame adult boars, keeping 2–8 adults. Native damage and drops, no attacker, so no skill gain. Pregnancy is not read, because the game keeps it private.
+- [x] Fishing winch is not registered. No safe native capture path was found. The model stays a file.
+- [x] `docs/AutomationCoverage.csv`: 969 items. Renewable chain 28, native renewable 71, finite supply with automated processing 181, creature supply 434, trader supply 118, manual or unique 92, unsupported pending adapter 45. The in-game `vf coverage` builds the same report from live objects.
+- [x] Package: `scripts/package.sh` stages `artifacts/VikingFactory-0.3.0.zip` with real dependencies, passes `validate-package.sh`, and loaded 39 of 39 pieces headless when installed into the game.
+- [x] Other automation mods are logged by name at startup. Nothing is patched out.
+- [ ] Dedicated-server soak. `valheim_server.x86_64` is still not installed here.
+- [ ] 500-piece factory profiled with two clients. `vf status` reports step time.
+- [ ] A license file. There is still none.
 
 ## Tests
 
-`dotnet test` on 27 September 2026: 13 passed, 0 failed. These do not load Valheim. One test checks that `Version.props`, the plugin constant, and the package manifest are the same number.
+`dotnet test` on 27 September 2026: 66 passed, 0 failed. These do not load Valheim.
 
-- [x] One crank runs one feeder and stalls on two
-- [x] A released crank provides no drive
-- [x] Shafts add no load
-- [x] A closed clutch drops the forward branch
-- [x] A disabled consumer releases its reservation
-- [x] A water wheel with no placement probe supplies nothing
-- [x] A verified water wheel supplies 48 DU and reserves 22 DU on the documented kiln line
-- [x] Two feeders do not duplicate the last item
-- [x] Removing the item after planning blocks the transfer
-- [x] A full destination after escrow keeps the item for one recovery, including the cheated flag
-- [x] Save and reload of the in-memory snapshot keeps escrow, quality, custom data, and crafter
-- [x] Different qualities do not merge
-- [ ] Delayed, duplicated, or out-of-order messages
-- [ ] Disconnect and reconnect
-- [ ] Save and reload inside the game
-- [ ] Machine destruction while holding items
-- [ ] Station input that was not acknowledged
-- [ ] Ratio loops, flywheel energy, or fuelled generators
+- [x] Crank stall, clutch, disabled consumer, water probe, version match (from `0.2.0`)
+- [x] Supply equals demand; one DU short stalls
+- [x] Direction, reversal, 2:1 ratio, contradictory ratio loop, source against the network, mismatched source speeds, governor
+- [x] Flywheel charge, discharge, cap, stall keeps energy, energy conserved on split
+- [x] Fuel taken only when paid time is spent; stall and reload keep paid time; empty fuel gives nothing
+- [x] Sail capacity curve
+- [x] Item codec round-trip with awkward text; no merge across quality or cheated flag; full store refuses
+- [x] Belt order, rate, power, backpressure, save and load
+- [x] Splitter fair, priority, filter; merger rotation; stock hysteresis
+- [x] Recipe mill: nails, five ingredients, bounded buffers, station loss, power loss, full output, recipe change, cancel, quota, speed cap, cheated output, save and reload in escrow, missing recipe on load, destruction drain
+- [x] Quality upgrade keeps identity and checks level
+- [x] Quarry rate and cap, spacing, progression fail-closed, extraction allowlist, commissioning, coppice growth, mode switch, forage allowlist, seed reserve, culling, feed, clock drops sleep jumps, ownership handoff, schema, presets, coverage classifier
+- [ ] Delayed, duplicated, or out-of-order messages across peers
+- [ ] Disconnect and reconnect mid-transfer
 - [ ] 500-piece factory, two clients, dedicated server
 
 ## Thunderstore roadmap
 
-- [x] Phase 0, partial: versions, scripts, and compatibility notes
-- [ ] Phase 0 gate: the plugin logs its version in the game
-- [x] Phase 1, partial: primitive pieces copied into the plugins folder
+- [x] Phase 0: versions, scripts, compatibility notes, and the plugin logs its version in the game
+- [x] Phase 1, partial: pieces load from the packaged ZIP
 - [ ] Phase 1 gate: one machine seen by another client and restored after save
-- [x] Phase 2, partial: power graph and feeder code, covered by the core tests above
+- [x] Phase 2 to 4, partial: code and core tests for power, items, native processing, recipe mill, wood, and stone
 - [ ] Phase 2 gate: two-client item races
-- [ ] Phase 3 native processing and recipe mill
-- [ ] Phase 4 renewable wood and stone
-- [ ] Phase 5 private alpha package
-- [ ] Phase 6 fields and food
-- [ ] Phase 7 public alpha
-- [ ] Phases 8–12 industry, art, beta, 1.0, and maintenance
+- [ ] Phase 5 private alpha package: a ZIP exists and loads; it has not passed a world or multiplayer check
+- [ ] Phases 6–12
 
-Release checklist, still open until a candidate exists:
+Release checklist:
 
 - [x] Build succeeds with the local SDK and `Environment.props`
 - [x] Automated core tests pass
-- [ ] No known in-game loss or duplication. One wheel was placed and the world was saved on quit. Item transfer was not tried.
-- [ ] Save, owner handoff, and destruction tested
+- [ ] No known in-game loss or duplication. Not tried in a world.
+- [ ] Save, owner handoff, and destruction tested in a world
 - [ ] Dedicated server and two clients
-- [ ] Native processing checked
+- [ ] Native processing checked in a world
 - [ ] Large factory profiled
-- [ ] Asset bundles
-- [ ] Install and upgrade of a package
-- [ ] 256×256 `icon.png`, matching versions, and a ZIP that passed `scripts/validate-package.sh`
+- [ ] Asset bundles. Not needed while pieces load GLBs.
+- [x] Install of a package: the ZIP installed and loaded headless. [ ] Upgrade from `0.2.0` over a saved world.
+- [x] 256×256 `icon.png`, matching versions, and a ZIP that passed `scripts/validate-package.sh`
 
 ## Exact next task
 
-Do not point bundles at a newer editor than `6000.0.75f1`. The world check does not need a bundle. Open that editor from the Flatpak Hub if a project is required. Host batchmode still has no headless entitlement.
-
-The isolated world already exists. `debugmode` resets every launch. In the world, press F5 and run `devcommands`, then `debugmode`, or the hammer grid stays on Repair. Remove the floating wheel and place a new one from the Crafting tag. Its feet should meet the ground without holding Shift. Confirm the hammer button shows the rendered picture. Then place the shaft, belt, feeder, and basket beside a wood wall and a workbench. Compare daylight, rain, torchlight, and indoor light. Confirm the wheel frame stays still, the belt deck scrolls only while the line turns, and a save still contains the pieces.
+Work through `docs/QA-Checklist.md` in the isolated world, in order. Each step says what to place, what should happen, and what to write back here. Start with step 1: the corrected water wheel and the M1 crank line. Then save, quit, reload, and confirm the items on belts and in baskets are where they were.
 
 Do not publish.

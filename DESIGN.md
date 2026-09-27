@@ -107,7 +107,7 @@ Wind ownership. On a server the windmill uses the environment of the client that
 
 Smoke. Active smelters, kilns, and blast furnaces stop after about 4 seconds without being able to spawn smoke. Smoke wants about a meter of clearance. Feeders sit beside ports and leave the chimney alone.
 
-Snap. 1 meter modules. Shaft ends are snap points. Jötunn `CustomPiece` from a vanilla piece or an empty primitive until real meshes exist. The hammer tag in the current build is Crafting. A custom Workshop category left Valheim’s build menu on an empty page. The menu only lists pieces the character has discovered.
+Snap. 1 meter modules. Shaft ends are snap points. Jötunn `CustomPiece` from a vanilla piece or an empty primitive until real meshes exist. Ports carry hammer snap points in `0.3.0`. The hammer tag in the current build is Crafting. A custom Workshop category left Valheim’s build menu on an empty page. The menu only lists pieces the character has discovered.
 
 Portals. Wood portals block ore, bars, and a short list (dragon egg, dvergr extractor, mechanical spring, Hildir's chests, charred cogwheel). Stone portals allow them, only when you enter the stone portal. Belts do not cross portals. Long hauls stay carts (18 slots) and ships until Ashlands.
 
@@ -130,4 +130,4 @@ Adapters, not one patch class: `SmelterAdapter`, `CookingAdapter`, `FermenterAda
 
 ## Out of scope
 
-Create contraptions and pistons. They fight `WearNTear` support. Circuit logic and runestones. Cart winches. Portal item teleport. Changing comfort, skills, or boss progression. Chopping wild trees or mining a deposit by deleting it is out of scope. A managed coppice and a bedrock quarry are in the master prompt, and they are not built.
+Create contraptions and pistons. They fight `WearNTear` support. Circuit logic and runestones. Cart winches. Portal item teleport. Changing comfort, skills, or boss progression. Chopping wild trees or mining a deposit by deleting it is out of scope. A managed coppice and a bedrock quarry are in the master prompt. `0.3.0` has code for both, not yet seen in a world.

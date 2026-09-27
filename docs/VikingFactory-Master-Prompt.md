@@ -12,7 +12,7 @@ Everything under “BEGIN CURSOR BUILD PROMPT” is addressed to Cursor. The res
 
 ## Living checklist
 
-This file is the target design, not the implementation record. Progress is `docs/ImplementationStatus.md`. The public summary is `ROADMAP.md`. Patch notes are `CHANGELOG.md`. A headless load registered the current pieces. A later windowed session placed one water wheel. The registered machines load polished GLBs, not the prototype pack.
+This file is the target design, not the implementation record. Progress is `docs/ImplementationStatus.md`. The public summary is `ROADMAP.md`. Patch notes are `CHANGELOG.md`. `0.3.0` has code for M0–M8 and loaded 39 pieces headless. No `0.3.0` piece has been placed in a world. The registered machines load polished and expansion GLBs, not the prototype pack.
 
 ## Research findings that change the original outline
 

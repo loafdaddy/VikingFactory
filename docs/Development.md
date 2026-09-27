@@ -33,7 +33,7 @@ A dedicated server, when you have `valheim_server.x86_64`, reads its world passw
 
 `Version.props` is the number for the update on the current branch. The core assembly, `PluginVersion` in `VikingFactoryPlugin.cs`, and `packaging/manifest.json` must all use that number. `VersionTests` fails if they drift. What changed in each number is [CHANGELOG.md](../CHANGELOG.md).
 
-`main` keeps the last snapshot that was pushed. This branch is `0.2.0`. Start a new update from `main` by branching to the next number and setting `Version.props` to it. If you are already on a version branch and the work is a further update, branch again to the next number instead of continuing on the old one.
+`main` keeps the last snapshot that was pushed. This branch is `0.3.0`. Start a new update from `main` by branching to the next number and setting `Version.props` to it. If you are already on a version branch and the work is a further update, branch again to the next number instead of continuing on the old one.
 
 ## Build and test
 
@@ -41,11 +41,13 @@ A dedicated server, when you have `valheim_server.x86_64`, reads its world passw
 ./scripts/test.sh
 ./scripts/build.sh
 VF_DEPLOY_PLUGINS=/path/to/BepInEx/plugins/VikingFactory ./scripts/deploy-dev.sh
+./scripts/package.sh
+dotnet run --project tools/VikingFactory.Diagnostics -c Release -- coverage
 ```
 
-`scripts/test.sh` runs the core tests. They do not load Valheim. Thirteen tests were passing on 27 September 2026: crank stall, clutch, water-wheel probe, item escrow, and the version match.
+`scripts/test.sh` runs the core tests. They do not load Valheim. 66 tests were passing on 27 September 2026: power, ratios, flywheel, fuel, items, belts, routing, the recipe mill, production, fields, livestock, scheduling, ownership, schema, presets, coverage, and the version match.
 
-`scripts/build.sh` builds the solution in Release. The plugin output is `src/VikingFactory.Plugin/bin/Release/VikingFactory.dll` plus `VikingFactory.Core.dll`. Deploy copies those, the polished GLBs for the registered machines, and the hammer pictures in `polished/icons/`.
+`scripts/build.sh` builds the solution in Release. The plugin output is `src/VikingFactory.Plugin/bin/Release/VikingFactory.dll` plus `VikingFactory.Core.dll`. Deploy copies those, every GLB `MachineCatalog.cs` names (polished first, then expansion), and the hammer pictures in `polished/icons/`. `scripts/package.sh` stages the same files in Thunderstore layout under `artifacts/`, runs `validate-package.sh`, and zips it. It does not upload. The diagnostics `coverage` mode turns the exported catalogue into `docs/AutomationCoverage.csv`.
 
 To look at the game, set Steam's launch options to:
 
@@ -63,15 +65,15 @@ The hammer lists only pieces that character has discovered. A new character sees
 
 | Path | Responsibility |
 |---|---|
-| `src/VikingFactory.Core` | Drive, load, and item transfers. No game references. |
-| `src/VikingFactory.Plugin` | BepInEx plugin, piece registration, GLB loading, material clones, feeder and basket calls into the game. |
+| `src/VikingFactory.Core` | Kinetics, fuel, items and codec, belts and routing, recipe mill and upgrades, production, fields, livestock, scheduling, ownership, schema, presets, coverage. No game references. |
+| `src/VikingFactory.Plugin` | BepInEx plugin. `Machines/MachineCatalog.cs` lists every piece. `WorkshopMachine` and the behaviour files hold per-piece logic. `Endpoints.cs` holds chest, machine-port, and native-station adapters. `WorkshopSimulator` runs the 5 Hz step. `Commands.cs` is the `vf` console command. |
 | `tests/VikingFactory.Core.Tests` | xUnit tests for the core. |
 | `tools/VikingFactory.Diagnostics` | Prints the core version and whether `assembly_valheim.dll` is present. It does not write the live catalogue. |
 | `VikingFactory-Assets` | Original models and the scripts that rebuild them. |
 | `packaging` | Thunderstore template. Not a release. |
 | `branding` | README lockup. |
 
-Plugin id: `com.vikingfactory`. The version is `Version.props`, currently `0.2.0`. There are no Harmony patches. Jötunn's `CustomPiece` creates the hammer pieces. The catalogue and material probe write JSON under the game's BepInEx config folder when vanilla prefabs become available. Those files are local output, not source.
+Plugin id: `com.vikingfactory`. The version is `Version.props`, currently `0.3.0`. There are no Harmony patches; station adapters call the stations' own RPCs and read their ZDO fields, and the mill reads one private field (`CraftingStation.m_haveFire`) by reflection. Jötunn's `CustomPiece` creates the hammer pieces, and configuration syncs through Jötunn's admin-only entries. The catalogue and material probe write JSON under the game's BepInEx config folder when vanilla prefabs become available. Those files are local output, not source.
 
 ## Assets
 
@@ -83,28 +85,37 @@ The clone map is in `src/VikingFactory.Plugin/NativeMaterials.cs` and `VikingFac
 |---|---|
 | `VikingFactory-Assets/models` | Prototype pack. Left as the baseline. |
 | `VikingFactory-Assets/polished` | Models for the registered pieces, plus cog, corner, splitter, trough, recipe mill, and quarry. The last six are not hammer pieces. Rebuild with Blender: `polished/source/build_water_wheel.py` and `polished/source/build_pack.py`. |
-| `VikingFactory-Assets/expansion` | Twenty-six later machines. Files only. Rebuild with `expansion/source/build_expansion.py`. `audit_blender.py` checks import, scale, and UV density. |
+| `VikingFactory-Assets/expansion` | Twenty-six later machines. Twenty-five are hammer pieces in `0.3.0`; the fishing winch is not. Rebuild with `expansion/source/build_expansion.py`. `audit_blender.py` checks import, scale, and UV density. Collider boxes come from the `Collider_Box` metadata nodes. |
 | `VikingFactory-Assets/converted` | Blender conversion of the prototypes. Not the files the plugin loads. |
 
 Moving parts spin or swing only while the machine state says the line is turning. A scrolling surface uses a property block on its own renderer. Animation does not create items.
 
 `VikingFactory-Unity/` is scratch from an editor attempt and is gitignored. Bundles need Unity `6000.0.75f1` with a license. Do not build them with a newer editor.
 
+## Hammer pictures
+
+`polished/source/render_icons.py` renders any missing 256×256 picture from the model each piece names. Pass `--all` to redo them. With the Flatpak Blender:
+
+```
+flatpak run --filesystem=$PWD org.blender.Blender -b --python VikingFactory-Assets/polished/source/render_icons.py
+```
+
 ## Multiplayer and saves
 
-Not verified. The design, and the current code's intent:
+Not verified in a world. The code's rules:
 
-- The ZNetView owner runs the machine.
-- A feeder moves one item only on that owner, about once every two seconds, and only while the line is turning.
-- The basket stores up to eight stacks on ZDO key `vf_items`. The clutch stores open or closed on `vf_clutch`.
-- Item copy keeps durability, quality, variant, crafter, world level, custom data, and the cheated flag.
-- A vanilla chest within 1.25 m of a feeder port can be a dock. That distance has not been tried in a world.
-- Factories are not meant to keep running in unloaded areas.
+- The ZNetView owner runs each machine. A machine acts only from its second consecutive step as owner, after rereading state the previous owner saved.
+- Every peer solves the kinetic graph for visuals. Only owners move items, spend fuel, or write ZDOs.
+- Native station inserts happen only while this peer owns the station, so the station's RPC runs locally and its queue can be checked before and after.
+- Items live on ZDOs: belts `vf_queue`, baskets `vf_items`, feeders `vf_hand`, mills `vf_in`, `vf_escrow`, `vf_out`, `vf_recovery`. A belt saves the moment an item leaves it.
+- Destruction drops held items once, on the owner, through `WearNTear.m_onDestroyed`. Unloading drops nothing.
+- The simulator steps at 5 Hz. A frame gap over 2 s, such as sleep, is dropped, not replayed.
+- Factories do not run where nobody is nearby.
 
-No second client has connected. No dedicated server has been started. Save and reload of a placed piece has not been done. Do not describe the mod as multiplayer-ready.
+No second client has connected. No dedicated server has been started. Do not describe the mod as multiplayer-ready.
 
 ## Packaging
 
 When a tested build exists, the package will contain the plugin DLLs, original assets, a 256×256 `icon.png`, `manifest.json`, and a player README. It will not contain Valheim assemblies. Server and every client will need the same build.
 
-Until then, `packaging/manifest.json` has an empty website and empty dependencies on purpose. Do not publish it.
+`packaging/manifest.json` lists BepInExPack 5.4.2351 and Jötunn 2.30.2. `packaging/PLAYER-README.md` becomes the package readme. There is no license file yet. Do not publish.
