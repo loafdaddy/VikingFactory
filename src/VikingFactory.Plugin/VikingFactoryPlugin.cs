@@ -15,7 +15,7 @@ namespace VikingFactory
     {
         public const string PluginGuid = "com.vikingfactory";
         public const string PluginName = "VikingFactory";
-        public const string PluginVersion = "0.2.0";
+        public const string PluginVersion = "0.3.0";
 
         private void Awake()
         {

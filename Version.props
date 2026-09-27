@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
     <!-- One number for this update. The plugin constant and packaging/manifest.json must match. -->
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
   </PropertyGroup>
 </Project>
