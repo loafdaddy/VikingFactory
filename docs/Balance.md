@@ -1,6 +1,6 @@
 # Balance
 
-These numbers are the master prompt's proposed defaults. They are not measured Valheim rates and they have not been playtested. `BalanceDefaults` in the core holds every one of them, and the core tests lock the rules built on them.
+These numbers are the master prompt's proposed defaults. They are not measured Valheim rates. Pieces have been placed in a world. None of these rates was timed there. `BalanceDefaults` in the core holds every one of them, and the core tests lock the rules built on them.
 
 ## Progress
 

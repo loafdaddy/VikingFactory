@@ -2,7 +2,7 @@
 
 Updated 27 September 2026 for `0.3.0`. This is the living cross-off list. The master prompt and the Thunderstore roadmap stay the target design. A checked box means the work exists in this repository or was observed on this machine. Code that compiles is not a gate that passed.
 
-`0.3.0` wrote the code for every milestone, M0 through M8. The core has 66 passing tests. A headless launch registered all 39 hammer pieces, and a second headless launch did the same from the packaged ZIP. **No `0.3.0` piece has been placed in a world.** Every milestone gate that says "in a world", "save and reload", "second client", or "dedicated server" is still open. `docs/QA-Checklist.md` is the script for closing them. The public summary is `ROADMAP.md`. Setup is `docs/Development.md`.
+`0.3.0` wrote the code for every milestone, M0 through M8. The core has 66 passing tests. A headless launch registered all 39 hammer pieces, and a second headless launch did the same from the packaged ZIP. On 27 September 2026 a windowed `0.3.0` client entered the isolated world `VIKINGFACTORY`, placed the pieces listed under M0, and quit. The world saved. No plugin error was logged. Placing a piece is not a milestone gate. Every gate that says "in a world", "save and reload", "second client", or "dedicated server" is still open. `docs/QA-Checklist.md` is the script for closing them. The public summary is `ROADMAP.md`. Setup is `docs/Development.md`.
 
 ## Milestone gates
 
@@ -10,7 +10,7 @@ Two columns per milestone: the code exists, and the gate was observed.
 
 | Milestone | Code in 0.3.0 | Gate observed |
 |---|---|---|
-| M0 audit and scaffold | [x] | [x] load. [ ] world placement of a corrected piece |
+| M0 audit and scaffold | [x] | [x] load. [x] pieces placed in a world. [ ] feet, hover, and a reload checked |
 | M1 power and logistics | [x] | [ ] two feeders stall a crank in a world, items survive save and reload, direction visible |
 | M2 native production line | [x] | [ ] native rates and smoke, full output never duplicates, authority change |
 | M3 recipe mill | [x] | [ ] bronze nails and one food recipe in a world, station removal, recipe change, cancellation |
@@ -24,7 +24,7 @@ The original gate list, kept for continuity:
 
 - [x] M0 scaffold is in the repository: versions, core tests, build, deploy, and an inert piece in code
 - [x] M0 load: `0.3.0` headless on 27 September 2026 logged `VikingFactory 0.3.0 loaded` and `Registered 39 of 39 workshop pieces`, each `Valid=True`
-- [ ] M0 world: an isolated world exists. One `0.2.0` water wheel was placed before the placement fix, and it floated. No `0.3.0` piece has been placed.
+- [x] M0 world, partial: on 27 September 2026 the windowed `0.3.0` client loaded `VIKINGFACTORY` (save 2) and placed `vf_farm_gantry`, `vf_splitter`, `vf_water_wheel`, three `vf_shaft`, four `vf_rope`, `vf_recipe_mill`, `vf_reinforced_steam`, `vf_sail_wheel`, `vf_assembler`, `vf_eitr_motor`, `vf_quarry`, two `vf_belt`, four `vf_marker`, and `vf_crank`. Quit exit code 0. Three dirty chunks saved. No VikingFactory error. The `0.2.0` wheel that floated was not confirmed removed.
 - [x] M1 machines are registered in code: crank, shaft, clutch, water wheel, belt, feeder, basket
 - [ ] M1 gate: two feeders stall a crank in a world, items survive save and reload, direction is visible
 - [ ] M2 gate: native kiln and smelter line, splitter, and merger in a world. Code exists.
@@ -49,7 +49,8 @@ The original gate list, kept for continuity:
 - [x] `vf status`, `vf network`, `vf exportcatalog`, `vf coverage`, `vf validate`, and admin-only `vf recover` console commands. Only the catalogue export has run, at startup. The commands have not been typed in a world.
 - [x] Server-synced configuration through Jötunn: preset, bedrock quarry, mining and saw tool tier, modded recipe allowlist. `NetworkCompatibility` requires the mod on server and every client, minor version strict.
 - [x] Per-machine save schema key `vf_schema`. Older saves migrate; a newer schema pauses the machine instead of overwriting it.
-- [ ] A corrected piece placed in a world. See `docs/QA-Checklist.md`, step 1.
+- [x] Pieces placed in a world. See the M0 world line for which ones, and what the height log said.
+- [ ] Checklist step 1 still open: feet on the ground, no Shift, hover text, hammer pictures, and the old floating wheel gone. The new water wheel logged no terrain hit under its pivot. The recipe mill and reinforced steam engine did, at about 0 m. Markers logged 0.30 m, the center of the 0.6 m block. Shafts and ropes shared world height 30.92 m with the ground 1.2–2.0 m below.
 
 ## M1 — power and logistics
 
@@ -193,6 +194,6 @@ Release checklist:
 
 ## Exact next task
 
-Work through `docs/QA-Checklist.md` in the isolated world, in order. Each step says what to place, what should happen, and what to write back here. Start with step 1: the corrected water wheel and the M1 crank line. Then save, quit, reload, and confirm the items on belts and in baskets are where they were.
+Work through `docs/QA-Checklist.md` in the isolated world, in order. A placement pass already happened. Next is step 1 as a look, not another drop: stand at the new water wheel and record whether its feet touch the ground, whether the old floating wheel is still there, and whether the hammer buttons are the rendered pictures. Then build the M1 crank line, save, quit, reload, and confirm the items on belts and in baskets are where they were.
 
 Do not publish.

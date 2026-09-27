@@ -46,7 +46,7 @@ The full target is written up as a design proposal in [`docs/VikingFactory-Maste
 
 ## What works today
 
-Update `0.3.0` contains code for every planned milestone. It has been compiled, covered by 66 core tests, and loaded headless. **None of it has been placed in a world yet**, so treat everything below as built, not proven. The in-world test script is [docs/QA-Checklist.md](docs/QA-Checklist.md).
+Update `0.3.0` contains code for every planned milestone. It has been compiled, covered by 66 core tests, and loaded headless. A windowed session then placed fourteen kinds of piece in the isolated world `VIKINGFACTORY` and saved. That shows they can be built. It does not show that they run. The in-world test script is [docs/QA-Checklist.md](docs/QA-Checklist.md).
 
 - The plugin loads under BepInEx and Jötunn and registers 39 hammer pieces on the Crafting tag, each with a model and a rendered picture.
 - **Power:** hand crank, water wheel, steam engines, sail wheel, and eitr motor. Shafts, rope, cogs with ratios, reversing cogs, clutches, a governor, and a flywheel. A line stalls when load exceeds drive, or when its ratios or sources disagree. Every segment shows which way it turns.
@@ -73,9 +73,9 @@ cp Environment.props.example Environment.props
 
 ## Known limits
 
-- No in-game screenshots, save/load test, second client, or dedicated server.
-- No `0.3.0` machine has been placed in a world. Rates, pivots, colliders, and snap points are unverified.
-- The water wheel places on the ground and gives drive only with its paddles in real water. That has not been seen in a world.
+- No in-game screenshots, save/load of a running line, second client, or dedicated server. The world did save on quit after the pieces were placed. Nobody reloaded to see that they were still there.
+- Fourteen kinds of piece have been placed. Rates, pivots, colliders, and snap points are still unverified. Shafts and ropes in that session shared one height above sloping ground. Several other pieces, including the water wheel, logged no terrain hit under the pivot.
+- The water wheel is meant to stand on the ground and give drive only with its paddles in real water. One was placed. Its feet, the Shift key, and the hover text were not recorded.
 - Multiplayer is not implemented as a tested feature. The intention is that the piece owner simulates, and that a factory stops when nobody is nearby. That has not been tried with two clients.
 - Unity `6000.0.75f1` matches the current game player. No AssetBundle has been built.
 - There is no license file yet. Do not treat the source as free to relicense or ship until one is added.

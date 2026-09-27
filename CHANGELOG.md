@@ -8,7 +8,7 @@ Patch notes for each VikingFactory update. This is not a player release. A versi
 
 27 September 2026.
 
-The code for every milestone, M0 through M8. Nothing in this update has been placed in a world yet. A headless launch registered all 39 pieces, and a second headless launch did the same from the packaged ZIP. `docs/QA-Checklist.md` is the in-world test script.
+The code for every milestone, M0 through M8. A headless launch registered all 39 pieces, and a second headless launch did the same from the packaged ZIP. A later windowed client entered the isolated world `VIKINGFACTORY` and placed pieces. `docs/QA-Checklist.md` is the in-world test script.
 
 Power
 - Direction and speed per shaft segment. Spinning parts show which way they turn, and hover says clockwise or counter-clockwise.
@@ -43,7 +43,11 @@ Tools
 - `scripts/package.sh` stages a test ZIP. The manifest now lists BepInExPack 5.4.2351 and Jötunn 2.30.2. It is still not uploaded.
 - Hammer pictures for every piece.
 
-Still open: every in-world gate, two clients, a dedicated server, and a license file.
+Played, 27 September 2026, windowed `0.3.0`. The client loaded the isolated world, placed pieces, and quit with exit code 0. The world saved three dirty chunks. The log has no VikingFactory error.
+
+Placed: farm gantry, splitter, water wheel, three shafts, four ropes, recipe mill, reinforced steam engine, sail wheel, assembler, eitr motor, quarry, two belts, four markers, and a hand crank. The recipe mill and the reinforced steam engine sat on the terrain (the downward ray hit at about 0 m). The four markers sat 0.30 m up, which is the center of the 0.6 m marker block. Three shafts and four ropes shared one world height, 30.92 m, with the ground 1.2–2.0 m below that. The water wheel, splitter, sail wheel, assembler, eitr motor, quarry, belts, and crank logged a world height and no terrain hit under the pivot. The old floating wheel logged a 2.9 m gap; this water wheel did not. Nobody recorded whether its feet were on the ground, whether Shift was held, or whether the old wheel is still in the save.
+
+Still open: whether those pieces look right, whether any of them run, a save and reload of a placed line, hammer pictures seen in the menu, two clients, a dedicated server, and a license file.
 
 ## 0.2.0
 
@@ -51,7 +55,7 @@ Still open: every in-world gate, two clients, a dedicated server, and a license 
 
 A windowed client entered an isolated world and placed one water wheel. The wheel floated, and the hammer grid looked empty the next time it was opened. This update is the correction for those two findings, plus pictures on the hammer buttons.
 
-- The water wheel no longer uses Valheim’s water-piece flag. That flag rejects dry ground unless Shift is held, and it forces the pivot 3 m above the surface. The placed wheel was 2.9 m up. The feet should now sit on the ground. That new place has not been repeated in a world.
+- The water wheel no longer uses Valheim’s water-piece flag. That flag rejects dry ground unless Shift is held, and it forces the pivot 3 m above the surface. The placed wheel was 2.9 m up. A later `0.3.0` session placed another wheel without that 2.9 m gap in the log. Whether its feet sit on the ground was not written down.
 - Hammer pieces use the Crafting tag. A custom Workshop category left the build menu on a blank page.
 - The hammer only lists pieces the character has discovered. A new character sees Repair, so the grid looks empty. `debugmode` shows every piece and resets every time the game starts.
 - Each registered piece has a 256×256 picture rendered from its model. The marker is a timber block. Those pictures have not been seen in the menu yet.

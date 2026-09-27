@@ -130,4 +130,4 @@ Adapters, not one patch class: `SmelterAdapter`, `CookingAdapter`, `FermenterAda
 
 ## Out of scope
 
-Create contraptions and pistons. They fight `WearNTear` support. Circuit logic and runestones. Cart winches. Portal item teleport. Changing comfort, skills, or boss progression. Chopping wild trees or mining a deposit by deleting it is out of scope. A managed coppice and a bedrock quarry are in the master prompt. `0.3.0` has code for both, not yet seen in a world.
+Create contraptions and pistons. They fight `WearNTear` support. Circuit logic and runestones. Cart winches. Portal item teleport. Changing comfort, skills, or boss progression. Chopping wild trees or mining a deposit by deleting it is out of scope. A managed coppice and a bedrock quarry are in the master prompt. `0.3.0` has code for both. A quarry was placed once. It was not watched drilling.

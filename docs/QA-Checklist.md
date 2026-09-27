@@ -6,8 +6,8 @@ Before starting: press F5, run `devcommands`, then `debugmode` (it resets every 
 
 ## 1. M0 and M1: first line
 
-1. Remove the floating `0.2.0` wheel. Place a new water wheel on dry ground. Its feet should touch the ground without Shift. Hover it: "Paddles are not in water."
-2. Check the hammer buttons show the rendered pictures.
+1. Remove the floating `0.2.0` wheel if it is still in the save. A `0.3.0` session on 27 September 2026 already placed another water wheel. The log did not show the old 2.9 m gap, and it also did not show a terrain hit under that pivot. Look at it: feet on the ground, no Shift, hover "Paddles are not in water."
+2. Check the hammer buttons show the rendered pictures. Pieces were placed from the hammer in that session. The pictures themselves were not recorded.
 3. Place a chest, a bronze feeder with its back at the chest, a basket at its front, a shaft from a hand crank to the feeder's kinetic port. Put 20 wood in the chest.
 4. Hold interact on the crank. Expected: stamina drains, the shaft and feeder arm move, one wood every 2 s into the basket. Hover shows "8 DU supply / 6 DU reserved".
 5. Add a second feeder on the same shaft. Expected: "Overloaded", both stop, nothing moves.

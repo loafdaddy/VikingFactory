@@ -20,7 +20,7 @@ A headless Valheim load attached these and resolved native material clones (`Cus
 
 The belt scrolls a property block on its own renderer while the line is turning. It does not change the shared vanilla material and it does not create items. The feeder arm swings the same way.
 
-Polished, not registered: `vf_cog`, `vf_conveyor_corner`, `vf_splitter`, `vf_gravity_trough`, `vf_recipe_mill`, `vf_quarry`.
+`0.3.0` registers the cog, belt corner, splitter, trough, recipe mill, and quarry as well. A windowed session placed the splitter, recipe mill, and quarry. Their GLBs had already attached at startup.
 
 ## Unity
 
@@ -28,7 +28,7 @@ Game player: `6000.0.75f1` (`26349cd2a5c8`). A matching editor install printed t
 
 ## Hammer pictures
 
-`polished/source/render_icons.py` rendered a 256×256 transparent picture of each registered piece into `polished/icons/`. The marker is a timber block. The plugin loads those PNGs for the hammer buttons. They have not been seen in the build menu. Valheim’s water-piece flag is not set: it lifts the pivot 3 m and rejects dry ground unless Shift is held. One wheel placed before that change floated.
+`polished/source/render_icons.py` rendered a 256×256 transparent picture of each registered piece into `polished/icons/`. The marker is a timber block. The plugin loads those PNGs for the hammer buttons. A windowed session placed pieces from the hammer. Whether those buttons showed the pictures was not recorded. Valheim’s water-piece flag is not set: it lifts the pivot 3 m and rejects dry ground unless Shift is held. One wheel placed before that change floated. A later wheel was placed without that 2.9 m gap in the log. Its feet were not checked by eye.
 
 ## Unverified
 

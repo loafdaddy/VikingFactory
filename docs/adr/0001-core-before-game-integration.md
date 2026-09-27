@@ -36,4 +36,5 @@ The same split holds for every milestone. Graph solving, fuel accounting, belt q
 
 - [x] Core logic for M0–M8 and its tests
 - [x] Plugin compiled, packaged, and loaded headless with 39 pieces
-- [ ] A placed piece or a save inside a world
+- [x] Pieces placed in a world, and the world saved on quit
+- [ ] A reload of those pieces, or a machine watched running

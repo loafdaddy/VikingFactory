@@ -33,7 +33,7 @@ A dedicated server, when you have `valheim_server.x86_64`, reads its world passw
 
 `Version.props` is the number for the update on the current branch. The core assembly, `PluginVersion` in `VikingFactoryPlugin.cs`, and `packaging/manifest.json` must all use that number. `VersionTests` fails if they drift. What changed in each number is [CHANGELOG.md](../CHANGELOG.md).
 
-`main` keeps the last snapshot that was pushed. This branch is `0.3.0`. Start a new update from `main` by branching to the next number and setting `Version.props` to it. If you are already on a version branch and the work is a further update, branch again to the next number instead of continuing on the old one.
+`main` keeps the last snapshot that was pushed. That snapshot is `0.3.0`, and the `0.3.0` branch points at the same commit. Start a new update from `main` by branching to the next number and setting `Version.props` to it. If you are already on a version branch and the work is a further update, branch again to the next number instead of continuing on the old one.
 
 ## Build and test
 
@@ -102,7 +102,7 @@ flatpak run --filesystem=$PWD org.blender.Blender -b --python VikingFactory-Asse
 
 ## Multiplayer and saves
 
-Not verified in a world. The code's rules:
+Pieces from `0.3.0` have been placed, and the world saved on quit. A reload of those pieces, a second client, and a dedicated server have not been tried. The code's rules:
 
 - The ZNetView owner runs each machine. A machine acts only from its second consecutive step as owner, after rereading state the previous owner saved.
 - Every peer solves the kinetic graph for visuals. Only owners move items, spend fuel, or write ZDOs.

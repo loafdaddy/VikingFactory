@@ -2,8 +2,8 @@
 
 The notes below describe the original prototype export. Later work lives elsewhere and should be preferred:
 
-- `polished/` has the models the plugin loads for the crank, shaft, clutch, water wheel, belt, feeder, and basket, plus unregistered cog, corner, splitter, trough, recipe mill, and quarry files. See `polished/STATUS.md`.
-- `expansion/` has 26 later machines. They are not hammer pieces. Blender 5.1.1 has imported them. See `expansion/START-HERE.md`.
+- `polished/` has the models the plugin loads for the early machines, including the cog, corner, splitter, trough, recipe mill, and quarry. See `polished/STATUS.md`.
+- `expansion/` has the later machines. `0.3.0` registers them as hammer pieces, except the fishing winch. A windowed session placed several of them. See `expansion/START-HERE.md`.
 - `converted/` is a Blender conversion of these prototypes. The plugin does not load it.
 
 The prototype GLBs remain the baseline. Do not overwrite them. The sentence further down about Blender being unavailable describes this original export only.

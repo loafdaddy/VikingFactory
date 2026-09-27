@@ -8,13 +8,13 @@ A GLB, a class, or a design note is not a finished machine. Visual asset work an
 
 **Prove `0.3.0` in a world.**
 
-`0.3.0` has code for every milestone: power, belts, native stations, the recipe mill, wood and stone, fields and kitchens, steam and sail, extraction, livestock, and a coverage report. Core tests cover the rules. A headless launch loaded all 39 pieces. Nothing has been placed.
+`0.3.0` has code for every milestone: power, belts, native stations, the recipe mill, wood and stone, fields and kitchens, steam and sail, extraction, livestock, and a coverage report. Core tests cover the rules. A headless launch loaded all 39 pieces. A windowed session placed fourteen kinds of piece in `VIKINGFACTORY` and saved. None of those lines was watched working, and the world was not reloaded.
 
 | | |
 |---|---|
 | Player outcome | Build the lines in `docs/QA-Checklist.md` and have them behave as described, including after a save. |
 | Developer outcome | Confirm pivots, colliders, snap points, and rates beside vanilla pieces. Fix what the world shows. |
-| Status | Code and tests done. In-world checks not started. |
+| Status | Code and tests done. Pieces can be placed. The checklist has not been run. |
 | Blockers | Someone has to play the checklist. No dedicated server binary on this machine. No second client has joined. |
 | Done when | Each checklist step is ticked in `docs/ImplementationStatus.md` with what was observed. |
 
@@ -47,8 +47,8 @@ There is no public package. `packaging/` is a template. `scripts/validate-packag
 
 | Milestone | Outcome | Status | Blockers | Done when |
 |---|---|---|---|---|
-| Dev build | A contributor can compile and load the plugin | `0.3.0` loaded headless with 39 pieces. `0.2.0` loaded in a window | Local game path stays in gitignored `Environment.props` | Documented setup still matches the scripts |
-| World proof | The current pieces survive play | Not started for `0.3.0` | Nobody has played the QA checklist | Save, reload, and a visible stall |
+| Dev build | A contributor can compile and load the plugin | `0.3.0` loaded headless and in a window, 39 pieces | Local game path stays in gitignored `Environment.props` | Documented setup still matches the scripts |
+| World proof | The current pieces survive play | Fourteen kinds placed once, then the world saved on quit | Nobody has played the QA checklist or reloaded | Save, reload, and a visible stall |
 | Multiplayer proof | Server and clients agree | Not implemented as a tested feature | No dedicated server has been run. No second client. | Same build on server and clients. One item transfer, no duplicate, owner handoff checked |
 | Package | Someone can install a zip | A test ZIP stages, validates, and loads headless | No license. Not tested in a world or with a server | Version, icon, README, and dependencies match a build that passed the world and multiplayer checks |
 | Thunderstore | A public alpha | Not started | Everything above | A separate, explicit publish. Game files are not in the zip |

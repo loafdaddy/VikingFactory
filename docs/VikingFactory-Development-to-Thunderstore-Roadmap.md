@@ -2,7 +2,7 @@
 
 Internal workflow and research notes from 25 September 2026. The public roadmap is `ROADMAP.md`. What is built is `docs/ImplementationStatus.md`.
 
-This file is a proposal for how a future package could be made. It is not a release checklist that has been completed. `0.3.0` loaded 39 pieces headless, including from a staged test ZIP. No `0.3.0` piece has been placed in a world. Do not publish from this document. What shipped in each number is `CHANGELOG.md`.
+This file is a proposal for how a future package could be made. It is not a release checklist that has been completed. `0.3.0` loaded 39 pieces headless, including from a staged test ZIP, and a windowed session placed fourteen kinds of piece. That session did not prove a package. Do not publish from this document. What shipped in each number is `CHANGELOG.md`.
 
 ## 1. Direct answers
 

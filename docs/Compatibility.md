@@ -4,7 +4,7 @@ Updated 27 September 2026 after Valheim was installed. Observations were checked
 
 ## Progress
 
-The cross-off list is `docs/ImplementationStatus.md`. A headless load registered the pieces. A later windowed session entered an isolated world and placed one water wheel. Setup steps are `docs/Development.md`. Patch notes are `CHANGELOG.md`.
+The cross-off list is `docs/ImplementationStatus.md`. A headless load registered the pieces. A windowed `0.2.0` session placed one water wheel, and it floated. A windowed `0.3.0` session on 27 September 2026 entered `VIKINGFACTORY`, placed fourteen kinds of piece, and saved on quit. Setup steps are `docs/Development.md`. Patch notes are `CHANGELOG.md`.
 
 ## Observations
 
@@ -21,7 +21,8 @@ The cross-off list is `docs/ImplementationStatus.md`. A headless load registered
 | Plugin target | `net472`, compiled against those local DLLs, plus `assembly_utils` for `Vector2i`. `VikingFactory.dll` and `VikingFactory.Core.dll` are in `BepInEx/plugins/VikingFactory`. |
 | Pieces in code | 39 in `0.3.0`, listed in `src/VikingFactory.Plugin/Machines/MachineCatalog.cs`. The marker is a block. The other 38 load polished or expansion GLBs. |
 | Core tests | 66 passed on 27 September 2026. They do not load the game. |
-| `0.3.0` load | Headless, 27 September 2026: `Registered 39 of 39 workshop pieces`, 38 models attached, every material slot resolved. Repeated from the packaged ZIP with the same result. No world entered. |
+| `0.3.0` load | Headless, 27 September 2026: `Registered 39 of 39 workshop pieces`, 38 models attached, every material slot resolved. Repeated from the packaged ZIP with the same result. |
+| `0.3.0` world | Windowed, same day, isolated save, world `VIKINGFACTORY` save 2. Entered the world, placed the pieces named in `docs/ImplementationStatus.md`, quit exit code 0, world saved. No VikingFactory error. No reload, and no machine was watched running. |
 | Earlier load | Headless, 27 September 2026, via `start_game_bepinex.sh -batchmode -nographics` and the isolated save directory from `scripts/launch-dev.sh`. Pieces registered `Valid=True`. No world was entered on that run. A later windowed `0.2.0` client entered a world and placed one water wheel. That wheel floated. |
 
 ## What the plugin references
@@ -58,7 +59,7 @@ Boss keys come from each boss prefab's `Character.m_defeatSetGlobalKey`: `defeat
 
 ## Not verified
 
-Every adapter above in a world, wind, smoke, sleep, and save/load of any piece. No Harmony patch is used. No second client or dedicated server.
+Every adapter above while a machine is running, wind, smoke, sleep, and a reload of any placed piece. The `0.3.0` session placed pieces and saved on quit. It did not reload. No Harmony patch is used. No second client or dedicated server.
 
 ## Launch
 
